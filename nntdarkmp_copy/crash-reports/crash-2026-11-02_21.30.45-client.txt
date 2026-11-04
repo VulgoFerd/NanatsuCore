@@ -1,0 +1,524 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 02/11/26 21:30
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+cpw.mods.fml.common.LoaderException: java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    JinRyuu/JRMCore/JRMCorePacHanS.handleData(ILjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @940: istore
+  Reason:
+    Type 'net/minecraft/nbt/NBTTagCompound' (current frame, stack[0]) is not assignable to integer
+  Current Frame:
+    bci: @940
+    flags: { }
+    locals: { 'JinRyuu/JRMCore/JRMCorePacHanS', integer, 'java/lang/String', 'net/minecraft/entity/player/EntityPlayer', 'net/minecraft/server/MinecraftServer', 'java/lang/String', 'net/minecraft/nbt/NBTTagCompound', '[Ljava/lang/String;', 'java/lang/String', 'java/lang/String', integer, integer, 'java/lang/String', '[Ljava/lang/String;', 'java/lang/String', '[Ljava/lang/String;', '[Ljava/lang/String;', integer, integer, 'java/lang/String' }
+    stack: { 'net/minecraft/nbt/NBTTagCompound' }
+  Bytecode:
+    0x0000000: 1b9a 00b9 2db2 0096 b800 9c36 0415 049a
+    0x0000010: 003c 2db2 009e b800 9c36 0515 05b8 00a2
+    0x0000020: 9900 212c b800 a636 062c b800 a936 0715
+    0x0000030: 0615 079f 000e 1507 3606 2c15 06b8 00ad
+    0x0000040: 4d2c 2d12 afb8 00b3 a700 722d 12af b800
+    0x0000050: b73a 052c 3a06 1905 b800 ba36 0719 05b8
+    0x0000060: 00bd 3608 1905 b800 a636 092d b200 9eb8
+    0x0000070: 009c 360a 150a b800 a299 0015 1905 b800
+    0x0000080: a936 0b15 0915 0b9f 0007 150b 3609 1906
+    0x0000090: 1507 b800 c03a 0619 0615 08b8 00c3 3a06
+    0x00000a0: 1906 1509 b800 ad3a 0619 0519 06b6 00c9
+    0x00000b0: 9900 0a2c 2d12 afb8 00b3 1b04 a000 132d
+    0x00000c0: b200 96b8 009c 3604 2c2d 12cb b800 b31b
+    0x00000d0: 05a0 000d 2cb8 00d0 2d12 d2b8 00d6 1b06
+    0x00000e0: a000 462d b200 96b8 009c 3604 2db2 009e
+    0x00000f0: b800 9c36 052d 12d8 b800 b73a 0615 0404
+    0x0000100: a000 2615 05b8 00db 9900 1e2d b800 dfb8
+    0x0000110: 00e4 9900 1419 0612 e6b6 00ea 9a00 0a2c
+    0x0000120: 2d12 d8b8 00b3 1b07 a000 582d b200 96b8
+    0x0000130: 009c 3604 2db2 009e b800 9c36 052d 12d8
+    0x0000140: b800 b73a 0615 0404 a000 3815 05b8 00db
+    0x0000150: 9900 302d b800 dfb8 00e4 9900 2619 0612
+    0x0000160: e6b6 00ea 9a00 1cbb 00ec 59b7 00ed 12e6
+    0x0000170: b600 f12c b600 f1b6 00f5 2d12 d8b8 00b3
+    0x0000180: b800 fbb6 00ff 3a04 1904 b601 0599 0026
+    0x0000190: bb00 ec59 b700 ed2d b601 0bb6 0111 b601
+    0x00001a0: 1412 e6b6 00f1 2db6 0117 b600 f1b6 00f5
+    0x00001b0: a700 072d b601 173a 052a 2d13 0119 b601
+    0x00001c0: 1d3a 061b 1050 a007 19b2 0122 1301 24b6
+    0x00001d0: 00ea 9907 0db2 0122 1301 26b6 012a 3a07
+    0x00001e0: bb00 ec59 b700 ed19 0703 32b6 00f1 1907
+    0x00001f0: 0432 b600 f119 05b6 00f1 b600 f5b8 012e
+    0x0000200: 3a08 2c13 0130 b600 ea99 000a 1b19 082d
+    0x0000210: b801 332c 1301 35b6 00ea 9906 c219 0813
+    0x0000220: 0137 b601 3b9a 06b7 1908 b601 3e99 0009
+    0x0000230: 1301 40a7 0005 1908 3a09 1909 b800 d036
+    0x0000240: 0a2c 04b6 0144 b800 d036 0bb2 0147 3a0c
+    0x0000250: 190c 1301 24b6 00ea 9900 0a19 0cb8 012e
+    0x0000260: 3a0c 190c 12e6 b601 2a3a 0d10 0ab8 014c
+    0x0000270: b601 4f3a 0eb2 0155 bb00 ec59 b700 ed13
+    0x0000280: 0157 b600 f12d b601 17b6 00f1 1301 59b6
+    0x0000290: 00f1 150b 0460 b601 5c13 015e b600 f119
+    0x00002a0: 0eb6 00f1 b600 f5b9 0164 0200 bb00 ec59
+    0x00002b0: b700 ed19 05b6 00f1 12e6 b600 f119 0eb6
+    0x00002c0: 00f1 b600 f53a 0519 0c13 0166 b600 ea99
+    0x00002d0: 05c9 190d bebd 00c5 3a0f 190d bebd 00c5
+    0x00002e0: 3a10 0336 1115 1119 0dbe a200 2819 0d15
+    0x00002f0: 1132 1301 66b6 012a 3a12 190f 1511 1912
+    0x0000300: 0332 5319 1015 1119 1204 3253 8411 01a7
+    0x0000310: ffd6 1910 150b 32b8 00d0 3611 150a 1511
+    0x0000320: 6436 12b2 0155 1301 68b9 0164 0200 1512
+    0x0000330: 9b05 65bb 00ec 59b7 00ed 1907 0332 b600
+    0x0000340: f119 0704 32b6 00f1 1905 b600 f119 0705
+    0x0000350: 32b6 00f1 1511 b601 5c19 0706 32b6 00f1
+    0x0000360: 150b 0460 b601 5c19 0707 32b6 00f1 b600
+    0x0000370: f5b8 012e 3a13 b201 5513 016a b901 6402
+    0x0000380: 0019 1313 016c b600 ea99 050c b201 5513
+    0x0000390: 016e b901 6402 0019 0f15 0b32 0305 b601
+    0x00003a0: 7113 0173 b600 ea99 0113 1906 3614 190f
+    0x00003b0: 150b 3205 b601 44b8 00d0 3615 1514 1515
+    0x00003c0: 6036 1603 3617 1516 b801 77a4 0010 1516
+    0x00003d0: b801 7764 3617 b801 7736 1619 0613 0179
+    0x00003e0: 1516 b601 7f1b bb00 ec59 b700 ed15 12b6
+    0x00003f0: 015c 1301 81b6 00f1 b600 f52d b801 33b2
+    0x0000400: 0155 bb00 ec59 b700 ed13 0183 b600 f12d
+    0x0000410: b601 17b6 00f1 1301 85b6 00f1 1515 b601
+    0x0000420: 5c13 0187 b600 f115 16b6 015c 1517 9e00
+    0x0000430: 21bb 00ec 59b7 00ed 1301 89b6 00f1 1517
+    0x0000440: b601 5c13 018b b600 f1b6 00f5 a700 0613
+    0x0000450: 018d b600 f1b6 00f5 b901 6402 002d bb01
+    0x0000460: 8f59 bb00 ec59 b700 ed13 0191 b600 f115
+    0x0000470: 15b6 015c 1301 87b6 00f1 1516 b601 5c15
+    0x0000480: 179e 0021 bb00 ec59 b700 ed13 0189 b600
+    0x0000490: f115 17b6 015c 1301 8bb6 00f1 b600 f5a7
+    0x00004a0: 0006 1301 8db6 00f1 b600 f5b7 0193 b201
+    0x00004b0: 95b6 0199 b601 9da7 03de 190f 150b 3203
+    0x00004c0: 05b6 0171 1301 9fb6 00ea 9902 0113 0181
+    0x00004d0: 3a14 190f 150b 3213 01a1 b600 ea99 010d
+    0x00004e0: 190f 150b 3213 01a3 b601 2a3a 1519 1503
+    0x00004f0: 3205 b601 443a 1404 3616 1516 1915 bea2
+    0x0000500: 008c 1915 1516 323a 1719 1713 01a5 b601
+    0x0000510: 2a03 3205 b601 443a 1819 1713 01a5 b601
+    0x0000520: 2a04 323a 1919 1913 01a7 1301 a9b6 01ad
+    0x0000530: 04bd 0005 5903 2db6 0117 53b8 01b1 3a1a
+    0x0000540: 2db4 01b5 0311 00fe 03b2 01bb b601 c157
+    0x0000550: 2db4 01b5 0311 00fe 03b6 01c5 3a1b 191b
+    0x0000560: c001 c7b6 01cb 3a1c 191c 191a b601 d019
+    0x0000570: 1c2d b401 b5b6 01d4 2db4 01b5 0311 00fe
+    0x0000580: 03b6 01d8 5784 1601 a7ff 722d bb01 8f59
+    0x0000590: bb00 ec59 b700 ed13 0191 b600 f119 14b6
+    0x00005a0: 00f1 1301 a5b6 00f1 b600 f5b7 0193 b201
+    0x00005b0: 95b6 0199 b601 9db2 0155 bb00 ec59 b700
+    0x00005c0: ed13 0183 b600 f12d b601 17b6 00f1 1301
+    0x00005d0: 85b6 00f1 1914 b600 f113 01a5 b600 f1b6
+    0x00005e0: 00f5 b901 6402 00a7 00e1 190f 150b 3213
+    0x00005f0: 01a5 b601 2a03 3205 b601 443a 1519 0f15
+    0x0000600: 0b32 1301 a5b6 012a 0432 3a16 1916 1301
+    0x0000610: a713 01a9 b601 ad04 bd00 0559 032d b601
+    0x0000620: 1753 b801 b13a 172d bb01 8f59 bb00 ec59
+    0x0000630: b700 ed13 0191 b600 f119 15b6 00f1 1301
+    0x0000640: a5b6 00f1 b600 f5b7 0193 b201 95b6 0199
+    0x0000650: b601 9db2 0155 bb00 ec59 b700 ed13 0183
+    0x0000660: b600 f12d b601 17b6 00f1 1301 85b6 00f1
+    0x0000670: 1915 b600 f113 01a5 b600 f1b6 00f5 b901
+    0x0000680: 6402 002d b401 b503 1100 fe03 b201 bbb6
+    0x0000690: 01c1 572d b401 b503 1100 fe03 b601 c53a
+    0x00006a0: 1819 18c0 01c7 b601 cb3a 1919 1919 17b6
+    0x00006b0: 01d0 1919 2db4 01b5 b601 d42d b401 b503
+    0x00006c0: 1100 fe03 b601 d857 a701 cd19 0f15 0b32
+    0x00006d0: 0305 b601 7113 01da b600 ea99 01ba 1301
+    0x00006e0: 813a 1419 0f15 0b32 1301 a1b6 00ea 9900
+    0x00006f0: c519 0f15 0b32 1301 a3b6 012a 3a15 1915
+    0x0000700: 0332 05b6 0144 3a14 0436 1615 1619 15be
+    0x0000710: a200 a019 1515 1632 3a17 1301 813a 1804
+    0x0000720: 3619 0336 1a15 169e 007b 1917 1301 26b6
+    0x0000730: 012a 3a1b 191b be04 a400 0c19 1b04 32b8
+    0x0000740: 00d0 3619 191b 0332 1301 dcb6 00ea 9900
+    0x0000750: 2119 1b03 3213 01dc b601 2a3a 1c19 1c03
+    0x0000760: 323a 1819 1c04 32b8 00d0 361a a700 0919
+    0x0000770: 1b03 323a 1819 18b8 01e0 3a1c 191c c600
+    0x0000780: 21bb 01e2 5919 1c15 1915 1ab7 01e5 3a1d
+    0x0000790: 2d19 1d03 b601 e93a 1e19 1e03 b501 eea7
+    0x00007a0: 000b 1917 05b6 0144 3a14 8416 01a7 ff5e
+    0x00007b0: a700 9513 0181 3a15 0436 1603 3617 190f
+    0x00007c0: 150b 3213 0126 b601 2a3a 1819 18be 04a4
+    0x00007d0: 000c 1918 0432 b800 d036 1619 1803 3213
+    0x00007e0: 01dc b600 ea99 0025 1918 0332 1301 dcb6
+    0x00007f0: 012a 3a19 1919 0332 05b6 0144 3a15 1919
+    0x0000800: 0432 b800 d036 17a7 000d 1918 0332 05b6
+    0x0000810: 0144 3a15 1915 b801 e03a 1919 19c6 0028
+    0x0000820: bb01 e259 1919 1516 1517 b701 e53a 1a2d
+    0x0000830: 191a 03b6 01e9 3a1b 191b 03b5 01ee 191a
+    0x0000840: b601 f13a 14b2 0155 bb00 ec59 b700 ed13
+    0x0000850: 0183 b600 f12d b601 17b6 00f1 1301 85b6
+    0x0000860: 00f1 1914 b600 f1b6 00f5 b901 6402 002d
+    0x0000870: bb01 8f59 bb00 ec59 b700 ed13 0191 b600
+    0x0000880: f119 14b6 00f1 b600 f5b7 0193 b201 95b6
+    0x0000890: 0199 b601 9da7 003c b201 55bb 00ec 59b7
+    0x00008a0: 00ed 1301 83b6 00f1 2db6 0117 b600 f113
+    0x00008b0: 01f3 b600 f1b6 00f5 b901 6402 002d bb01
+    0x00008c0: 8f59 1301 f5b7 0193 b201 95b6 0199 b601
+    0x00008d0: 9db2 0155 1301 f7b9 0164 0200 a700 421b
+    0x00008e0: 1050 a000 3cb2 0155 bb00 ec59 b700 ed13
+    0x00008f0: 0183 b600 f12d b601 17b6 00f1 1301 f9b6
+    0x0000900: 00f1 b600 f5b9 0164 0200 2dbb 018f 5913
+    0x0000910: 01fb b701 93b2 0195 b601 99b6 019d b1  
+  Stackmap Table:
+    append_frame(@65,Integer,Integer)
+    chop_frame(@75,1)
+    full_frame(@142,{Object[#2],Integer,Object[#197],Object[#263],Integer,Object[#197],Object[#197],Integer,Integer,Integer,Integer},{})
+    full_frame(@186,{Object[#2],Integer,Object[#197],Object[#263]},{})
+    same_frame(@207)
+    same_frame(@222)
+    same_frame_extended(@294)
+    same_frame_extended(@384)
+    append_frame(@435,Object[#257])
+    same_locals_1_stack_item_frame(@439,Object[#197])
+    full_frame(@531,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197]},{})
+    same_frame(@566)
+    same_locals_1_stack_item_frame(@568,Object[#197])
+    full_frame(@610,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197]},{})
+    full_frame(@741,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer},{})
+    same_frame(@786)
+    full_frame(@987,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#379],Integer,Integer,Integer},{})
+    full_frame(@1103,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#379],Integer,Integer,Integer},{Object[#352],Object[#236]})
+    full_frame(@1106,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#379],Integer,Integer,Integer},{Object[#352],Object[#236],Object[#197]})
+    full_frame(@1186,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#379],Integer,Integer,Integer},{Object[#263],Uninitialized[#1118],Uninitialized[#1118],Object[#236]})
+    full_frame(@1189,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#379],Integer,Integer,Integer},{Object[#263],Uninitialized[#1118],Uninitialized[#1118],Object[#236],Object[#197]})
+    full_frame(@1210,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197]},{})
+    append_frame(@1274,Object[#197],Object[#560],Integer)
+    same_frame_extended(@1419)
+    chop_frame(@1514,2)
+    append_frame(@1736,Object[#5])
+    chop_frame(@1739,2)
+    append_frame(@1803,Object[#197],Object[#560],Integer)
+    full_frame(@1860,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#197],Object[#560],Integer,Object[#197],Object[#197],Integer,Integer,Object[#560]},{})
+    same_frame(@1903)
+    same_frame(@1909)
+    append_frame(@1951,Object[#562])
+    chop_frame(@1954,2)
+    same_frame(@1962)
+    full_frame(@1968,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#197],Object[#560],Integer},{})
+    chop_frame(@1971,2)
+    full_frame(@2011,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#197],Object[#197],Integer,Integer,Object[#560]},{})
+    same_frame(@2058)
+    same_frame(@2068)
+    full_frame(@2117,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#197],Object[#5],Integer},{})
+    full_frame(@2197,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer},{})
+    full_frame(@2200,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197]},{})
+    same_frame(@2257)
+    full_frame(@2268,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197]},{})
+    chop_frame(@2271,2)
+    same_frame(@2334)
+
+	at cpw.mods.fml.common.LoadController.transition(LoadController.java:163)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:544)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:208)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:480)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:878)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+Caused by: java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    JinRyuu/JRMCore/JRMCorePacHanS.handleData(ILjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @940: istore
+  Reason:
+    Type 'net/minecraft/nbt/NBTTagCompound' (current frame, stack[0]) is not assignable to integer
+  Current Frame:
+    bci: @940
+    flags: { }
+    locals: { 'JinRyuu/JRMCore/JRMCorePacHanS', integer, 'java/lang/String', 'net/minecraft/entity/player/EntityPlayer', 'net/minecraft/server/MinecraftServer', 'java/lang/String', 'net/minecraft/nbt/NBTTagCompound', '[Ljava/lang/String;', 'java/lang/String', 'java/lang/String', integer, integer, 'java/lang/String', '[Ljava/lang/String;', 'java/lang/String', '[Ljava/lang/String;', '[Ljava/lang/String;', integer, integer, 'java/lang/String' }
+    stack: { 'net/minecraft/nbt/NBTTagCompound' }
+  Bytecode:
+    0x0000000: 1b9a 00b9 2db2 0096 b800 9c36 0415 049a
+    0x0000010: 003c 2db2 009e b800 9c36 0515 05b8 00a2
+    0x0000020: 9900 212c b800 a636 062c b800 a936 0715
+    0x0000030: 0615 079f 000e 1507 3606 2c15 06b8 00ad
+    0x0000040: 4d2c 2d12 afb8 00b3 a700 722d 12af b800
+    0x0000050: b73a 052c 3a06 1905 b800 ba36 0719 05b8
+    0x0000060: 00bd 3608 1905 b800 a636 092d b200 9eb8
+    0x0000070: 009c 360a 150a b800 a299 0015 1905 b800
+    0x0000080: a936 0b15 0915 0b9f 0007 150b 3609 1906
+    0x0000090: 1507 b800 c03a 0619 0615 08b8 00c3 3a06
+    0x00000a0: 1906 1509 b800 ad3a 0619 0519 06b6 00c9
+    0x00000b0: 9900 0a2c 2d12 afb8 00b3 1b04 a000 132d
+    0x00000c0: b200 96b8 009c 3604 2c2d 12cb b800 b31b
+    0x00000d0: 05a0 000d 2cb8 00d0 2d12 d2b8 00d6 1b06
+    0x00000e0: a000 462d b200 96b8 009c 3604 2db2 009e
+    0x00000f0: b800 9c36 052d 12d8 b800 b73a 0615 0404
+    0x0000100: a000 2615 05b8 00db 9900 1e2d b800 dfb8
+    0x0000110: 00e4 9900 1419 0612 e6b6 00ea 9a00 0a2c
+    0x0000120: 2d12 d8b8 00b3 1b07 a000 582d b200 96b8
+    0x0000130: 009c 3604 2db2 009e b800 9c36 052d 12d8
+    0x0000140: b800 b73a 0615 0404 a000 3815 05b8 00db
+    0x0000150: 9900 302d b800 dfb8 00e4 9900 2619 0612
+    0x0000160: e6b6 00ea 9a00 1cbb 00ec 59b7 00ed 12e6
+    0x0000170: b600 f12c b600 f1b6 00f5 2d12 d8b8 00b3
+    0x0000180: b800 fbb6 00ff 3a04 1904 b601 0599 0026
+    0x0000190: bb00 ec59 b700 ed2d b601 0bb6 0111 b601
+    0x00001a0: 1412 e6b6 00f1 2db6 0117 b600 f1b6 00f5
+    0x00001b0: a700 072d b601 173a 052a 2d13 0119 b601
+    0x00001c0: 1d3a 061b 1050 a007 19b2 0122 1301 24b6
+    0x00001d0: 00ea 9907 0db2 0122 1301 26b6 012a 3a07
+    0x00001e0: bb00 ec59 b700 ed19 0703 32b6 00f1 1907
+    0x00001f0: 0432 b600 f119 05b6 00f1 b600 f5b8 012e
+    0x0000200: 3a08 2c13 0130 b600 ea99 000a 1b19 082d
+    0x0000210: b801 332c 1301 35b6 00ea 9906 c219 0813
+    0x0000220: 0137 b601 3b9a 06b7 1908 b601 3e99 0009
+    0x0000230: 1301 40a7 0005 1908 3a09 1909 b800 d036
+    0x0000240: 0a2c 04b6 0144 b800 d036 0bb2 0147 3a0c
+    0x0000250: 190c 1301 24b6 00ea 9900 0a19 0cb8 012e
+    0x0000260: 3a0c 190c 12e6 b601 2a3a 0d10 0ab8 014c
+    0x0000270: b601 4f3a 0eb2 0155 bb00 ec59 b700 ed13
+    0x0000280: 0157 b600 f12d b601 17b6 00f1 1301 59b6
+    0x0000290: 00f1 150b 0460 b601 5c13 015e b600 f119
+    0x00002a0: 0eb6 00f1 b600 f5b9 0164 0200 bb00 ec59
+    0x00002b0: b700 ed19 05b6 00f1 12e6 b600 f119 0eb6
+    0x00002c0: 00f1 b600 f53a 0519 0c13 0166 b600 ea99
+    0x00002d0: 05c9 190d bebd 00c5 3a0f 190d bebd 00c5
+    0x00002e0: 3a10 0336 1115 1119 0dbe a200 2819 0d15
+    0x00002f0: 1132 1301 66b6 012a 3a12 190f 1511 1912
+    0x0000300: 0332 5319 1015 1119 1204 3253 8411 01a7
+    0x0000310: ffd6 1910 150b 32b8 00d0 3611 150a 1511
+    0x0000320: 6436 12b2 0155 1301 68b9 0164 0200 1512
+    0x0000330: 9b05 65bb 00ec 59b7 00ed 1907 0332 b600
+    0x0000340: f119 0704 32b6 00f1 1905 b600 f119 0705
+    0x0000350: 32b6 00f1 1511 b601 5c19 0706 32b6 00f1
+    0x0000360: 150b 0460 b601 5c19 0707 32b6 00f1 b600
+    0x0000370: f5b8 012e 3a13 b201 5513 016a b901 6402
+    0x0000380: 0019 1313 016c b600 ea99 050c b201 5513
+    0x0000390: 016e b901 6402 0019 0f15 0b32 0305 b601
+    0x00003a0: 7113 0173 b600 ea99 0113 1906 3614 190f
+    0x00003b0: 150b 3205 b601 44b8 00d0 3615 1514 1515
+    0x00003c0: 6036 1603 3617 1516 b801 77a4 0010 1516
+    0x00003d0: b801 7764 3617 b801 7736 1619 0613 0179
+    0x00003e0: 1516 b601 7f1b bb00 ec59 b700 ed15 12b6
+    0x00003f0: 015c 1301 81b6 00f1 b600 f52d b801 33b2
+    0x0000400: 0155 bb00 ec59 b700 ed13 0183 b600 f12d
+    0x0000410: b601 17b6 00f1 1301 85b6 00f1 1515 b601
+    0x0000420: 5c13 0187 b600 f115 16b6 015c 1517 9e00
+    0x0000430: 21bb 00ec 59b7 00ed 1301 89b6 00f1 1517
+    0x0000440: b601 5c13 018b b600 f1b6 00f5 a700 0613
+    0x0000450: 018d b600 f1b6 00f5 b901 6402 002d bb01
+    0x0000460: 8f59 bb00 ec59 b700 ed13 0191 b600 f115
+    0x0000470: 15b6 015c 1301 87b6 00f1 1516 b601 5c15
+    0x0000480: 179e 0021 bb00 ec59 b700 ed13 0189 b600
+    0x0000490: f115 17b6 015c 1301 8bb6 00f1 b600 f5a7
+    0x00004a0: 0006 1301 8db6 00f1 b600 f5b7 0193 b201
+    0x00004b0: 95b6 0199 b601 9da7 03de 190f 150b 3203
+    0x00004c0: 05b6 0171 1301 9fb6 00ea 9902 0113 0181
+    0x00004d0: 3a14 190f 150b 3213 01a1 b600 ea99 010d
+    0x00004e0: 190f 150b 3213 01a3 b601 2a3a 1519 1503
+    0x00004f0: 3205 b601 443a 1404 3616 1516 1915 bea2
+    0x0000500: 008c 1915 1516 323a 1719 1713 01a5 b601
+    0x0000510: 2a03 3205 b601 443a 1819 1713 01a5 b601
+    0x0000520: 2a04 323a 1919 1913 01a7 1301 a9b6 01ad
+    0x0000530: 04bd 0005 5903 2db6 0117 53b8 01b1 3a1a
+    0x0000540: 2db4 01b5 0311 00fe 03b2 01bb b601 c157
+    0x0000550: 2db4 01b5 0311 00fe 03b6 01c5 3a1b 191b
+    0x0000560: c001 c7b6 01cb 3a1c 191c 191a b601 d019
+    0x0000570: 1c2d b401 b5b6 01d4 2db4 01b5 0311 00fe
+    0x0000580: 03b6 01d8 5784 1601 a7ff 722d bb01 8f59
+    0x0000590: bb00 ec59 b700 ed13 0191 b600 f119 14b6
+    0x00005a0: 00f1 1301 a5b6 00f1 b600 f5b7 0193 b201
+    0x00005b0: 95b6 0199 b601 9db2 0155 bb00 ec59 b700
+    0x00005c0: ed13 0183 b600 f12d b601 17b6 00f1 1301
+    0x00005d0: 85b6 00f1 1914 b600 f113 01a5 b600 f1b6
+    0x00005e0: 00f5 b901 6402 00a7 00e1 190f 150b 3213
+    0x00005f0: 01a5 b601 2a03 3205 b601 443a 1519 0f15
+    0x0000600: 0b32 1301 a5b6 012a 0432 3a16 1916 1301
+    0x0000610: a713 01a9 b601 ad04 bd00 0559 032d b601
+    0x0000620: 1753 b801 b13a 172d bb01 8f59 bb00 ec59
+    0x0000630: b700 ed13 0191 b600 f119 15b6 00f1 1301
+    0x0000640: a5b6 00f1 b600 f5b7 0193 b201 95b6 0199
+    0x0000650: b601 9db2 0155 bb00 ec59 b700 ed13 0183
+    0x0000660: b600 f12d b601 17b6 00f1 1301 85b6 00f1
+    0x0000670: 1915 b600 f113 01a5 b600 f1b6 00f5 b901
+    0x0000680: 6402 002d b401 b503 1100 fe03 b201 bbb6
+    0x0000690: 01c1 572d b401 b503 1100 fe03 b601 c53a
+    0x00006a0: 1819 18c0 01c7 b601 cb3a 1919 1919 17b6
+    0x00006b0: 01d0 1919 2db4 01b5 b601 d42d b401 b503
+    0x00006c0: 1100 fe03 b601 d857 a701 cd19 0f15 0b32
+    0x00006d0: 0305 b601 7113 01da b600 ea99 01ba 1301
+    0x00006e0: 813a 1419 0f15 0b32 1301 a1b6 00ea 9900
+    0x00006f0: c519 0f15 0b32 1301 a3b6 012a 3a15 1915
+    0x0000700: 0332 05b6 0144 3a14 0436 1615 1619 15be
+    0x0000710: a200 a019 1515 1632 3a17 1301 813a 1804
+    0x0000720: 3619 0336 1a15 169e 007b 1917 1301 26b6
+    0x0000730: 012a 3a1b 191b be04 a400 0c19 1b04 32b8
+    0x0000740: 00d0 3619 191b 0332 1301 dcb6 00ea 9900
+    0x0000750: 2119 1b03 3213 01dc b601 2a3a 1c19 1c03
+    0x0000760: 323a 1819 1c04 32b8 00d0 361a a700 0919
+    0x0000770: 1b03 323a 1819 18b8 01e0 3a1c 191c c600
+    0x0000780: 21bb 01e2 5919 1c15 1915 1ab7 01e5 3a1d
+    0x0000790: 2d19 1d03 b601 e93a 1e19 1e03 b501 eea7
+    0x00007a0: 000b 1917 05b6 0144 3a14 8416 01a7 ff5e
+    0x00007b0: a700 9513 0181 3a15 0436 1603 3617 190f
+    0x00007c0: 150b 3213 0126 b601 2a3a 1819 18be 04a4
+    0x00007d0: 000c 1918 0432 b800 d036 1619 1803 3213
+    0x00007e0: 01dc b600 ea99 0025 1918 0332 1301 dcb6
+    0x00007f0: 012a 3a19 1919 0332 05b6 0144 3a15 1919
+    0x0000800: 0432 b800 d036 17a7 000d 1918 0332 05b6
+    0x0000810: 0144 3a15 1915 b801 e03a 1919 19c6 0028
+    0x0000820: bb01 e259 1919 1516 1517 b701 e53a 1a2d
+    0x0000830: 191a 03b6 01e9 3a1b 191b 03b5 01ee 191a
+    0x0000840: b601 f13a 14b2 0155 bb00 ec59 b700 ed13
+    0x0000850: 0183 b600 f12d b601 17b6 00f1 1301 85b6
+    0x0000860: 00f1 1914 b600 f1b6 00f5 b901 6402 002d
+    0x0000870: bb01 8f59 bb00 ec59 b700 ed13 0191 b600
+    0x0000880: f119 14b6 00f1 b600 f5b7 0193 b201 95b6
+    0x0000890: 0199 b601 9da7 003c b201 55bb 00ec 59b7
+    0x00008a0: 00ed 1301 83b6 00f1 2db6 0117 b600 f113
+    0x00008b0: 01f3 b600 f1b6 00f5 b901 6402 002d bb01
+    0x00008c0: 8f59 1301 f5b7 0193 b201 95b6 0199 b601
+    0x00008d0: 9db2 0155 1301 f7b9 0164 0200 a700 421b
+    0x00008e0: 1050 a000 3cb2 0155 bb00 ec59 b700 ed13
+    0x00008f0: 0183 b600 f12d b601 17b6 00f1 1301 f9b6
+    0x0000900: 00f1 b600 f5b9 0164 0200 2dbb 018f 5913
+    0x0000910: 01fb b701 93b2 0195 b601 99b6 019d b1  
+  Stackmap Table:
+    append_frame(@65,Integer,Integer)
+    chop_frame(@75,1)
+    full_frame(@142,{Object[#2],Integer,Object[#197],Object[#263],Integer,Object[#197],Object[#197],Integer,Integer,Integer,Integer},{})
+    full_frame(@186,{Object[#2],Integer,Object[#197],Object[#263]},{})
+    same_frame(@207)
+    same_frame(@222)
+    same_frame_extended(@294)
+    same_frame_extended(@384)
+    append_frame(@435,Object[#257])
+    same_locals_1_stack_item_frame(@439,Object[#197])
+    full_frame(@531,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197]},{})
+    same_frame(@566)
+    same_locals_1_stack_item_frame(@568,Object[#197])
+    full_frame(@610,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197]},{})
+    full_frame(@741,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer},{})
+    same_frame(@786)
+    full_frame(@987,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#379],Integer,Integer,Integer},{})
+    full_frame(@1103,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#379],Integer,Integer,Integer},{Object[#352],Object[#236]})
+    full_frame(@1106,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#379],Integer,Integer,Integer},{Object[#352],Object[#236],Object[#197]})
+    full_frame(@1186,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#379],Integer,Integer,Integer},{Object[#263],Uninitialized[#1118],Uninitialized[#1118],Object[#236]})
+    full_frame(@1189,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#379],Integer,Integer,Integer},{Object[#263],Uninitialized[#1118],Uninitialized[#1118],Object[#236],Object[#197]})
+    full_frame(@1210,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197]},{})
+    append_frame(@1274,Object[#197],Object[#560],Integer)
+    same_frame_extended(@1419)
+    chop_frame(@1514,2)
+    append_frame(@1736,Object[#5])
+    chop_frame(@1739,2)
+    append_frame(@1803,Object[#197],Object[#560],Integer)
+    full_frame(@1860,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#197],Object[#560],Integer,Object[#197],Object[#197],Integer,Integer,Object[#560]},{})
+    same_frame(@1903)
+    same_frame(@1909)
+    append_frame(@1951,Object[#562])
+    chop_frame(@1954,2)
+    same_frame(@1962)
+    full_frame(@1968,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#197],Object[#560],Integer},{})
+    chop_frame(@1971,2)
+    full_frame(@2011,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#197],Object[#197],Integer,Integer,Object[#560]},{})
+    same_frame(@2058)
+    same_frame(@2068)
+    full_frame(@2117,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer,Object[#197],Object[#197],Object[#5],Integer},{})
+    full_frame(@2197,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197],Object[#560],Object[#560],Integer,Integer},{})
+    full_frame(@2200,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197],Object[#197],Integer,Integer,Object[#197],Object[#560],Object[#197]},{})
+    same_frame(@2257)
+    full_frame(@2268,{Object[#2],Integer,Object[#197],Object[#263],Object[#257],Object[#197],Object[#379],Object[#560],Object[#197]},{})
+    chop_frame(@2271,2)
+    same_frame(@2334)
+
+	at JinRyuu.JRMCore.JRMCore.<clinit>(JRMCore.java:19)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at cpw.mods.fml.common.ProxyInjector.inject(ProxyInjector.java:59)
+	at cpw.mods.fml.common.FMLModContainer.constructMod(FMLModContainer.java:512)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:513)
+	... 10 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 447016328 bytes (426 MB) / 1140850688 bytes (1088 MB) up to 2147483648 bytes (2048 MB)
+	JVM Flags: 8 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx2G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 42 mods loaded, 42 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UC	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UC	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UC	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UC	AM2-Preloader{0.0.3} [AMCore] (minecraft.jar) 
+	UC	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UC	LumySkinPatch{1.0.13} [Lumy Skin Patch] (minecraft.jar) 
+	UC	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-universal.jar) 
+	UC	unimixins{0.1.17} [UniMixins] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	unimixins-mixin{0.1.17} [UniMixins: Mixin (UniMix)] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	unimixins-compat{0.1.17} [UniMixins: Compatibility] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	mixingasm{0.3} [UniMixins: Mixingasm] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	spongemixins{2.0.1} [UniMixins: SpongeMixins] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	mixinbooterlegacy{1.2.1} [UniMixins: MixinBooterLegacy] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	gasstation{0.5.1} [UniMixins: GasStation] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	gtnhmixins{2.2.0} [UniMixins: GTNHMixins] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	mixinextras{0.1.17} [UniMixins: MixinExtras] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	fullbright{1.2} [Fullbright] (1.7.10-Fullbright-v1.2.jar) 
+	UC	DamageIndicatorsMod{3.2.3} [Damage Indicators] (1.7.10DamageIndicatorsMod-3.2.3.jar) 
+	UC	nanatsu{0.1} [nanatsu] (7dsMod_0.1_2.jar) 
+	UC	crow{1.1} [Crow's weapons Mod] (7DSModels.jar) 
+	UC	nanatsunotaizai{4.0.0} [nanatsunotaizai] (7DSNationv1.3.jar) 
+	UC	advancedtitles{1.0.0} [AdvancedTitles] (advancedtitles-1.0.0.jar) 
+	UC	AnimationAPI{1.2.4} [AnimationAPI] (AnimationAPI-1.7.10.jar) 
+	UC	armourersWorkshop{1.7.10-0.48.5} [Armourer's Workshop] (Armourers-Workshop-1.7.10-0.48.5.jar) 
+	UC	arsmagica2{1.4.0.009} [Ars Magica 2] (Ars-Magica-2-Mod-1.7.10.jar) 
+	UC	clientslots{1.0.0} [ClientSlots] (ClientSlots-1.7.10.jar) 
+	UC	crowhpbar{1.0} [Crow's HP Bar] (crowHPBar-1.0.jar) 
+	UE	jinryuujrmcore{1.3.51} [JinRyuu's JRMCore] (JRMCore-v1.3.51.jar) 
+	UE	jinryuudragonblockc{1.4.85} [Dragon Block C] (DragonBlockC-v1.4.85.jar) 
+	UC	wizardry{1.1.5} [Electroblob's Wizardry] (ElectroblobsWizardry-1.1.5-MC1.7.10.jar) 
+	UC	ias{D7.29 :P} [In-Game Account Switcher] (InGameAccountSwitcher-Forge-1.7-8.0.1.jar) 
+	UE	jinryuubetterrenderaddon{1.6.52} [JinRyuu's Better Render Addon] (JBRA-Client-v1.6.52.jar) 
+	UC	journeymap{4.0.1} [JourneyMap] (JourneyMap-Mod-1.7.10-FairPlay.jar) 
+	UC	LunatriusCore{1.1.2.21} [LunatriusCore] (LunatriusCore-1.7.10-1.1.2.21-universal.jar) 
+	UC	necrotempus{1.3.6} [NecroTempus] (necrotempus-1.3.6.jar) 
+	UC	customnpcs{1.11.1} [CustomNPC+] (nntdark-CustomNPC-Plus-1.11.1.jar) 
+	UE	npcdbc{1.2.1} [CustomNPC+ DBC Addon] (npcdbc-1.2.1-hotfix1.jar) 
+	UC	omniconfig{1.0.1} [Omniconfig] (omniconfig-1.0.1-mc1.7.10.jar) 
+	UC	rpresence{1.0} [rpresence] (RPresenceCore-NNTDark.jar) 
+	UC	Schematica{1.7.6.131} [Schematica] (Schematica-1.7.10-1.7.6.131-universal.jar) 
+	UC	Waila{1.5.10} [Waila] (Waila-1.5.10_1.7.10.jar) 
+	UC	witchery{0.24.1} [Witchery] (Witchery-Mod-1.7.10.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.3.0 - Build 20.19.15.5171' Renderer: 'Intel(R) HD Graphics 4600'
+	Mixins in Stacktrace: 
+		cpw.mods.fml.common.LoadController:
+			mixin.mixinbooterlegacy.json:LoadControllerMixin from mod (unknown)
+		net.minecraft.client.Minecraft:
+			mixins.npcdbc.json:client.MixinMinecraft from mod (unknown)
+		cpw.mods.fml.client.FMLClientHandler:
+			mixins.necrotempus.json:fml.FMLClientHandler from mod (unknown)

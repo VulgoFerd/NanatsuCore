@@ -1,0 +1,17 @@
+{
+  "id": "Caverna _5819,31,6544",
+  "name": "Caverna ",
+  "icon": "waypoint-normal.png",
+  "x": 5819,
+  "y": 31,
+  "z": 6544,
+  "r": 181,
+  "g": 137,
+  "b": 187,
+  "enable": true,
+  "type": "Normal",
+  "origin": "JourneyMap",
+  "dimensions": [
+    14
+  ]
+}

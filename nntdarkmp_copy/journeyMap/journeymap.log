@@ -1,0 +1,25 @@
+21:19:41 INFO [Client thread] [JourneyMap.initialize] JourneyMap 4.0.1 FairPlay initialize ENTER
+21:19:41 INFO [Client thread] [JMLogger.logProperties] Version: JourneyMap 4.0.1 FairPlay, built with Forge 1.7.10
+Forge: 10.13.4.1614
+Memory: 1632MB total, 879MB free
+Environment: os.name=Windows 10, os.arch=amd64, java.version=1.8.0_51, user.country=BR, user.language=pt, game language=pt_BR, locale=pt_br
+CoreProperties: revision=2, logLevel=INFO, chunkOffset=8, entityPoll=1800, playerPoll=1900, chunkPoll=2000, cacheAnimalsData=3100, maxAnimalsData=32, cacheMobsData=3000, maxMobsData=32, cachePlayerData=1000, cachePlayersData=2000, maxPlayersData=32, cacheVillagersData=2200, maxVillagersData=32, caveLighting=true, caveGreySurface=false, announceMod=true, checkUpdates=true
+FullMapProperties: revision=2, showCaves=true, showMobs=true, showAnimals=true, showVillagers=true, showPets=true, showPlayers=true, showWaypoints=true, showGrid=true, forceUnicode=false, fontSmall=true
+MiniMapProperties: revision=2, showSelf=true, showMobs=true, showAnimals=true, showVillagers=true, showPets=true, showPlayers=true, showWaypoints=true, managerEnabled=false, shape=SmallSquare, position=TopRight, showFps=false, enableHotkeys=true, showWaypointLabels=true, forceUnicode=false, fontSmall=true
+WaypointProperties: revision=2, managerEnabled=true, beaconEnabled=true, showTexture=true, showStaticBeam=true, showRotatingBeam=true, showName=true, showDistance=true, autoHideLabel=true, boldLabel=false, forceUnicode=false, fontSmall=true, textureSmall=true, maxDistance=0
+WebMapProperties: revision=2, showMobs=true, showAnimals=true, showVillagers=true, showPets=true, showPlayers=true, showWaypoints=true, managerEnabled=true, port=8080, browserPoll=2000
+21:19:41 INFO [Client thread] [JourneyMap.initialize] JourneyMap 4.0.1 FairPlay initialize EXIT
+21:20:04 INFO [Client thread] [JourneyMap.postInitialize] JourneyMap 4.0.1 FairPlay postInitialize ENTER
+21:20:04 INFO [Client thread] [JMServer.start] Started webserver on port 8080
+21:20:04 INFO [Client thread] [JourneyMap.postInitialize] Initialization complete.
+21:20:04 INFO [Client thread] [JourneyMap.postInitialize] JourneyMap 4.0.1 FairPlay postInitialize EXIT
+21:20:52 INFO [Client thread] [ColorCache.func_110549_a] ResourcePack: null --> [minecraft, realms, fml, forge, nei, mixingasm, damageindicatorsmod, defaultskins, nanatsu, crow, nanatsunotaizai, armourersworkshop, arsmagica2, crowhpbar, jinryuudragonbc, wizardry, ias, journeymap, jinryuumodscore, core, necrotempus, customnpcs, npcdbc, 32.png, dsmod, 16.png, schematica, waila, witchery, my_sounds, 8nameplates, menus, items, symbols, _iainternal]
+21:20:52 INFO [Client thread] [WaypointStore.load] Loaded 0 waypoints for world
+21:20:52 INFO [Client thread] [LegacyMigrationTask$Manager.enableTask] No legacy files found.
+21:20:52 INFO [Client thread] [JourneyMap.startMapping] Mapping started in Novo Mundo dimension 0.
+21:20:56 INFO [Client thread] [VersionCheck.checkVersion] Checking for updated version: https://dl.dropboxusercontent.com/u/38077766/JourneyMap/journeymap-version.js
+21:20:56 SEVERE [Client thread] [VersionCheck.checkVersion] Could not check version URL
+21:20:56 INFO [Client thread] [ChatLog.showChatAnnouncements] JourneyMap: JourneyMap 4.0.1 FairPlay ready.
+21:20:56 INFO [Client thread] [ChatLog.showChatAnnouncements] JourneyMap: Press [J] or open browser to http://localhost:8080 
+21:29:58 INFO [Client thread] [JourneyMap.stopMapping] Mapping halting in Novo Mundo dimension 0.
+21:29:58 INFO [JM-svr-3] [JMServer.stop] Stopped webserver without errors

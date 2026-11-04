@@ -1,0 +1,198 @@
+﻿{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "skill": {
+      "*": "allow"
+    }
+  },
+  "plugins": ["superpowers@git+https://github.com/obra/superpowers.git"],
+  "skills": [
+    "__OPENCODE_HOME__/vendor/claude-octopus/skills",
+    "__OPENCODE_HOME__/vendor/andrej-karpathy-skills/skills"
+  ],
+  "provider": {
+    "openrouter": {
+      "models": {
+        "free-router": {
+          "name": "OpenRouter Free Router (auto)",
+          "id": "openrouter/free",
+          "tool_call": true
+        },
+        "nemotron-3-ultra": {
+          "name": "Nemotron 3 Ultra 550B (free, 1M ctx)",
+          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "tool_call": true,
+          "limit": {
+            "context": 1000000,
+            "output": 32768
+          }
+        },
+        "nemotron-3-super": {
+          "name": "Nemotron 3 Super 120B (free, 1M ctx)",
+          "id": "nvidia/nemotron-3-super-120b-a12b:free",
+          "tool_call": true,
+          "limit": {
+            "context": 1000000,
+            "output": 32768
+          }
+        },
+        "inkling": {
+          "name": "Inkling 975B (free)",
+          "id": "thinkingmachines/inkling:free",
+          "tool_call": true,
+          "limit": {
+            "context": 1000000,
+            "output": 32768
+          }
+        },
+        "inkling-small": {
+          "name": "Inkling Small 276B (free)",
+          "id": "thinkingmachines/inkling-small:free",
+          "tool_call": true,
+          "limit": {
+            "context": 128000,
+            "output": 32768
+          }
+        },
+        "laguna-s": {
+          "name": "Poolside Laguna S 2.1 (free, coding agent)",
+          "id": "poolside/laguna-s-2.1:free",
+          "tool_call": true,
+          "limit": {
+            "context": 256000,
+            "output": 64000
+          }
+        },
+        "laguna-xs": {
+          "name": "Poolside Laguna XS 2.1 (free, coding agent)",
+          "id": "poolside/laguna-xs-2.1:free",
+          "tool_call": true,
+          "limit": {
+            "context": 256000,
+            "output": 32000
+          }
+        },
+        "north-mini-code": {
+          "name": "Cohere North Mini Code (free)",
+          "id": "cohere/north-mini-code:free",
+          "tool_call": true,
+          "limit": {
+            "context": 256000,
+            "output": 64000
+          }
+        },
+        "glm-5.2": {
+          "name": "Z.ai GLM-5.2 (free)",
+          "id": "z-ai/glm-5.2:free",
+          "tool_call": true,
+          "limit": {
+            "context": 128000,
+            "output": 32768
+          }
+        },
+        "dots-3-note-preview": {
+          "name": "Dots 3 Note Preview 280B (free)",
+          "id": "dots-studio/dots-3-note-preview:free",
+          "tool_call": true,
+          "limit": {
+            "context": 128000,
+            "output": 32768
+          }
+        },
+        "nex-n2.5-pro": {
+          "name": "Nex AGI N2.5 Pro (free, agentic)",
+          "id": "nex-agi/nex-n2.5-pro:free",
+          "tool_call": true,
+          "limit": {
+            "context": 128000,
+            "output": 32768
+          }
+        },
+        "qwen-3.8-27b": {
+          "name": "Qwen 3.8 27B (free)",
+          "id": "qwen/qwen3.8-27b:free",
+          "tool_call": true,
+          "limit": {
+            "context": 128000,
+            "output": 32768
+          }
+        },
+        "gemma-4-31b": {
+          "name": "Gemma 4 31B IT (free)",
+          "id": "google/gemma-4-31b-it:free",
+          "tool_call": true,
+          "limit": {
+            "context": 128000,
+            "output": 32768
+          }
+        },
+        "nemotron-3.5-lightning": {
+          "name": "Nemotron 3.5 Lightning 30B (free, fast)",
+          "id": "nvidia/nemotron-3.5-lightning:free",
+          "tool_call": true,
+          "limit": {
+            "context": 128000,
+            "output": 32768
+          }
+        }
+      }
+    }
+  },
+  "providers": {
+    // <fcc>
+    "free-claude-code": {
+      "name": "Free Claude Code (proxy local)",
+      "package": "@opencode/ai/providers/openai/responses",
+      "settings": {
+        "baseURL": "http://127.0.0.1:8082/v1",
+        "apiKey": "{file:~/.fcc/opencode-api-key.txt}",
+        "headerTimeout": false,
+        "chunkTimeout": false,
+        "timeout": false
+      },
+      "models": {
+        "nvidia_nim/nvidia/nemotron-3-ultra-550b-a55b": {
+          "name": "Nemotron 3 Ultra 550B (FCC, free)",
+          "limit": {
+            "context": 200000,
+            "output": 32768
+          }
+        }
+      }
+    }
+    // </fcc>
+  },
+  "mcp": {
+    "servers": {
+      // <pixellab>
+      "pixellab": {
+        "type": "remote",
+        "url": "https://api.pixellab.ai/mcp",
+        "oauth": false,
+        "headers": {
+          "Authorization": "Bearer COLE_SEU_TOKEN_PIXELLAB_AQUI"
+        }
+      },
+      // </pixellab>
+      "context7": {
+        "type": "remote",
+        "url": "https://mcp.context7.com/mcp",
+        "oauth": false
+      },
+      "memoria": {
+        "type": "local",
+        "command": [
+          "node",
+          "C:/Users/Fernando/AppData/Roaming/npm/node_modules/@modelcontextprotocol/server-memory/dist/index.js"
+        ]
+      },
+      "pensamento": {
+        "type": "local",
+        "command": [
+          "node",
+          "C:/Users/Fernando/AppData/Roaming/npm/node_modules/@modelcontextprotocol/server-sequential-thinking/dist/index.js"
+        ]
+      }
+    }
+  }
+}

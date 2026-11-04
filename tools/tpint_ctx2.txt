@@ -1,0 +1,646 @@
+﻿JinRyuu/JRMCore/ComJrmc.func_71515_b(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V @319
+      [317] PSEUDO
+      [318] ALOAD 11
+   >> [319] LDC jrmcTpint
+      [320] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [321] ISTORE 19
+      [322] PSEUDO
+      [323] PSEUDO
+      [324] ILOAD 19
+      [325] ILOAD 18
+      [326] ISUB
+      [327] IFLT -> @
+JinRyuu/JRMCore/ComJrmc.func_71515_b(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V @334
+      [332] ISUB
+      [333] ALOAD 11
+   >> [334] LDC jrmcTpint
+      [335] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.setInt(ILnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)V
+      [336] PSEUDO
+      [337] PSEUDO
+      [338] ALOAD 13
+      [339] ICONST_0
+      [340] AALOAD
+      [341] ALOAD 11
+      [342] GETSTATIC JinRyuu/JRMCore/JRMCoreH.techNbt:[Ljava/lang/String;
+JinRyuu/JRMCore/ComJrmcCheck.func_71515_b(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V @220
+      [218] PSEUDO
+      [219] ALOAD 5
+   >> [220] LDC jrmcTpint
+      [221] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [222] ISTORE 19
+      [223] PSEUDO
+      [224] PSEUDO
+      [225] ICONST_4
+      [226] ANEWARRAY
+      [227] DUP
+      [228] ICONST_0
+JinRyuu/JRMCore/ComJrmcRacialSkill.func_71515_b(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V @529
+      [527] IFEQ -> @
+      [528] ALOAD 8
+   >> [529] LDC jrmcTpint
+      [530] ALOAD 0
+      [531] GETFIELD JinRyuu/JRMCore/ComJrmcRacialSkill.tp_current:I
+      [532] ALOAD 0
+      [533] GETFIELD JinRyuu/JRMCore/ComJrmcRacialSkill.tp_cost:I
+      [534] ISUB
+      [535] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [536] GOTO -> @
+      [537] PSEUDO
+JinRyuu/JRMCore/ComJrmcRacialSkill.canAfford(ZZLjava/lang/String;Lnet/minecraft/entity/player/EntityPlayerMP;Lnet/minecraft/nbt/NBTTagCompound;BBZZ)V @277
+      [275] ALOAD 0
+      [276] ALOAD 5
+   >> [277] LDC jrmcTpint
+      [278] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [279] PUTFIELD JinRyuu/JRMCore/ComJrmcRacialSkill.tp_current:I
+      [280] PSEUDO
+      [281] PSEUDO
+      [282] ILOAD 6
+      [283] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.rSai(I)Z
+      [284] IFEQ -> @
+      [285] ILOAD 1
+JinRyuu/JRMCore/ComJrmctp.func_71515_b(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V @505
+      [503] PSEUDO
+      [504] ALOAD 12
+   >> [505] LDC jrmcTpint
+      [506] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [507] ISTORE 13
+      [508] PSEUDO
+      [509] PSEUDO
+      [510] ILOAD 13
+      [511] I2L
+      [512] LLOAD 6
+      [513] LSUB
+JinRyuu/JRMCore/ComJrmctp.func_71515_b(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V @532
+      [530] PSEUDO
+      [531] ALOAD 12
+   >> [532] LDC jrmcTpint
+      [533] ILOAD 14
+      [534] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [535] PSEUDO
+      [536] PSEUDO
+      [537] ILOAD 11
+      [538] IFEQ -> @
+      [539] ALOAD 0
+      [540] ALOAD 1
+JinRyuu/JRMCore/ComJrmctp.func_71515_b(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V @577
+      [575] PSEUDO
+      [576] ALOAD 12
+   >> [577] LDC jrmcTpint
+      [578] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [579] ISTORE 13
+      [580] PSEUDO
+      [581] PSEUDO
+      [582] ILOAD 13
+      [583] I2L
+      [584] LLOAD 6
+      [585] LADD
+JinRyuu/JRMCore/ComJrmctp.func_71515_b(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V @622
+      [620] PSEUDO
+      [621] ALOAD 12
+   >> [622] LDC jrmcTpint
+      [623] ILOAD 16
+      [624] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [625] PSEUDO
+      [626] PSEUDO
+      [627] ILOAD 11
+      [628] IFEQ -> @
+      [629] ALOAD 0
+      [630] ALOAD 1
+JinRyuu/JRMCore/JRMCoreComTickH.updatePlayersData(Lnet/minecraft/server/MinecraftServer;ILnet/minecraft/entity/player/EntityPlayerMP;LJinRyuu/JRMCore/server/JGPlayerMP;Lnet/minecraft/nbt/NBTTagCompound;)V @1340
+      [1338] PSEUDO
+      [1339] ALOAD 5
+   >> [1340] LDC jrmcTpint
+      [1341] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74781_a(Ljava/lang/String;)Lnet/minecraft/nbt/NBTBase;
+      [1342] IFNONNULL -> @
+      [1343] PSEUDO
+      [1344] PSEUDO
+      [1345] ALOAD 5
+      [1346] LDC jrmcTp
+      [1347] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74765_d(Ljava/lang/String;)S
+      [1348] ISTORE 42
+JinRyuu/JRMCore/JRMCoreComTickH.updatePlayersData(Lnet/minecraft/server/MinecraftServer;ILnet/minecraft/entity/player/EntityPlayerMP;LJinRyuu/JRMCore/server/JGPlayerMP;Lnet/minecraft/nbt/NBTTagCompound;)V @1352
+      [1350] PSEUDO
+      [1351] ALOAD 5
+   >> [1352] LDC jrmcTpint
+      [1353] ILOAD 42
+      [1354] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [1355] PSEUDO
+      [1356] PSEUDO
+      [1357] ALOAD 5
+      [1358] LDC jrmcTp
+      [1359] ICONST_0
+      [1360] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74777_a(Ljava/lang/String;S)V
+JinRyuu/JRMCore/JRMCoreComTickH.updatePlayersData(Lnet/minecraft/server/MinecraftServer;ILnet/minecraft/entity/player/EntityPlayerMP;LJinRyuu/JRMCore/server/JGPlayerMP;Lnet/minecraft/nbt/NBTTagCompound;)V @1511
+      [1509] PSEUDO
+      [1510] ALOAD 5
+   >> [1511] LDC jrmcTpint
+      [1512] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [1513] ILOAD 42
+      [1514] IADD
+      [1515] ISTORE 44
+      [1516] PSEUDO
+      [1517] PSEUDO
+      [1518] ALOAD 5
+      [1519] LDC jrmcTpint
+JinRyuu/JRMCore/JRMCoreComTickH.updatePlayersData(Lnet/minecraft/server/MinecraftServer;ILnet/minecraft/entity/player/EntityPlayerMP;LJinRyuu/JRMCore/server/JGPlayerMP;Lnet/minecraft/nbt/NBTTagCompound;)V @1519
+      [1517] PSEUDO
+      [1518] ALOAD 5
+   >> [1519] LDC jrmcTpint
+      [1520] ILOAD 44
+      [1521] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [1522] PSEUDO
+      [1523] PSEUDO
+      [1524] ALOAD 5
+      [1525] GETSTATIC JinRyuu/JRMCore/JRMCoreH.techNbt:[Ljava/lang/String;
+      [1526] ICONST_0
+      [1527] AALOAD
+JinRyuu/JRMCore/JRMCoreComTickH.updatePlayersData(Lnet/minecraft/server/MinecraftServer;ILnet/minecraft/entity/player/EntityPlayerMP;LJinRyuu/JRMCore/server/JGPlayerMP;Lnet/minecraft/nbt/NBTTagCompound;)V @2491
+      [2489] INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      [2490] ALOAD 5
+   >> [2491] LDC jrmcTpint
+      [2492] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [2493] INVOKEVIRTUAL java/lang/StringBuilder.append(I)Ljava/lang/StringBuilder;
+      [2494] INVOKEVIRTUAL java/lang/StringBuilder.toString()Ljava/lang/String;
+      [2495] AASTORE
+      [2496] PSEUDO
+      [2497] PSEUDO
+      [2498] PSEUDO
+      [2499] GETSTATIC JinRyuu/JRMCore/JRMCoreComTickH.dat12:[Ljava/lang/String;
+JinRyuu/JRMCore/JRMCoreH.expPls(Lnet/minecraft/entity/player/EntityPlayer;I)V @55
+      [53] PSEUDO
+      [54] ALOAD 0
+   >> [55] LDC jrmcTpint
+      [56] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [57] ISTORE 5
+      [58] PSEUDO
+      [59] PSEUDO
+      [60] ILOAD 1
+      [61] ISTORE 6
+      [62] PSEUDO
+      [63] PSEUDO
+JinRyuu/JRMCore/JRMCoreH.expPls(Lnet/minecraft/entity/player/EntityPlayer;I)V @108
+      [106] IADD
+      [107] ALOAD 0
+   >> [108] LDC jrmcTpint
+      [109] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.setInt(ILnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)V
+      [110] PSEUDO
+      [111] PSEUDO
+      [112] PSEUDO
+      [113] IINC
+      [114] GOTO -> @
+      [115] PSEUDO
+      [116] PSEUDO
+JinRyuu/JRMCore/JRMCoreH.jrmcExp(Lnet/minecraft/entity/Entity;II)V @205
+      [203] PSEUDO
+      [204] ALOAD 13
+   >> [205] LDC jrmcTpint
+      [206] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [207] ISTORE 19
+      [208] PSEUDO
+      [209] PSEUDO
+      [210] ALOAD 13
+      [211] LDC jrmcDiff
+      [212] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getByte(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)B
+      [213] ISTORE 20
+JinRyuu/JRMCore/JRMCoreH.jrmcExp(Lnet/minecraft/entity/Entity;II)V @264
+      [262] ILOAD 23
+      [263] ALOAD 13
+   >> [264] LDC jrmcTpint
+      [265] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.setInt(ILnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)V
+      [266] PSEUDO
+      [267] PSEUDO
+      [268] PSEUDO
+      [269] ALOAD 15
+      [270] ALOAD 13
+      [271] INVOKEVIRTUAL net/minecraft/entity/player/EntityPlayerMP.func_70005_c_()Ljava/lang/String;
+      [272] INVOKEVIRTUAL java/lang/String.equalsIgnoreCase(Ljava/lang/String;)Z
+JinRyuu/JRMCore/JRMCoreH.jrmcExp(Lnet/minecraft/entity/Entity;II)V @310
+      [308] PSEUDO
+      [309] ALOAD 3
+   >> [310] LDC jrmcTpint
+      [311] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [312] ISTORE 14
+      [313] PSEUDO
+      [314] PSEUDO
+      [315] ALOAD 3
+      [316] LDC jrmcDiff
+      [317] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getByte(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)B
+      [318] ISTORE 15
+JinRyuu/JRMCore/JRMCoreH.jrmcExp(Lnet/minecraft/entity/Entity;II)V @358
+      [356] ILOAD 18
+      [357] ALOAD 3
+   >> [358] LDC jrmcTpint
+      [359] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.setInt(ILnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)V
+      [360] PSEUDO
+      [361] PSEUDO
+      [362] PSEUDO
+      [363] RETURN
+      [364] PSEUDO
+JinRyuu/JRMCore/JRMCoreH.tpalgn(Lnet/minecraft/entity/player/EntityPlayer;II)V @30
+      [28] PSEUDO
+      [29] ALOAD 0
+   >> [30] LDC jrmcTpint
+      [31] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [32] ILOAD 1
+      [33] IADD
+      [34] ISTORE 6
+      [35] PSEUDO
+      [36] PSEUDO
+      [37] ILOAD 6
+      [38] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getMaxTP()I
+JinRyuu/JRMCore/JRMCoreH.tpalgn(Lnet/minecraft/entity/player/EntityPlayer;II)V @48
+      [46] PSEUDO
+      [47] ALOAD 0
+   >> [48] LDC jrmcTpint
+      [49] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.setInt(ILnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)V
+      [50] PSEUDO
+      [51] GOTO -> @
+      [52] PSEUDO
+      [53] PSEUDO
+      [54] PSEUDO
+      [55] ALOAD 3
+      [56] INVOKEVIRTUAL net/minecraft/server/MinecraftServer.func_71213_z()[Ljava/lang/String;
+JinRyuu/JRMCore/JRMCoreH.tpalgn(Lnet/minecraft/entity/player/EntityPlayer;II)V @234
+      [232] PSEUDO
+      [233] ALOAD 8
+   >> [234] LDC jrmcTpint
+      [235] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [236] ILOAD 1
+      [237] IADD
+      [238] ISTORE 11
+      [239] PSEUDO
+      [240] PSEUDO
+      [241] ILOAD 11
+      [242] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getMaxTP()I
+JinRyuu/JRMCore/JRMCoreH.tpalgn(Lnet/minecraft/entity/player/EntityPlayer;II)V @252
+      [250] PSEUDO
+      [251] ALOAD 8
+   >> [252] LDC jrmcTpint
+      [253] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.setInt(ILnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)V
+      [254] PSEUDO
+      [255] PSEUDO
+      [256] PSEUDO
+      [257] IINC
+      [258] GOTO -> @
+      [259] PSEUDO
+      [260] PSEUDO
+JinRyuu/JRMCore/JRMCorePacHanS.handleData(ILjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @595
+      [593] PSEUDO
+      [594] ALOAD 6
+   >> [595] LDC jrmcTpint
+      [596] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [597] ISTORE 20
+      [598] PSEUDO
+      [599] PSEUDO
+      [600] ALOAD 15
+      [601] ILOAD 11
+      [602] AALOAD
+      [603] ICONST_2
+JinRyuu/JRMCore/JRMCorePacHanS.handleData(ILjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @636
+      [634] PSEUDO
+      [635] ALOAD 6
+   >> [636] LDC jrmcTpint
+      [637] ILOAD 22
+      [638] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [639] PSEUDO
+      [640] PSEUDO
+      [641] ILOAD 1
+      [642] NEW
+      [643] DUP
+      [644] INVOKESPECIAL java/lang/StringBuilder.<init>()V
+JinRyuu/JRMCore/JRMCorePacHanS.handleQuad(IIIILnet/minecraft/entity/player/EntityPlayer;)V @790
+      [788] PSEUDO
+      [789] ALOAD 7
+   >> [790] LDC jrmcTpint
+      [791] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [792] ISTORE 8
+      [793] PSEUDO
+      [794] PSEUDO
+      [795] ILOAD 2
+      [796] IFNE -> @
+      [797] PSEUDO
+      [798] PSEUDO
+JinRyuu/JRMCore/JRMCorePacHanS.handleQuad(IIIILnet/minecraft/entity/player/EntityPlayer;)V @809
+      [807] PSEUDO
+      [808] ALOAD 7
+   >> [809] LDC jrmcTpint
+      [810] ILOAD 8
+      [811] ICONST_1
+      [812] ISUB
+      [813] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [814] PSEUDO
+      [815] PSEUDO
+      [816] ALOAD 7
+      [817] GETSTATIC JinRyuu/JRMCore/JRMCorePacHanS.Acc:Ljava/lang/String;
+JinRyuu/JRMCore/JRMCorePacHanS.handleQuad(IIIILnet/minecraft/entity/player/EntityPlayer;)V @974
+      [972] PSEUDO
+      [973] ALOAD 7
+   >> [974] LDC jrmcTpint
+      [975] ILOAD 8
+      [976] ICONST_1
+      [977] ISUB
+      [978] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [979] GOTO -> @
+      [980] PSEUDO
+      [981] PSEUDO
+      [982] PSEUDO
+JinRyuu/JRMCore/JRMCorePacHanS.handleQuad(IIIILnet/minecraft/entity/player/EntityPlayer;)V @1078
+      [1076] PSEUDO
+      [1077] ALOAD 7
+   >> [1078] LDC jrmcTpint
+      [1079] ILOAD 15
+      [1080] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [1081] PSEUDO
+      [1082] PSEUDO
+      [1083] ALOAD 7
+      [1084] LDC jrmcTPlimit
+      [1085] ILOAD 13
+      [1086] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+JinRyuu/JRMCore/JRMCorePacHanS.handleQuad(IIIILnet/minecraft/entity/player/EntityPlayer;)V @1188
+      [1186] PSEUDO
+      [1187] ALOAD 7
+   >> [1188] LDC jrmcTpint
+      [1189] ILOAD 8
+      [1190] ICONST_1
+      [1191] ISUB
+      [1192] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [1193] GOTO -> @
+      [1194] PSEUDO
+      [1195] PSEUDO
+      [1196] PSEUDO
+JinRyuu/JRMCore/JRMCorePacHanS.handleQuad(IIIILnet/minecraft/entity/player/EntityPlayer;)V @1292
+      [1290] PSEUDO
+      [1291] ALOAD 7
+   >> [1292] LDC jrmcTpint
+      [1293] ILOAD 15
+      [1294] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [1295] PSEUDO
+      [1296] PSEUDO
+      [1297] ALOAD 7
+      [1298] LDC jrmcTPlimit2
+      [1299] ILOAD 13
+      [1300] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+JinRyuu/JRMCore/JRMCorePacHanS.handleTech(BLjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @430
+      [428] PSEUDO
+      [429] ALOAD 3
+   >> [430] LDC jrmcTpint
+      [431] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [432] ISTORE 13
+      [433] PSEUDO
+      [434] PSEUDO
+      [435] ILOAD 13
+      [436] ILOAD 12
+      [437] IADD
+      [438] ALOAD 3
+JinRyuu/JRMCore/JRMCorePacHanS.handleTech(BLjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @439
+      [437] IADD
+      [438] ALOAD 3
+   >> [439] LDC jrmcTpint
+      [440] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.setInt(ILnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)V
+      [441] PSEUDO
+      [442] PSEUDO
+      [443] GOTO -> @
+      [444] PSEUDO
+      [445] PSEUDO
+      [446] ALOAD 9
+      [447] LDC ;
+JinRyuu/JRMCore/JRMCorePacHanS.handleTech(BLjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @468
+      [466] PSEUDO
+      [467] ALOAD 3
+   >> [468] LDC jrmcTpint
+      [469] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [470] ISTORE 12
+      [471] PSEUDO
+      [472] PSEUDO
+      [473] ILOAD 12
+      [474] ILOAD 11
+      [475] IADD
+      [476] ALOAD 3
+JinRyuu/JRMCore/JRMCorePacHanS.handleTech(BLjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @477
+      [475] IADD
+      [476] ALOAD 3
+   >> [477] LDC jrmcTpint
+      [478] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.setInt(ILnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)V
+      [479] PSEUDO
+      [480] PSEUDO
+      [481] PSEUDO
+      [482] LDC  
+      [483] ALOAD 3
+      [484] GETSTATIC JinRyuu/JRMCore/JRMCoreH.techNbt:[Ljava/lang/String;
+      [485] ILOAD 1
+JinRyuu/JRMCore/JRMCorePacHanS.handleTech(BLjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @593
+      [591] PSEUDO
+      [592] ALOAD 3
+   >> [593] LDC jrmcTpint
+      [594] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [595] ISTORE 18
+      [596] PSEUDO
+      [597] PSEUDO
+      [598] ILOAD 18
+      [599] ILOAD 17
+      [600] ISUB
+      [601] IFLT -> @
+JinRyuu/JRMCore/JRMCorePacHanS.handleTech(BLjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @608
+      [606] ISUB
+      [607] ALOAD 3
+   >> [608] LDC jrmcTpint
+      [609] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.setInt(ILnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)V
+      [610] PSEUDO
+      [611] PSEUDO
+      [612] NEW
+      [613] DUP
+      [614] INVOKESPECIAL java/lang/StringBuilder.<init>()V
+      [615] LDC 
+      [616] INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+JinRyuu/JRMCore/JRMCorePacHanS.handleTech(BLjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @727
+      [725] PSEUDO
+      [726] ALOAD 3
+   >> [727] LDC jrmcTpint
+      [728] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [729] ISTORE 14
+      [730] PSEUDO
+      [731] PSEUDO
+      [732] ILOAD 14
+      [733] ILOAD 13
+      [734] ISUB
+      [735] IFLT -> @
+JinRyuu/JRMCore/JRMCorePacHanS.handleTech(BLjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @744
+      [742] ISUB
+      [743] ALOAD 3
+   >> [744] LDC jrmcTpint
+      [745] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.setInt(ILnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)V
+      [746] PSEUDO
+      [747] PSEUDO
+      [748] NEW
+      [749] DUP
+      [750] INVOKESPECIAL java/lang/StringBuilder.<init>()V
+      [751] LDC 
+      [752] INVOKEVIRTUAL java/lang/StringBuilder.append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+JinRyuu/JRMCore/JRMCorePacHanS.handleTech(BLjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @822
+      [820] PSEUDO
+      [821] ALOAD 3
+   >> [822] LDC jrmcTpint
+      [823] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.getInt(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)I
+      [824] ISTORE 11
+      [825] PSEUDO
+      [826] PSEUDO
+      [827] ILOAD 11
+      [828] ILOAD 10
+      [829] ISUB
+      [830] IFLT -> @
+JinRyuu/JRMCore/JRMCorePacHanS.handleTech(BLjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @837
+      [835] ISUB
+      [836] ALOAD 3
+   >> [837] LDC jrmcTpint
+      [838] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.setInt(ILnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;)V
+      [839] PSEUDO
+      [840] PSEUDO
+      [841] ALOAD 2
+      [842] ALOAD 3
+      [843] GETSTATIC JinRyuu/JRMCore/JRMCoreH.techNbt:[Ljava/lang/String;
+      [844] ILOAD 1
+      [845] AALOAD
+JinRyuu/JRMCore/JRMCorePacHanS.handleStats3(BBBLnet/minecraft/entity/player/EntityPlayer;)V @324
+      [322] PSEUDO
+      [323] ALOAD 5
+   >> [324] LDC jrmcTpint
+      [325] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [326] ISTORE 31
+      [327] PSEUDO
+      [328] PSEUDO
+      [329] ILOAD 2
+      [330] ICONST_0
+      [331] ILOAD 7
+      [332] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.isPowerTypeKi(I)Z
+JinRyuu/JRMCore/JRMCorePacHanS.handleStats3(BBBLnet/minecraft/entity/player/EntityPlayer;)V @651
+      [649] PSEUDO
+      [650] ALOAD 5
+   >> [651] LDC jrmcTpint
+      [652] ILOAD 42
+      [653] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [654] PSEUDO
+      [655] PSEUDO
+      [656] PSEUDO
+      [657] GOTO -> @
+      [658] PSEUDO
+      [659] PSEUDO
+JinRyuu/JRMCore/JRMCorePacHanS.handleStats3(BBBLnet/minecraft/entity/player/EntityPlayer;)V @1022
+      [1020] PSEUDO
+      [1021] ALOAD 5
+   >> [1022] LDC jrmcTpint
+      [1023] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [1024] ISTORE 38
+      [1025] PSEUDO
+      [1026] PSEUDO
+      [1027] ILOAD 10
+      [1028] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.rSai(I)Z
+      [1029] IFEQ -> @
+      [1030] ILOAD 2
+JinRyuu/JRMCore/JRMCorePacHanS.handleStats3(BBBLnet/minecraft/entity/player/EntityPlayer;)V @1198
+      [1196] PSEUDO
+      [1197] ALOAD 5
+   >> [1198] LDC jrmcTpint
+      [1199] ILOAD 38
+      [1200] ILOAD 37
+      [1201] ISUB
+      [1202] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [1203] PSEUDO
+      [1204] PSEUDO
+      [1205] PSEUDO
+      [1206] GOTO -> @
+JinRyuu/JRMCore/JRMCorePacHanS.handleUpgrade(BLnet/minecraft/entity/player/EntityPlayer;)V @195
+      [193] IFLE -> @
+      [194] ALOAD 3
+   >> [195] LDC jrmcTpint
+      [196] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [197] ILOAD 17
+      [198] IF_ICMPLT -> @
+      [199] ALOAD 3
+      [200] GETSTATIC JinRyuu/JRMCore/JRMCoreH.AttrbtNbtI:[Ljava/lang/String;
+      [201] ILOAD 1
+      [202] BIPUSH 6
+      [203] IREM
+JinRyuu/JRMCore/JRMCorePacHanS.handleUpgrade(BLnet/minecraft/entity/player/EntityPlayer;)V @256
+      [254] PSEUDO
+      [255] ALOAD 3
+   >> [256] LDC jrmcTpint
+      [257] ALOAD 3
+      [258] LDC jrmcTpint
+      [259] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [260] ILOAD 17
+      [261] ISUB
+      [262] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [263] PSEUDO
+      [264] PSEUDO
+JinRyuu/JRMCore/JRMCorePacHanS.handleUpgrade(BLnet/minecraft/entity/player/EntityPlayer;)V @258
+      [256] LDC jrmcTpint
+      [257] ALOAD 3
+   >> [258] LDC jrmcTpint
+      [259] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [260] ILOAD 17
+      [261] ISUB
+      [262] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [263] PSEUDO
+      [264] PSEUDO
+      [265] ALOAD 3
+      [266] GETSTATIC JinRyuu/JRMCore/JRMCoreH.AttrbtNbtI:[Ljava/lang/String;
+JinRyuu/JRMCore/JRMCorePacHanS.handleUpgrade(BLnet/minecraft/entity/player/EntityPlayer;)V @494
+      [492] ALOAD 2
+      [493] ALOAD 3
+   >> [494] LDC jrmcTpint
+      [495] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [496] ALOAD 3
+      [497] LDC jrmcExp
+      [498] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74771_c(Ljava/lang/String;)B
+      [499] ALOAD 3
+      [500] LDC jrmcAlign
+      [501] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74771_c(Ljava/lang/String;)B
+      [502] ALOAD 6
+JinRyuu/JRMCore/JRMCorePacHanS.handleChar(BILnet/minecraft/entity/player/EntityPlayer;)V @416
+      [414] ALOAD 3
+      [415] ALOAD 4
+   >> [416] LDC jrmcTpint
+      [417] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [418] ALOAD 4
+      [419] LDC jrmcExp
+      [420] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74771_c(Ljava/lang/String;)B
+      [421] ALOAD 4
+      [422] LDC jrmcAlign
+      [423] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74771_c(Ljava/lang/String;)B
+      [424] ALOAD 12
+JinRyuu/JRMCore/JRMCorePacHanS.handleChar(BILnet/minecraft/entity/player/EntityPlayer;)V @663
+      [661] PSEUDO
+      [662] ALOAD 4
+   >> [663] LDC jrmcTpint
+      [664] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [665] ISTORE 11
+      [666] PSEUDO
+      [667] PSEUDO
+      [668] ALOAD 3
+      [669] INVOKESTATIC JinRyuu/JRMCore/JRMCoreH.PlyrAttrbts(Lnet/minecraft/entity/player/EntityPlayer;)[I
+      [670] ASTORE 12
+      [671] PSEUDO
+JinRyuu/JRMCore/JRMCorePacHanS.handleChar(BILnet/minecraft/entity/player/EntityPlayer;)V @705
+      [703] PSEUDO
+      [704] ALOAD 4
+   >> [705] LDC jrmcTpint
+      [706] ILOAD 11
+      [707] BIPUSH 20
+      [708] ISUB
+      [709] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74768_a(Ljava/lang/String;I)V
+      [710] PSEUDO
+      [711] PSEUDO
+      [712] ALOAD 3
+      [713] ILOAD 13
+JinRyuu/JRMCore/JRMCorePacHanS.handleTick(ILjava/lang/String;Lnet/minecraft/entity/player/EntityPlayer;)V @102
+      [100] ALOAD 3
+      [101] ALOAD 4
+   >> [102] LDC jrmcTpint
+      [103] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74762_e(Ljava/lang/String;)I
+      [104] ALOAD 4
+      [105] LDC jrmcExp
+      [106] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74771_c(Ljava/lang/String;)B
+      [107] ALOAD 4
+      [108] LDC jrmcAlign
+      [109] INVOKEVIRTUAL net/minecraft/nbt/NBTTagCompound.func_74771_c(Ljava/lang/String;)B
+      [110] ALOAD 5

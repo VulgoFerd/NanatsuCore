@@ -1,0 +1,364 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 31/10/26 22:09
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+cpw.mods.fml.common.LoaderException: java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    JinRyuu/JRMCore/JRMCorePacHanS.handleChar(BILnet/minecraft/entity/player/EntityPlayer;)V @609: invokestatic
+  Reason:
+    Type long_2nd (current frame, stack[2]) is not assignable to integer
+  Current Frame:
+    bci: @609
+    flags: { }
+    locals: { 'JinRyuu/JRMCore/JRMCorePacHanS', integer, integer, 'net/minecraft/entity/player/EntityPlayer', 'net/minecraft/nbt/NBTTagCompound', integer, integer, integer, integer, integer, integer, integer, top, top, top, top, '[I', integer }
+    stack: { 'net/minecraft/entity/player/EntityPlayer', long, long_2nd, integer, integer, '[I' }
+  Bytecode:
+    0x0000000: 2a2d 1301 18b6 011c 3a04 1014 3605 1904
+    0x0000010: b200 95b6 026b 3606 1904 b202 67b6 026b
+    0x0000020: 3607 1904 b200 9db6 026b 3608 1904 b202
+    0x0000030: 6db6 026b 3609 1904 b204 dfb6 026b 360a
+    0x0000040: 1506 9a00 2a1b 2a03 b608 05a0 0021 1904
+    0x0000050: b200 9d1c 91b6 05f6 1904 b204 df15 0807
+    0x0000060: a000 0707 a700 0403 91b6 05f6 1506 9a00
+    0x0000070: 1d1b 106a a000 1719 04b2 04df 1508 07a0
+    0x0000080: 0007 1ca7 0004 0391 b605 f615 069a 001b
+    0x0000090: 1b2a 1007 b608 05a0 0011 1904 1308 07b2
+    0x00000a0: 080a 1c2e 86b6 080e 1506 9a00 161b 2a05
+    0x00000b0: b608 05a0 000d 1904 b202 671c 91b6 05f6
+    0x00000c0: 1506 9a00 161b 2a06 b608 05a0 000d 1904
+    0x00000d0: b202 6d1c 91b6 05f6 1506 9a01 d81b 2a07
+    0x00000e0: b608 05a0 01cf 0436 0bb8 0811 9900 112d
+    0x00000f0: b806 ba9a 0007 04a7 0004 0336 0b15 0b99
+    0x0000100: 01b3 1904 b200 951c 91b6 05f6 1507 049f
+    0x0000110: 0009 1507 05a0 00ea 1904 b204 df15 0807
+    0x0000120: a000 0707 a700 0403 91b6 05f6 2d13 0813
+    0x0000130: b804 cd36 0c15 0c04 a000 5b03 2d13 0813
+    0x0000140: b800 d703 360d 150d 1006 a200 462d b208
+    0x0000150: 1615 0d32 b804 cd36 0e15 0715 0d15 0815
+    0x0000160: 09b8 081a 360f 1904 b207 dc15 0d32 150e
+    0x0000170: 150f a400 0815 0ea7 0005 150f b605 1803
+    0x0000180: 2db2 0816 150d 32b8 00d7 840d 01a7 ffb9
+    0x0000190: a700 2903 360d 150d 1006 a200 1f19 04b2
+    0x00001a0: 07dc 150d 3215 0715 0d15 0815 09b8 081a
+    0x00001b0: b605 1884 0d01 a7ff e02d b803 573a 102d
+    0x00001c0: 0515 0705 1910 052e 1508 1509 0bb8 04e3
+    0x00001d0: 3611 1511 2d13 05c2 b800 d72d 0815 0708
+    0x00001e0: 1910 082e 1508 1509 2d15 07b8 05c6 b804
+    0x00001f0: e336 1215 122d 1305 c8b8 00d7 a700 4a03
+    0x0000200: 360c 150c 06a2 001f 1904 b207 dc15 0c32
+    0x0000210: 1507 150c 1508 1509 b808 1ab6 0518 840c
+    0x0000220: 01a7 ffe1 2db8 0357 3a10 2d05 1507 0519
+    0x0000230: 1005 2e15 0815 090b b804 e336 1115 112d
+    0x0000240: 1305 c2b8 00d7 2d19 0413 0178 b601 7c19
+    0x0000250: 0413 07f6 b602 6b19 0413 02fa b602 6b19
+    0x0000260: 10b8 07fa 1904 1307 4d19 04b2 009d b602
+    0x0000270: 6b19 04b2 026d b602 6b15 07b8 081e b602
+    0x0000280: cd19 0413 074f 1904 b200 9db6 026b 1904
+    0x0000290: b202 6db6 026b 1507 b808 21b6 02cd 1904
+    0x00002a0: 1308 2303 b605 1819 0413 0825 1308 27b6
+    0x00002b0: 02cd 1b2a 08b6 0805 a000 1919 04b2 0829
+    0x00002c0: b602 6b1c a200 0d19 04b2 0829 1c91 b605
+    0x00002d0: f61b 2a10 06b6 0805 a000 0d19 04b2 082b
+    0x00002e0: 1c91 b605 f61b 1064 a000 112d b806 ba9a
+    0x00002f0: 000a b808 2e2d b808 311b 1065 a000 2f19
+    0x0000300: 04b2 0829 b602 6b04 a100 2319 0413 0833
+    0x0000310: b605 0804 a300 1719 0413 0833 1109 6019
+    0x0000320: 04b2 0829 b602 6b68 b605 181b 1066 a000
+    0x0000330: 3b19 0413 0835 b602 6b99 000f 1904 1308
+    0x0000340: 35b6 026b 02a0 000f 1904 1308 3504 b605
+    0x0000350: f6a7 0018 1904 1308 35b6 026b 04a0 000c
+    0x0000360: 1904 1308 3503 b605 f615 069a 0024 1b10
+    0x0000370: 67a0 001e 1c9a 000c 1904 1308 3505 b605
+    0x0000380: f61c 04a0 000c 1904 1308 3503 b605 f61b
+    0x0000390: 1068 a000 5519 0413 0835 b602 6b99 001b
+    0x00003a0: 1904 1308 35b6 026b 029f 000f 1904 1308
+    0x00003b0: 35b6 026b 04a0 000c 1904 1308 3506 b605
+    0x00003c0: f62d 1308 37b8 009b 360b 150b 1007 9f00
+    0x00003d0: 1115 0b10 089f 000a 150b 100e a000 0b03
+    0x00003e0: 2d13 0837 b805 471b 1069 a000 6919 0413
+    0x00003f0: 0178 b601 7c36 0b2d b803 573a 102d 0515
+    0x0000400: 0705 1910 052e 1508 1509 0bb8 04e3 3611
+    0x0000410: 1904 1308 35b6 026b 069f 000f 1904 1308
+    0x0000420: 35b6 026b 07a0 002e 150b 1014 a100 2719
+    0x0000430: 0413 0178 150b 1014 64b6 0184 2d15 1186
+    0x0000440: 1306 2b6a 8b01 b808 3b57 1904 1308 3503
+    0x0000450: b605 f6b1                              
+  Stackmap Table:
+    full_frame(@103,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190]})
+    full_frame(@104,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190],Integer})
+    same_frame(@108)
+    full_frame(@134,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190]})
+    full_frame(@135,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190],Integer})
+    same_frame(@139)
+    same_frame(@168)
+    same_frame(@192)
+    same_frame(@216)
+    append_frame(@250,Integer)
+    same_locals_1_stack_item_frame(@251,Integer)
+    same_frame(@253)
+    same_frame(@280)
+    full_frame(@295,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190]})
+    full_frame(@296,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190],Integer})
+    append_frame(@326,Integer,Integer)
+    full_frame(@378,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190]})
+    full_frame(@380,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190],Integer})
+    chop_frame(@400,3)
+    same_frame(@403)
+    append_frame(@406,Integer)
+    chop_frame(@441,1)
+    chop_frame(@511,1)
+    append_frame(@514,Integer)
+    chop_frame(@548,1)
+    full_frame(@582,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Top,Top,Top,Top,Object[#877],Integer},{})
+    full_frame(@690,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{})
+    same_frame(@721)
+    same_frame(@741)
+    same_frame(@761)
+    same_frame(@811)
+    same_frame(@840)
+    same_frame(@852)
+    same_frame(@873)
+    same_frame(@897)
+    same_frame(@911)
+    same_frame(@952)
+    same_frame(@961)
+    append_frame(@991,Integer)
+    chop_frame(@999,1)
+    full_frame(@1064,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Top,Top,Top,Top,Object[#877],Integer},{})
+    full_frame(@1107,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{})
+
+	at cpw.mods.fml.common.LoadController.transition(LoadController.java:163)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:544)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:208)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:480)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:878)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+Caused by: java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    JinRyuu/JRMCore/JRMCorePacHanS.handleChar(BILnet/minecraft/entity/player/EntityPlayer;)V @609: invokestatic
+  Reason:
+    Type long_2nd (current frame, stack[2]) is not assignable to integer
+  Current Frame:
+    bci: @609
+    flags: { }
+    locals: { 'JinRyuu/JRMCore/JRMCorePacHanS', integer, integer, 'net/minecraft/entity/player/EntityPlayer', 'net/minecraft/nbt/NBTTagCompound', integer, integer, integer, integer, integer, integer, integer, top, top, top, top, '[I', integer }
+    stack: { 'net/minecraft/entity/player/EntityPlayer', long, long_2nd, integer, integer, '[I' }
+  Bytecode:
+    0x0000000: 2a2d 1301 18b6 011c 3a04 1014 3605 1904
+    0x0000010: b200 95b6 026b 3606 1904 b202 67b6 026b
+    0x0000020: 3607 1904 b200 9db6 026b 3608 1904 b202
+    0x0000030: 6db6 026b 3609 1904 b204 dfb6 026b 360a
+    0x0000040: 1506 9a00 2a1b 2a03 b608 05a0 0021 1904
+    0x0000050: b200 9d1c 91b6 05f6 1904 b204 df15 0807
+    0x0000060: a000 0707 a700 0403 91b6 05f6 1506 9a00
+    0x0000070: 1d1b 106a a000 1719 04b2 04df 1508 07a0
+    0x0000080: 0007 1ca7 0004 0391 b605 f615 069a 001b
+    0x0000090: 1b2a 1007 b608 05a0 0011 1904 1308 07b2
+    0x00000a0: 080a 1c2e 86b6 080e 1506 9a00 161b 2a05
+    0x00000b0: b608 05a0 000d 1904 b202 671c 91b6 05f6
+    0x00000c0: 1506 9a00 161b 2a06 b608 05a0 000d 1904
+    0x00000d0: b202 6d1c 91b6 05f6 1506 9a01 d81b 2a07
+    0x00000e0: b608 05a0 01cf 0436 0bb8 0811 9900 112d
+    0x00000f0: b806 ba9a 0007 04a7 0004 0336 0b15 0b99
+    0x0000100: 01b3 1904 b200 951c 91b6 05f6 1507 049f
+    0x0000110: 0009 1507 05a0 00ea 1904 b204 df15 0807
+    0x0000120: a000 0707 a700 0403 91b6 05f6 2d13 0813
+    0x0000130: b804 cd36 0c15 0c04 a000 5b03 2d13 0813
+    0x0000140: b800 d703 360d 150d 1006 a200 462d b208
+    0x0000150: 1615 0d32 b804 cd36 0e15 0715 0d15 0815
+    0x0000160: 09b8 081a 360f 1904 b207 dc15 0d32 150e
+    0x0000170: 150f a400 0815 0ea7 0005 150f b605 1803
+    0x0000180: 2db2 0816 150d 32b8 00d7 840d 01a7 ffb9
+    0x0000190: a700 2903 360d 150d 1006 a200 1f19 04b2
+    0x00001a0: 07dc 150d 3215 0715 0d15 0815 09b8 081a
+    0x00001b0: b605 1884 0d01 a7ff e02d b803 573a 102d
+    0x00001c0: 0515 0705 1910 052e 1508 1509 0bb8 04e3
+    0x00001d0: 3611 1511 2d13 05c2 b800 d72d 0815 0708
+    0x00001e0: 1910 082e 1508 1509 2d15 07b8 05c6 b804
+    0x00001f0: e336 1215 122d 1305 c8b8 00d7 a700 4a03
+    0x0000200: 360c 150c 06a2 001f 1904 b207 dc15 0c32
+    0x0000210: 1507 150c 1508 1509 b808 1ab6 0518 840c
+    0x0000220: 01a7 ffe1 2db8 0357 3a10 2d05 1507 0519
+    0x0000230: 1005 2e15 0815 090b b804 e336 1115 112d
+    0x0000240: 1305 c2b8 00d7 2d19 0413 0178 b601 7c19
+    0x0000250: 0413 07f6 b602 6b19 0413 02fa b602 6b19
+    0x0000260: 10b8 07fa 1904 1307 4d19 04b2 009d b602
+    0x0000270: 6b19 04b2 026d b602 6b15 07b8 081e b602
+    0x0000280: cd19 0413 074f 1904 b200 9db6 026b 1904
+    0x0000290: b202 6db6 026b 1507 b808 21b6 02cd 1904
+    0x00002a0: 1308 2303 b605 1819 0413 0825 1308 27b6
+    0x00002b0: 02cd 1b2a 08b6 0805 a000 1919 04b2 0829
+    0x00002c0: b602 6b1c a200 0d19 04b2 0829 1c91 b605
+    0x00002d0: f61b 2a10 06b6 0805 a000 0d19 04b2 082b
+    0x00002e0: 1c91 b605 f61b 1064 a000 112d b806 ba9a
+    0x00002f0: 000a b808 2e2d b808 311b 1065 a000 2f19
+    0x0000300: 04b2 0829 b602 6b04 a100 2319 0413 0833
+    0x0000310: b605 0804 a300 1719 0413 0833 1109 6019
+    0x0000320: 04b2 0829 b602 6b68 b605 181b 1066 a000
+    0x0000330: 3b19 0413 0835 b602 6b99 000f 1904 1308
+    0x0000340: 35b6 026b 02a0 000f 1904 1308 3504 b605
+    0x0000350: f6a7 0018 1904 1308 35b6 026b 04a0 000c
+    0x0000360: 1904 1308 3503 b605 f615 069a 0024 1b10
+    0x0000370: 67a0 001e 1c9a 000c 1904 1308 3505 b605
+    0x0000380: f61c 04a0 000c 1904 1308 3503 b605 f61b
+    0x0000390: 1068 a000 5519 0413 0835 b602 6b99 001b
+    0x00003a0: 1904 1308 35b6 026b 029f 000f 1904 1308
+    0x00003b0: 35b6 026b 04a0 000c 1904 1308 3506 b605
+    0x00003c0: f62d 1308 37b8 009b 360b 150b 1007 9f00
+    0x00003d0: 1115 0b10 089f 000a 150b 100e a000 0b03
+    0x00003e0: 2d13 0837 b805 471b 1069 a000 6919 0413
+    0x00003f0: 0178 b601 7c36 0b2d b803 573a 102d 0515
+    0x0000400: 0705 1910 052e 1508 1509 0bb8 04e3 3611
+    0x0000410: 1904 1308 35b6 026b 069f 000f 1904 1308
+    0x0000420: 35b6 026b 07a0 002e 150b 1014 a100 2719
+    0x0000430: 0413 0178 150b 1014 64b6 0184 2d15 1186
+    0x0000440: 1306 2b6a 8b01 b808 3b57 1904 1308 3503
+    0x0000450: b605 f6b1                              
+  Stackmap Table:
+    full_frame(@103,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190]})
+    full_frame(@104,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190],Integer})
+    same_frame(@108)
+    full_frame(@134,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190]})
+    full_frame(@135,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190],Integer})
+    same_frame(@139)
+    same_frame(@168)
+    same_frame(@192)
+    same_frame(@216)
+    append_frame(@250,Integer)
+    same_locals_1_stack_item_frame(@251,Integer)
+    same_frame(@253)
+    same_frame(@280)
+    full_frame(@295,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190]})
+    full_frame(@296,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190],Integer})
+    append_frame(@326,Integer,Integer)
+    full_frame(@378,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190]})
+    full_frame(@380,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer},{Object[#308],Object[#190],Integer})
+    chop_frame(@400,3)
+    same_frame(@403)
+    append_frame(@406,Integer)
+    chop_frame(@441,1)
+    chop_frame(@511,1)
+    append_frame(@514,Integer)
+    chop_frame(@548,1)
+    full_frame(@582,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Top,Top,Top,Top,Object[#877],Integer},{})
+    full_frame(@690,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{})
+    same_frame(@721)
+    same_frame(@741)
+    same_frame(@761)
+    same_frame(@811)
+    same_frame(@840)
+    same_frame(@852)
+    same_frame(@873)
+    same_frame(@897)
+    same_frame(@911)
+    same_frame(@952)
+    same_frame(@961)
+    append_frame(@991,Integer)
+    chop_frame(@999,1)
+    full_frame(@1064,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Top,Top,Top,Top,Object[#877],Integer},{})
+    full_frame(@1107,{Object[#2],Integer,Integer,Object[#192],Object[#308],Integer,Integer,Integer,Integer,Integer,Integer},{})
+
+	at JinRyuu.JRMCore.JRMCore.<clinit>(JRMCore.java:19)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at cpw.mods.fml.common.ProxyInjector.inject(ProxyInjector.java:59)
+	at cpw.mods.fml.common.FMLModContainer.constructMod(FMLModContainer.java:512)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:513)
+	... 10 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 823554616 bytes (785 MB) / 1140850688 bytes (1088 MB) up to 2147483648 bytes (2048 MB)
+	JVM Flags: 8 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx2G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 42 mods loaded, 42 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UC	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UC	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UC	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UC	AM2-Preloader{0.0.3} [AMCore] (minecraft.jar) 
+	UC	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UC	LumySkinPatch{1.0.13} [Lumy Skin Patch] (minecraft.jar) 
+	UC	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-universal.jar) 
+	UC	unimixins{0.1.17} [UniMixins] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	unimixins-mixin{0.1.17} [UniMixins: Mixin (UniMix)] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	unimixins-compat{0.1.17} [UniMixins: Compatibility] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	mixingasm{0.3} [UniMixins: Mixingasm] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	spongemixins{2.0.1} [UniMixins: SpongeMixins] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	mixinbooterlegacy{1.2.1} [UniMixins: MixinBooterLegacy] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	gasstation{0.5.1} [UniMixins: GasStation] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	gtnhmixins{2.2.0} [UniMixins: GTNHMixins] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	mixinextras{0.1.17} [UniMixins: MixinExtras] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UC	fullbright{1.2} [Fullbright] (1.7.10-Fullbright-v1.2.jar) 
+	UC	DamageIndicatorsMod{3.2.3} [Damage Indicators] (1.7.10DamageIndicatorsMod-3.2.3.jar) 
+	UC	nanatsu{0.1} [nanatsu] (7dsMod_0.1_2.jar) 
+	UC	crow{1.1} [Crow's weapons Mod] (7DSModels.jar) 
+	UC	nanatsunotaizai{4.0.0} [nanatsunotaizai] (7DSNationv1.3.jar) 
+	UC	advancedtitles{1.0.0} [AdvancedTitles] (advancedtitles-1.0.0.jar) 
+	UC	AnimationAPI{1.2.4} [AnimationAPI] (AnimationAPI-1.7.10.jar) 
+	UC	armourersWorkshop{1.7.10-0.48.5} [Armourer's Workshop] (Armourers-Workshop-1.7.10-0.48.5.jar) 
+	UC	arsmagica2{1.4.0.009} [Ars Magica 2] (Ars-Magica-2-Mod-1.7.10.jar) 
+	UC	clientslots{1.0.0} [ClientSlots] (ClientSlots-1.7.10.jar) 
+	UC	crowhpbar{1.0} [Crow's HP Bar] (crowHPBar-1.0.jar) 
+	UE	jinryuujrmcore{1.3.51} [JinRyuu's JRMCore] (JRMCore-v1.3.51-bignum.jar) 
+	UE	jinryuudragonblockc{1.4.85} [Dragon Block C] (DragonBlockC-v1.4.85.jar) 
+	UC	wizardry{1.1.5} [Electroblob's Wizardry] (ElectroblobsWizardry-1.1.5-MC1.7.10.jar) 
+	UC	ias{D7.29 :P} [In-Game Account Switcher] (InGameAccountSwitcher-Forge-1.7-8.0.1.jar) 
+	UE	jinryuubetterrenderaddon{1.6.52} [JinRyuu's Better Render Addon] (JBRA-Client-v1.6.52.jar) 
+	UC	journeymap{4.0.1} [JourneyMap] (JourneyMap-Mod-1.7.10-FairPlay.jar) 
+	UC	LunatriusCore{1.1.2.21} [LunatriusCore] (LunatriusCore-1.7.10-1.1.2.21-universal.jar) 
+	UC	necrotempus{1.3.6} [NecroTempus] (necrotempus-1.3.6.jar) 
+	UC	customnpcs{1.11.1} [CustomNPC+] (nntdark-CustomNPC-Plus-1.11.1.jar) 
+	UE	npcdbc{1.2.1} [CustomNPC+ DBC Addon] (npcdbc-1.2.1-hotfix1.jar) 
+	UC	omniconfig{1.0.1} [Omniconfig] (omniconfig-1.0.1-mc1.7.10.jar) 
+	UC	rpresence{1.0} [rpresence] (RPresenceCore-NNTDark.jar) 
+	UC	Schematica{1.7.6.131} [Schematica] (Schematica-1.7.10-1.7.6.131-universal.jar) 
+	UC	Waila{1.5.10} [Waila] (Waila-1.5.10_1.7.10.jar) 
+	UC	witchery{0.24.1} [Witchery] (Witchery-Mod-1.7.10.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.3.0 - Build 20.19.15.5171' Renderer: 'Intel(R) HD Graphics 4600'
+	Mixins in Stacktrace: 
+		cpw.mods.fml.common.LoadController:
+			mixin.mixinbooterlegacy.json:LoadControllerMixin from mod (unknown)
+		net.minecraft.client.Minecraft:
+			mixins.npcdbc.json:client.MixinMinecraft from mod (unknown)
+		cpw.mods.fml.client.FMLClientHandler:
+			mixins.necrotempus.json:fml.FMLClientHandler from mod (unknown)

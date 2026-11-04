@@ -1,0 +1,17 @@
+{
+  "id": "Ban na floresta_5929,32,6574",
+  "name": "Ban na floresta",
+  "icon": "waypoint-normal.png",
+  "x": 5929,
+  "y": 32,
+  "z": 6574,
+  "r": 32,
+  "g": 116,
+  "b": 109,
+  "enable": true,
+  "type": "Normal",
+  "origin": "JourneyMap",
+  "dimensions": [
+    14
+  ]
+}

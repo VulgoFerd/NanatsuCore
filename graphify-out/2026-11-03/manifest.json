@@ -1,0 +1,922 @@
+{
+  ".agents/skills/security-audit/report-schema.json": {
+    "mtime": 1793715009.778109,
+    "seen": 1793715795.5025344,
+    "ast_hash": "e705ada366ad4025f55f943c95d9f590",
+    "semantic_hash": "e705ada366ad4025f55f943c95d9f590",
+    "ast_empty": true
+  },
+  ".agents/skills/security-audit/validate-coverage-ledger.cjs": {
+    "mtime": 1793715009.778109,
+    "seen": 1793715795.502544,
+    "ast_hash": "5a66be64317f177ecef5d150b1abf1d9",
+    "semantic_hash": "5a66be64317f177ecef5d150b1abf1d9"
+  },
+  ".agents/skills/security-audit/validate-coverage-ledger.test.cjs": {
+    "mtime": 1793715009.778109,
+    "seen": 1793715795.5027952,
+    "ast_hash": "3bc35b09cbd0d46c65457de04cef10a3",
+    "semantic_hash": "3bc35b09cbd0d46c65457de04cef10a3"
+  },
+  ".agents/skills/security-audit/validate-findings.cjs": {
+    "mtime": 1793715009.778109,
+    "seen": 1793715795.5029795,
+    "ast_hash": "b924a4aca31ed6095f6c1603b97a552c",
+    "semantic_hash": "b924a4aca31ed6095f6c1603b97a552c"
+  },
+  ".agents/skills/security-audit/validate-findings.test.cjs": {
+    "mtime": 1793715009.778109,
+    "seen": 1793715795.5031471,
+    "ast_hash": "135077736a6939252acbff7ca706c32a",
+    "semantic_hash": "135077736a6939252acbff7ca706c32a"
+  },
+  "AUDITORIA_DBC/ClassDiff.java": {
+    "mtime": 1793414295.4912443,
+    "seen": 1793715795.503308,
+    "ast_hash": "28c14db0bd6904ad2107462235cb4bb8",
+    "semantic_hash": "28c14db0bd6904ad2107462235cb4bb8"
+  },
+  "AUDITORIA_DBC/DumpRefs.java": {
+    "mtime": 1793417889.2086704,
+    "seen": 1793715795.5034678,
+    "ast_hash": "9c93a802db1816e6c1a181096fc1d8d0",
+    "semantic_hash": "9c93a802db1816e6c1a181096fc1d8d0"
+  },
+  "AUDITORIA_DBC/FindStats2Refs.java": {
+    "mtime": 1793603395.4220653,
+    "seen": 1793715795.5036223,
+    "ast_hash": "f9f9f4a7472cc16206e98343e24c42d4",
+    "semantic_hash": "f9f9f4a7472cc16206e98343e24c42d4"
+  },
+  "AUDITORIA_DBC/FixMaxTP.java": {
+    "mtime": 1793409004.3515265,
+    "seen": 1793715795.5037785,
+    "ast_hash": "b5d2e72dddd88106c908d0f29ba14cfc",
+    "semantic_hash": "b5d2e72dddd88106c908d0f29ba14cfc"
+  },
+  "AUDITORIA_DBC/FrameCheck.java": {
+    "mtime": 1793414270.239143,
+    "seen": 1793715795.50393,
+    "ast_hash": "3c8d625fbafcb1f327bd1f0a6b830cec",
+    "semantic_hash": "3c8d625fbafcb1f327bd1f0a6b830cec"
+  },
+  "AUDITORIA_DBC/InspectChain.java": {
+    "mtime": 1793603667.1497812,
+    "seen": 1793715795.5040803,
+    "ast_hash": "c1a5d84768f3f6cf4cf3df1165e48966",
+    "semantic_hash": "c1a5d84768f3f6cf4cf3df1165e48966"
+  },
+  "AUDITORIA_DBC/InspectPStats2.java": {
+    "mtime": 1793597310.555907,
+    "seen": 1793715795.5042317,
+    "ast_hash": "35e4fd6324f8188149c492f5075dc343",
+    "semantic_hash": "35e4fd6324f8188149c492f5075dc343"
+  },
+  "AUDITORIA_DBC/InspectTpSites.java": {
+    "mtime": 1793603340.34311,
+    "seen": 1793715795.5043814,
+    "ast_hash": "d467639c688b8fd0b69b1bb7c7c81863",
+    "semantic_hash": "d467639c688b8fd0b69b1bb7c7c81863"
+  },
+  "AUDITORIA_DBC/MemberRefs.java": {
+    "mtime": 1793418601.943343,
+    "seen": 1793715795.5045319,
+    "ast_hash": "53988625c4c2b41495520a7cd71a7b18",
+    "semantic_hash": "53988625c4c2b41495520a7cd71a7b18"
+  },
+  "AUDITORIA_DBC/PatchBig.java": {
+    "mtime": 1793603717.192975,
+    "seen": 1793715795.504681,
+    "ast_hash": "421dab5dd72186f41cdd65e4c9bdd8e2",
+    "semantic_hash": "421dab5dd72186f41cdd65e4c9bdd8e2"
+  },
+  "AUDITORIA_DBC/PatchBig_restored.java": {
+    "mtime": 1793587133.9823496,
+    "seen": 1793715795.5048308,
+    "ast_hash": "b062973e67cb955ef44ba84d155f6fde",
+    "semantic_hash": "b062973e67cb955ef44ba84d155f6fde"
+  },
+  "AUDITORIA_DBC/Sites.java": {
+    "mtime": 1793418478.855035,
+    "seen": 1793715795.5049818,
+    "ast_hash": "a0e43cd1542ba3920e07e54f2f943233",
+    "semantic_hash": "a0e43cd1542ba3920e07e54f2f943233"
+  },
+  "AUDITORIA_DBC/TpPatch.java": {
+    "mtime": 1793680381.128271,
+    "seen": 1793715795.505131,
+    "ast_hash": "731b50220bc49c3354d63eece3bf9c50",
+    "semantic_hash": "731b50220bc49c3354d63eece3bf9c50"
+  },
+  "AUDITORIA_DBC/TpReport.java": {
+    "mtime": 1793418930.955251,
+    "seen": 1793715795.5052805,
+    "ast_hash": "52e7430b8f92d262bdbc4313ac7078bf",
+    "semantic_hash": "52e7430b8f92d262bdbc4313ac7078bf"
+  },
+  "AUDITORIA_DBC/TpShapes.java": {
+    "mtime": 1793417980.9159715,
+    "seen": 1793715795.5054288,
+    "ast_hash": "614e44866d29bedd2f1951d8c612602f",
+    "semantic_hash": "614e44866d29bedd2f1951d8c612602f"
+  },
+  "AUDITORIA_DBC/VerifyClasses.java": {
+    "mtime": 1793593774.5061283,
+    "seen": 1793715795.5055761,
+    "ast_hash": "5aaabc9837fab87eebcadfef01ea1e6a",
+    "semantic_hash": "5aaabc9837fab87eebcadfef01ea1e6a"
+  },
+  "AUDITORIA_DBC/VerifyJar.java": {
+    "mtime": 1793417858.585243,
+    "seen": 1793715795.5057247,
+    "ast_hash": "676bb135d2c6249b4cab7d1aa1a30267",
+    "semantic_hash": "676bb135d2c6249b4cab7d1aa1a30267"
+  },
+  "artifacts/DiffDescriptors.java": {
+    "mtime": 1793605506.901919,
+    "seen": 1793715795.5058742,
+    "ast_hash": "b690b20453c877b91813cb620089bc20",
+    "semantic_hash": "b690b20453c877b91813cb620089bc20"
+  },
+  "artifacts/DumpMethod.java": {
+    "mtime": 1793604517.312011,
+    "seen": 1793715795.5060375,
+    "ast_hash": "3e2cc69c71189087c69dc7b1e827d8cb",
+    "semantic_hash": "3e2cc69c71189087c69dc7b1e827d8cb"
+  },
+  "artifacts/FindStats2Refs.java": {
+    "mtime": 1793603395.4220653,
+    "seen": 1793715795.5061834,
+    "ast_hash": "f9f9f4a7472cc16206e98343e24c42d4",
+    "semantic_hash": "f9f9f4a7472cc16206e98343e24c42d4"
+  },
+  "artifacts/InspectChain.java": {
+    "mtime": 1793603667.1497812,
+    "seen": 1793715795.506329,
+    "ast_hash": "c1a5d84768f3f6cf4cf3df1165e48966",
+    "semantic_hash": "c1a5d84768f3f6cf4cf3df1165e48966"
+  },
+  "artifacts/InspectMethods.java": {
+    "mtime": 1793603436.5282128,
+    "seen": 1793715795.5064735,
+    "ast_hash": "e33682a3f9894c911cd1f96d63605c1f",
+    "semantic_hash": "e33682a3f9894c911cd1f96d63605c1f"
+  },
+  "artifacts/InspectPStats2.java": {
+    "mtime": 1793597310.555907,
+    "seen": 1793715795.5066178,
+    "ast_hash": "35e4fd6324f8188149c492f5075dc343",
+    "semantic_hash": "35e4fd6324f8188149c492f5075dc343"
+  },
+  "artifacts/InspectTpSites.java": {
+    "mtime": 1793603340.34311,
+    "seen": 1793715795.506761,
+    "ast_hash": "d467639c688b8fd0b69b1bb7c7c81863",
+    "semantic_hash": "d467639c688b8fd0b69b1bb7c7c81863"
+  },
+  "artifacts/PatchBig.java": {
+    "mtime": 1793629218.274066,
+    "seen": 1793715795.506904,
+    "ast_hash": "cb97c9086e762d4e93f77e04e233b095",
+    "semantic_hash": "cb97c9086e762d4e93f77e04e233b095"
+  },
+  "artifacts/ScanTP.java": {
+    "mtime": 1793604438.9759316,
+    "seen": 1793715795.5070643,
+    "ast_hash": "64bb22226778616eb97a2f13b55e96c6",
+    "semantic_hash": "64bb22226778616eb97a2f13b55e96c6"
+  },
+  "artifacts/TPAlgoTest.java": {
+    "mtime": 1793605545.9677675,
+    "seen": 1793715795.5072074,
+    "ast_hash": "f34b6633b6dfc35617f3bb91c06ef6a3",
+    "semantic_hash": "f34b6633b6dfc35617f3bb91c06ef6a3"
+  },
+  "artifacts/VerifyASM.java": {
+    "mtime": 1793605506.901919,
+    "seen": 1793715795.5073526,
+    "ast_hash": "8f252c7e0e18f7f8dade583543cf3a39",
+    "semantic_hash": "8f252c7e0e18f7f8dade583543cf3a39"
+  },
+  "artifacts/VerifyClasses.java": {
+    "mtime": 1793593774.5061283,
+    "seen": 1793715795.5074956,
+    "ast_hash": "5aaabc9837fab87eebcadfef01ea1e6a",
+    "semantic_hash": "5aaabc9837fab87eebcadfef01ea1e6a"
+  },
+  "mixins.npcdbc.late.json": {
+    "mtime": 1773610626.0,
+    "seen": 1793715795.5076425,
+    "ast_hash": "b22cf6ca00daf6f8b7e163da740371c5",
+    "semantic_hash": "b22cf6ca00daf6f8b7e163da740371c5",
+    "ast_empty": true
+  },
+  "mixins.npcdbc.refmap.json": {
+    "mtime": 1773610626.0,
+    "seen": 1793715795.5076463,
+    "ast_hash": "778fcf40f808804ea884ccb9529052b4",
+    "semantic_hash": "778fcf40f808804ea884ccb9529052b4",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/armourers_workshop_data/fast-cache/cache.json": {
+    "mtime": 1791591219.3324604,
+    "seen": 1793715795.5076485,
+    "ast_hash": "a4d064fb62121107f29f3444ddd9d5cf",
+    "semantic_hash": "a4d064fb62121107f29f3444ddd9d5cf",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/bin/1.7.10.json": {
+    "mtime": 1551348276.0,
+    "seen": 1793715795.5076516,
+    "ast_hash": "a615b7ce2fc2ca59782b51b9c1194fa2",
+    "semantic_hash": "a615b7ce2fc2ca59782b51b9c1194fa2",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/bin/version.json": {
+    "mtime": 1570737390.0,
+    "seen": 1793715795.5076537,
+    "ast_hash": "9732403da857e74dfacbfd6ad3203173",
+    "semantic_hash": "9732403da857e74dfacbfd6ad3203173",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/config/CustomMainMenu/mainmenu.json": {
+    "mtime": 1675527315.0,
+    "seen": 1793715795.5076559,
+    "ast_hash": "6dbc21db6ded76de4b40289db8531b58",
+    "semantic_hash": "6dbc21db6ded76de4b40289db8531b58",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/config/CustomMainMenu/teste.json": {
+    "mtime": 1675527295.0,
+    "seen": 1793715795.5076582,
+    "ast_hash": "28d9fb21a61e50d5489dfdd12ea20c34",
+    "semantic_hash": "28d9fb21a61e50d5489dfdd12ea20c34",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/config/OpenEye.json": {
+    "mtime": 1551348280.0,
+    "seen": 1793715795.5076606,
+    "ast_hash": "1fa358dce7c47e2544f32a78d8838561",
+    "semantic_hash": "1fa358dce7c47e2544f32a78d8838561",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/config/ias.json": {
+    "mtime": 1789007620.5003278,
+    "seen": 1793715795.5076628,
+    "ast_hash": "7a02170ee154915cdd2f016f8a4998e8",
+    "semantic_hash": "7a02170ee154915cdd2f016f8a4998e8",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/customnpcs/assets/customnpcs/sounds.json": {
+    "mtime": 1785628214.932655,
+    "seen": 1793715795.507668,
+    "ast_hash": "22e67cc3ae278cb47bca0058382d3330",
+    "semantic_hash": "22e67cc3ae278cb47bca0058382d3330",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/journeyMap/data/mp/_dc-srv.baa4e28f726f._minecraft._tcp.nnt.rededarkmc.com._0/waypoints/Ban na floresta_5929,32,6574.json": {
+    "mtime": 1786389803.558199,
+    "seen": 1793715795.5076702,
+    "ast_hash": "74a50bd36c7a2ccde8abafe90582c12a",
+    "semantic_hash": "74a50bd36c7a2ccde8abafe90582c12a",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/journeyMap/data/mp/_dc-srv.baa4e28f726f._minecraft._tcp.nnt.rededarkmc.com._0/waypoints/Caverna _5819,31,6544.json": {
+    "mtime": 1786390738.721356,
+    "seen": 1793715795.507673,
+    "ast_hash": "f33505825c13244b12b75b0cf1798c09",
+    "semantic_hash": "f33505825c13244b12b75b0cf1798c09",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/journeyMap/data/mp/_dc-srv.baa4e28f726f._minecraft._tcp.nnt.rededarkmc.com._0/waypoints/Death_-2211,5,-218.json": {
+    "mtime": 1791590076.8022327,
+    "seen": 1793715795.5076752,
+    "ast_hash": "ccd300b3c841678770cdde7e48e16b7b",
+    "semantic_hash": "ccd300b3c841678770cdde7e48e16b7b",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/journeyMap/data/mp/_dc-srv.baa4e28f726f._minecraft._tcp.nnt.rededarkmc.com._0/waypoints/Death_4875,101,5950.json": {
+    "mtime": 1791336634.383156,
+    "seen": 1793715795.507677,
+    "ast_hash": "dd81cdc7cc415d555b7897d1e0d3fdf7",
+    "semantic_hash": "dd81cdc7cc415d555b7897d1e0d3fdf7",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/journeyMap/data/mp/_dc-srv.baa4e28f726f._minecraft._tcp.nnt.rededarkmc.com._0/waypoints/Troca_2326,114,1923.json": {
+    "mtime": 1787877813.0537565,
+    "seen": 1793715795.5076792,
+    "ast_hash": "8aad4ea3fad73f108b78d7fe859a45e4",
+    "semantic_hash": "8aad4ea3fad73f108b78d7fe859a45e4",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/journeyMap/data/mp/localhost_0/waypoints/Death_35,60,31.json": {
+    "mtime": 1787613992.1425023,
+    "seen": 1793715795.5076814,
+    "ast_hash": "526822497217fb4c152e605ca3371a93",
+    "semantic_hash": "526822497217fb4c152e605ca3371a93",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/journeyMap/data/mp/localhost_0/waypoints/Death_59,61,28.json": {
+    "mtime": 1787615305.6914666,
+    "seen": 1793715795.5076835,
+    "ast_hash": "80c386c617842466460614134170d622",
+    "semantic_hash": "80c386c617842466460614134170d622",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/mcdata/defaultconfigs.json": {
+    "mtime": 1793661563.969548,
+    "seen": 1793715795.507686,
+    "ast_hash": "5d6f68e1236b5bcb5992c31dc497f2c6",
+    "semantic_hash": "5d6f68e1236b5bcb5992c31dc497f2c6",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/customnpcs/dialogs/Villager/1.json": {
+    "mtime": 1793574816.9880993,
+    "seen": 1793715795.507688,
+    "ast_hash": "ed4fdcd3bc980e2ecb5afbdb98bf24c8",
+    "semantic_hash": "ed4fdcd3bc980e2ecb5afbdb98bf24c8",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/customnpcs/dialogs/Villager/2.json": {
+    "mtime": 1793574816.9910984,
+    "seen": 1793715795.5076902,
+    "ast_hash": "2bd28dd8900dc7ade54be4da6c932b74",
+    "semantic_hash": "2bd28dd8900dc7ade54be4da6c932b74",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/customnpcs/dialogs/Villager/3.json": {
+    "mtime": 1793574816.9946096,
+    "seen": 1793715795.5076923,
+    "ast_hash": "72ec42cc45971b7a1ba0a02f5e053f65",
+    "semantic_hash": "72ec42cc45971b7a1ba0a02f5e053f65",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/customnpcs/playerdata/821b7707-c8a4-4413-be12-6a075f9f3b96.json": {
+    "mtime": 1793662198.7201278,
+    "seen": 1793715795.5076945,
+    "ast_hash": "b884fa0739dff650841047ba79013964",
+    "semantic_hash": "b884fa0739dff650841047ba79013964",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/customnpcs/scripts/forge_scripts.json": {
+    "mtime": 1793596419.8713284,
+    "seen": 1793715795.5076966,
+    "ast_hash": "12a4cde298d86d166fb414e6377691d3",
+    "semantic_hash": "12a4cde298d86d166fb414e6377691d3",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/customnpcs/scripts/npc_scripts.json": {
+    "mtime": 1793596419.8723278,
+    "seen": 1793715795.5076993,
+    "ast_hash": "12a4cde298d86d166fb414e6377691d3",
+    "semantic_hash": "12a4cde298d86d166fb414e6377691d3",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/customnpcs/scripts/player_scripts.json": {
+    "mtime": 1793596419.8713284,
+    "seen": 1793715795.5077012,
+    "ast_hash": "4dd10e54ba73e100d477183de21af2f1",
+    "semantic_hash": "4dd10e54ba73e100d477183de21af2f1",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/customnpcs/scripts/world_data.json": {
+    "mtime": 1793574862.224804,
+    "seen": 1793715795.5077033,
+    "ast_hash": "5b76b0eef9af8a2300673e0553f609f9",
+    "semantic_hash": "5b76b0eef9af8a2300673e0553f609f9",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/data/missions/dbcDBCBroly.json": {
+    "mtime": 1793574817.0970857,
+    "seen": 1793715795.5077055,
+    "ast_hash": "bb774639c972dd5ed578cf0f6ec82ad4",
+    "semantic_hash": "bb774639c972dd5ed578cf0f6ec82ad4",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/data/missions/mainDBC.json": {
+    "mtime": 1793574817.094088,
+    "seen": 1793715795.5077074,
+    "ast_hash": "f5931c7a1db5b2f9fec8a56c06b5ca19",
+    "semantic_hash": "f5931c7a1db5b2f9fec8a56c06b5ca19",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/data/missions/mainNC.json": {
+    "mtime": 1793574817.0990853,
+    "seen": 1793715795.5077095,
+    "ast_hash": "c1b98efcb00fb4e6097e629392c747a7",
+    "semantic_hash": "c1b98efcb00fb4e6097e629392c747a7",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo--/stats/821b7707-c8a4-4413-be12-6a075f9f3b96.json": {
+    "mtime": 1793662198.7151308,
+    "seen": 1793715795.5077114,
+    "ast_hash": "eff4e25cbfb8a7d06977d8fdfc0abc59",
+    "semantic_hash": "eff4e25cbfb8a7d06977d8fdfc0abc59",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo-/customnpcs/scripts/forge_scripts.json": {
+    "mtime": 1793574300.1272614,
+    "seen": 1793715795.5077138,
+    "ast_hash": "12a4cde298d86d166fb414e6377691d3",
+    "semantic_hash": "12a4cde298d86d166fb414e6377691d3",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo-/customnpcs/scripts/npc_scripts.json": {
+    "mtime": 1793574300.1272614,
+    "seen": 1793715795.5077162,
+    "ast_hash": "12a4cde298d86d166fb414e6377691d3",
+    "semantic_hash": "12a4cde298d86d166fb414e6377691d3",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo-/customnpcs/scripts/player_scripts.json": {
+    "mtime": 1793574300.1272614,
+    "seen": 1793715795.5077183,
+    "ast_hash": "4dd10e54ba73e100d477183de21af2f1",
+    "semantic_hash": "4dd10e54ba73e100d477183de21af2f1",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo/customnpcs/scripts/forge_scripts.json": {
+    "mtime": 1793574291.4807248,
+    "seen": 1793715795.5077205,
+    "ast_hash": "12a4cde298d86d166fb414e6377691d3",
+    "semantic_hash": "12a4cde298d86d166fb414e6377691d3",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo/customnpcs/scripts/npc_scripts.json": {
+    "mtime": 1793574291.481724,
+    "seen": 1793715795.5077224,
+    "ast_hash": "12a4cde298d86d166fb414e6377691d3",
+    "semantic_hash": "12a4cde298d86d166fb414e6377691d3",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/saves/Novo Mundo/customnpcs/scripts/player_scripts.json": {
+    "mtime": 1793574291.481724,
+    "seen": 1793715795.5077248,
+    "ast_hash": "4dd10e54ba73e100d477183de21af2f1",
+    "semantic_hash": "4dd10e54ba73e100d477183de21af2f1",
+    "ast_empty": true
+  },
+  "nntdarkmp_copy/usernamecache.json": {
+    "mtime": 1786481578.6837566,
+    "seen": 1793715795.5077271,
+    "ast_hash": "9dbb7aff0c9db3e7245900a636b72cdd",
+    "semantic_hash": "9dbb7aff0c9db3e7245900a636b72cdd",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/armourers_workshop_data/fast-cache/cache.json": {
+    "mtime": 1791591219.3324604,
+    "seen": 1793715795.5077293,
+    "ast_hash": "a4d064fb62121107f29f3444ddd9d5cf",
+    "semantic_hash": "a4d064fb62121107f29f3444ddd9d5cf",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/bin/1.7.10.json": {
+    "mtime": 1551348276.0,
+    "seen": 1793715795.5077314,
+    "ast_hash": "a615b7ce2fc2ca59782b51b9c1194fa2",
+    "semantic_hash": "a615b7ce2fc2ca59782b51b9c1194fa2",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/bin/version.json": {
+    "mtime": 1570737390.0,
+    "seen": 1793715795.5077336,
+    "ast_hash": "9732403da857e74dfacbfd6ad3203173",
+    "semantic_hash": "9732403da857e74dfacbfd6ad3203173",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/config/CustomMainMenu/mainmenu.json": {
+    "mtime": 1675527315.0,
+    "seen": 1793715795.5077353,
+    "ast_hash": "6dbc21db6ded76de4b40289db8531b58",
+    "semantic_hash": "6dbc21db6ded76de4b40289db8531b58",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/config/CustomMainMenu/teste.json": {
+    "mtime": 1675527295.0,
+    "seen": 1793715795.5077376,
+    "ast_hash": "28d9fb21a61e50d5489dfdd12ea20c34",
+    "semantic_hash": "28d9fb21a61e50d5489dfdd12ea20c34",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/config/OpenEye.json": {
+    "mtime": 1551348280.0,
+    "seen": 1793715795.50774,
+    "ast_hash": "1fa358dce7c47e2544f32a78d8838561",
+    "semantic_hash": "1fa358dce7c47e2544f32a78d8838561",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/config/ias.json": {
+    "mtime": 1789007620.5003278,
+    "seen": 1793715795.507742,
+    "ast_hash": "7a02170ee154915cdd2f016f8a4998e8",
+    "semantic_hash": "7a02170ee154915cdd2f016f8a4998e8",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/customnpcs/assets/customnpcs/sounds.json": {
+    "mtime": 1785628214.932655,
+    "seen": 1793715795.507744,
+    "ast_hash": "22e67cc3ae278cb47bca0058382d3330",
+    "semantic_hash": "22e67cc3ae278cb47bca0058382d3330",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/journeyMap/data/mp/_dc-srv.baa4e28f726f._minecraft._tcp.nnt.rededarkmc.com._0/waypoints/Ban na floresta_5929,32,6574.json": {
+    "mtime": 1786389803.558199,
+    "seen": 1793715795.5077462,
+    "ast_hash": "74a50bd36c7a2ccde8abafe90582c12a",
+    "semantic_hash": "74a50bd36c7a2ccde8abafe90582c12a",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/journeyMap/data/mp/_dc-srv.baa4e28f726f._minecraft._tcp.nnt.rededarkmc.com._0/waypoints/Caverna _5819,31,6544.json": {
+    "mtime": 1786390738.721356,
+    "seen": 1793715795.5077484,
+    "ast_hash": "f33505825c13244b12b75b0cf1798c09",
+    "semantic_hash": "f33505825c13244b12b75b0cf1798c09",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/journeyMap/data/mp/_dc-srv.baa4e28f726f._minecraft._tcp.nnt.rededarkmc.com._0/waypoints/Death_-2211,5,-218.json": {
+    "mtime": 1791590076.8022327,
+    "seen": 1793715795.5077505,
+    "ast_hash": "ccd300b3c841678770cdde7e48e16b7b",
+    "semantic_hash": "ccd300b3c841678770cdde7e48e16b7b",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/journeyMap/data/mp/_dc-srv.baa4e28f726f._minecraft._tcp.nnt.rededarkmc.com._0/waypoints/Death_4875,101,5950.json": {
+    "mtime": 1791336634.383156,
+    "seen": 1793715795.5077527,
+    "ast_hash": "dd81cdc7cc415d555b7897d1e0d3fdf7",
+    "semantic_hash": "dd81cdc7cc415d555b7897d1e0d3fdf7",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/journeyMap/data/mp/_dc-srv.baa4e28f726f._minecraft._tcp.nnt.rededarkmc.com._0/waypoints/Troca_2326,114,1923.json": {
+    "mtime": 1787877813.0537565,
+    "seen": 1793715795.5077546,
+    "ast_hash": "8aad4ea3fad73f108b78d7fe859a45e4",
+    "semantic_hash": "8aad4ea3fad73f108b78d7fe859a45e4",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/journeyMap/data/mp/localhost_0/waypoints/Death_35,60,31.json": {
+    "mtime": 1787613992.1425023,
+    "seen": 1793715795.507757,
+    "ast_hash": "526822497217fb4c152e605ca3371a93",
+    "semantic_hash": "526822497217fb4c152e605ca3371a93",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/journeyMap/data/mp/localhost_0/waypoints/Death_59,61,28.json": {
+    "mtime": 1787615305.6914666,
+    "seen": 1793715795.507759,
+    "ast_hash": "80c386c617842466460614134170d622",
+    "semantic_hash": "80c386c617842466460614134170d622",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/mcdata/defaultconfigs.json": {
+    "mtime": 1793414443.2727115,
+    "seen": 1793715795.5077631,
+    "ast_hash": "5aae3f45dffe3f26bb440ae24edca68f",
+    "semantic_hash": "5aae3f45dffe3f26bb440ae24edca68f",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/customnpcs/dialogs/Villager/1.json": {
+    "mtime": 1793414556.00003,
+    "seen": 1793715795.5077655,
+    "ast_hash": "b85a9608cf75f17803101546c5a5fb31",
+    "semantic_hash": "b85a9608cf75f17803101546c5a5fb31",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/customnpcs/dialogs/Villager/2.json": {
+    "mtime": 1793414556.003029,
+    "seen": 1793715795.5077674,
+    "ast_hash": "350f595a82d6c46f8680730e80a0942e",
+    "semantic_hash": "350f595a82d6c46f8680730e80a0942e",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/customnpcs/dialogs/Villager/3.json": {
+    "mtime": 1793414556.0070271,
+    "seen": 1793715795.5077696,
+    "ast_hash": "59edd85a5f4165f4625d52daa21d3f03",
+    "semantic_hash": "59edd85a5f4165f4625d52daa21d3f03",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/customnpcs/playerdata/821b7707-c8a4-4413-be12-6a075f9f3b96.json": {
+    "mtime": 1793415462.3372889,
+    "seen": 1793715795.5077724,
+    "ast_hash": "b884fa0739dff650841047ba79013964",
+    "semantic_hash": "b884fa0739dff650841047ba79013964",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/customnpcs/scripts/forge_scripts.json": {
+    "mtime": 1793415463.6078515,
+    "seen": 1793715795.507775,
+    "ast_hash": "12a4cde298d86d166fb414e6377691d3",
+    "semantic_hash": "12a4cde298d86d166fb414e6377691d3",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/customnpcs/scripts/npc_scripts.json": {
+    "mtime": 1793415463.6098557,
+    "seen": 1793715795.5077772,
+    "ast_hash": "12a4cde298d86d166fb414e6377691d3",
+    "semantic_hash": "12a4cde298d86d166fb414e6377691d3",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/customnpcs/scripts/player_scripts.json": {
+    "mtime": 1793415463.608851,
+    "seen": 1793715795.5077794,
+    "ast_hash": "4dd10e54ba73e100d477183de21af2f1",
+    "semantic_hash": "4dd10e54ba73e100d477183de21af2f1",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/customnpcs/scripts/world_data.json": {
+    "mtime": 1793414601.489472,
+    "seen": 1793715795.5077813,
+    "ast_hash": "5b76b0eef9af8a2300673e0553f609f9",
+    "semantic_hash": "5b76b0eef9af8a2300673e0553f609f9",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/data/missions/dbcDBCBroly.json": {
+    "mtime": 1793414556.1535652,
+    "seen": 1793715795.5077834,
+    "ast_hash": "bb774639c972dd5ed578cf0f6ec82ad4",
+    "semantic_hash": "bb774639c972dd5ed578cf0f6ec82ad4",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/data/missions/mainDBC.json": {
+    "mtime": 1793414556.136575,
+    "seen": 1793715795.5077858,
+    "ast_hash": "f5931c7a1db5b2f9fec8a56c06b5ca19",
+    "semantic_hash": "f5931c7a1db5b2f9fec8a56c06b5ca19",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/data/missions/mainNC.json": {
+    "mtime": 1793414556.1575632,
+    "seen": 1793715795.5077875,
+    "ast_hash": "c1b98efcb00fb4e6097e629392c747a7",
+    "semantic_hash": "c1b98efcb00fb4e6097e629392c747a7",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/saves/Testes/stats/821b7707-c8a4-4413-be12-6a075f9f3b96.json": {
+    "mtime": 1793415462.3312943,
+    "seen": 1793715795.5077899,
+    "ast_hash": "dd8b995158fa6c31281e1d376e8a4061",
+    "semantic_hash": "dd8b995158fa6c31281e1d376e8a4061",
+    "ast_empty": true
+  },
+  "nntdarkmp_testD/usernamecache.json": {
+    "mtime": 1786481578.6837566,
+    "seen": 1793715795.5077918,
+    "ast_hash": "9dbb7aff0c9db3e7245900a636b72cdd",
+    "semantic_hash": "9dbb7aff0c9db3e7245900a636b72cdd",
+    "ast_empty": true
+  },
+  "opencode-kit/config/cli.json": {
+    "mtime": 1792028512.5297935,
+    "seen": 1793715795.5077941,
+    "ast_hash": "a4c089570f17faf686295a88901ffd13",
+    "semantic_hash": "a4c089570f17faf686295a88901ffd13"
+  },
+  "opencode-kit/config/plugins/i-have-adhd.js": {
+    "mtime": 1793371374.6742144,
+    "seen": 1793715795.507954,
+    "ast_hash": "0d4d6008dbbca2840be7330fb29369b2",
+    "semantic_hash": "0d4d6008dbbca2840be7330fb29369b2"
+  },
+  "opencode-kit/config/skills/grill-me/agents/openai.yaml": {
+    "mtime": 1787983089.831096,
+    "seen": 1793715795.508134,
+    "ast_hash": "4f8d07281108635f083a7984848d404b",
+    "semantic_hash": "4f8d07281108635f083a7984848d404b"
+  },
+  "opencode-kit/config/skills/grilling/agents/openai.yaml": {
+    "mtime": 1787983089.8320951,
+    "seen": 1793715795.5082958,
+    "ast_hash": "5b52240bd2bcffc0cf2225da8343796c",
+    "semantic_hash": "5b52240bd2bcffc0cf2225da8343796c"
+  },
+  "opencode-kit/config/skills/handoff/agents/openai.yaml": {
+    "mtime": 1787983089.834095,
+    "seen": 1793715795.50845,
+    "ast_hash": "89f811f470af44fb0762cbb89b72ad56",
+    "semantic_hash": "89f811f470af44fb0762cbb89b72ad56"
+  },
+  "opencode-kit/config/skills/mcp-builder/scripts/connections.py": {
+    "mtime": 1792280449.4456458,
+    "seen": 1793715795.508605,
+    "ast_hash": "1606c9917623cc43787353d2cd8731ff",
+    "semantic_hash": "1606c9917623cc43787353d2cd8731ff"
+  },
+  "opencode-kit/config/skills/mcp-builder/scripts/evaluation.py": {
+    "mtime": 1792280449.4456458,
+    "seen": 1793715795.5087626,
+    "ast_hash": "1a26a79489e2ae76029ec68b32065e61",
+    "semantic_hash": "1a26a79489e2ae76029ec68b32065e61"
+  },
+  "opencode-kit/config/skills/skill-creator/eval-viewer/generate_review.py": {
+    "mtime": 1792280449.6165466,
+    "seen": 1793715795.5089164,
+    "ast_hash": "3ec67448bf48beb2ce336e8a050e4618",
+    "semantic_hash": "3ec67448bf48beb2ce336e8a050e4618"
+  },
+  "opencode-kit/config/skills/skill-creator/scripts/__init__.py": {
+    "mtime": 1792280449.6215441,
+    "seen": 1793715795.509075,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "opencode-kit/config/skills/skill-creator/scripts/aggregate_benchmark.py": {
+    "mtime": 1792280449.6215441,
+    "seen": 1793715795.5092285,
+    "ast_hash": "341cc9da943bb8515f22774f3fb1f151",
+    "semantic_hash": "341cc9da943bb8515f22774f3fb1f151"
+  },
+  "opencode-kit/config/skills/skill-creator/scripts/generate_report.py": {
+    "mtime": 1792280449.622543,
+    "seen": 1793715795.5093827,
+    "ast_hash": "e103b279b5aeb66bdc6360b2882f7461",
+    "semantic_hash": "e103b279b5aeb66bdc6360b2882f7461"
+  },
+  "opencode-kit/config/skills/skill-creator/scripts/improve_description.py": {
+    "mtime": 1792280449.6235423,
+    "seen": 1793715795.5095363,
+    "ast_hash": "90f7eca93679d893581c64f5ad408e63",
+    "semantic_hash": "90f7eca93679d893581c64f5ad408e63"
+  },
+  "opencode-kit/config/skills/skill-creator/scripts/package_skill.py": {
+    "mtime": 1792280449.6235423,
+    "seen": 1793715795.5096896,
+    "ast_hash": "b3e2d0f02bd130c6865edaeb13042f71",
+    "semantic_hash": "b3e2d0f02bd130c6865edaeb13042f71"
+  },
+  "opencode-kit/config/skills/skill-creator/scripts/quick_validate.py": {
+    "mtime": 1792280449.624542,
+    "seen": 1793715795.5098445,
+    "ast_hash": "1c14726b2f21750beffe0bef97c7f8d9",
+    "semantic_hash": "1c14726b2f21750beffe0bef97c7f8d9"
+  },
+  "opencode-kit/config/skills/skill-creator/scripts/run_eval.py": {
+    "mtime": 1792280449.625542,
+    "seen": 1793715795.5100002,
+    "ast_hash": "561ec9772f276cb1bea459e477f03fd9",
+    "semantic_hash": "561ec9772f276cb1bea459e477f03fd9"
+  },
+  "opencode-kit/config/skills/skill-creator/scripts/run_loop.py": {
+    "mtime": 1792280449.625542,
+    "seen": 1793715795.5101523,
+    "ast_hash": "8d7f8fc75b5b06df80837f05dcd33445",
+    "semantic_hash": "8d7f8fc75b5b06df80837f05dcd33445"
+  },
+  "opencode-kit/config/skills/skill-creator/scripts/utils.py": {
+    "mtime": 1792280449.6265407,
+    "seen": 1793715795.510305,
+    "ast_hash": "77d0ec8142dfb2f06f5d150c4beaf333",
+    "semantic_hash": "77d0ec8142dfb2f06f5d150c4beaf333"
+  },
+  "opencode-kit/config/tools/consultar-codex.ps1": {
+    "mtime": 1792287545.466049,
+    "seen": 1793715795.5104573,
+    "ast_hash": "c43ab0092157025c27c67d4c87c6774b",
+    "semantic_hash": "c43ab0092157025c27c67d4c87c6774b"
+  },
+  "opencode-kit/exportar.ps1": {
+    "mtime": 1793572834.3184516,
+    "seen": 1793715795.5106091,
+    "ast_hash": "e14cb572844516bdc9713ce2494815e4",
+    "semantic_hash": "e14cb572844516bdc9713ce2494815e4"
+  },
+  "opencode-kit/instalar.ps1": {
+    "mtime": 1793573404.1190028,
+    "seen": 1793715795.5107572,
+    "ast_hash": "e57fa41bd9bfebcca025fe716ebf7e67",
+    "semantic_hash": "e57fa41bd9bfebcca025fe716ebf7e67"
+  },
+  "skills-lock.json": {
+    "mtime": 1793715010.3941464,
+    "seen": 1793715795.510901,
+    "ast_hash": "1b2513c2e2bf8015ba4b1debcf34a39e",
+    "semantic_hash": "1b2513c2e2bf8015ba4b1debcf34a39e",
+    "ast_empty": true
+  },
+  "src/db/database.py": {
+    "mtime": 1793492699.2452137,
+    "seen": 1793715795.5109043,
+    "ast_hash": "5c433c847492eed67b0b1720ef41849f",
+    "semantic_hash": "5c433c847492eed67b0b1720ef41849f"
+  },
+  "src/models/__init__.py": {
+    "mtime": 1793492719.0464272,
+    "seen": 1793715795.5110507,
+    "ast_hash": "1ca0d796da5aa88e1a7837f4434f3d4d",
+    "semantic_hash": "1ca0d796da5aa88e1a7837f4434f3d4d"
+  },
+  "src/models/conversation.py": {
+    "mtime": 1793492748.3408167,
+    "seen": 1793715795.5111954,
+    "ast_hash": "88d04331401aac10b2b4a6573f22ed80",
+    "semantic_hash": "88d04331401aac10b2b4a6573f22ed80"
+  },
+  "src/models/message.py": {
+    "mtime": 1793492764.927473,
+    "seen": 1793715795.5113409,
+    "ast_hash": "7e610e032a540d3f18ddb0cf56ecb2a9",
+    "semantic_hash": "7e610e032a540d3f18ddb0cf56ecb2a9"
+  },
+  "src/models/project.py": {
+    "mtime": 1793492731.0790179,
+    "seen": 1793715795.5114858,
+    "ast_hash": "1e836248ab34a511d5f7d07eb9d086fb",
+    "semantic_hash": "1e836248ab34a511d5f7d07eb9d086fb"
+  },
+  "src/models/task.py": {
+    "mtime": 1793492781.6043131,
+    "seen": 1793715795.5116293,
+    "ast_hash": "42cb2b06c2d84c69d12930c28c4c3861",
+    "semantic_hash": "42cb2b06c2d84c69d12930c28c4c3861"
+  },
+  "tests/test_database.py": {
+    "mtime": 1793492605.2987416,
+    "seen": 1793715795.5117748,
+    "ast_hash": "5d8abfdd9acd724eca376434e9fa8105",
+    "semantic_hash": "5d8abfdd9acd724eca376434e9fa8105"
+  },
+  "tools/ClassDiff.java": {
+    "mtime": 1793414295.4912443,
+    "seen": 1793715795.511919,
+    "ast_hash": "28c14db0bd6904ad2107462235cb4bb8",
+    "semantic_hash": "28c14db0bd6904ad2107462235cb4bb8"
+  },
+  "tools/DebugMethod.java": {
+    "mtime": 1793713789.0685399,
+    "seen": 1793715795.5120645,
+    "ast_hash": "08f4e7cc4f92d32b7c8618c1fecefc74",
+    "semantic_hash": "08f4e7cc4f92d32b7c8618c1fecefc74"
+  },
+  "tools/DebugMethodFull.java": {
+    "mtime": 1793714112.90253,
+    "seen": 1793715795.5122073,
+    "ast_hash": "af42ca3adf2dff9df7ce70057b305d19",
+    "semantic_hash": "af42ca3adf2dff9df7ce70057b305d19"
+  },
+  "tools/DumpMethod.java": {
+    "mtime": 1793663837.3417513,
+    "seen": 1793715795.5123527,
+    "ast_hash": "ff6e96ad6ee27f9a7897f9d1b8b21a4b",
+    "semantic_hash": "ff6e96ad6ee27f9a7897f9d1b8b21a4b"
+  },
+  "tools/DumpRefs.java": {
+    "mtime": 1793417889.2086704,
+    "seen": 1793715795.5124955,
+    "ast_hash": "9c93a802db1816e6c1a181096fc1d8d0",
+    "semantic_hash": "9c93a802db1816e6c1a181096fc1d8d0"
+  },
+  "tools/FixMaxTP.java": {
+    "mtime": 1793409004.3515265,
+    "seen": 1793715795.5126376,
+    "ast_hash": "b5d2e72dddd88106c908d0f29ba14cfc",
+    "semantic_hash": "b5d2e72dddd88106c908d0f29ba14cfc"
+  },
+  "tools/FrameCheck.java": {
+    "mtime": 1793414270.239143,
+    "seen": 1793715795.51278,
+    "ast_hash": "3c8d625fbafcb1f327bd1f0a6b830cec",
+    "semantic_hash": "3c8d625fbafcb1f327bd1f0a6b830cec"
+  },
+  "tools/InspectClass.java": {
+    "mtime": 1793663567.5627606,
+    "seen": 1793715795.512922,
+    "ast_hash": "89f6d77944dae824c6604dc07ecdb946",
+    "semantic_hash": "89f6d77944dae824c6604dc07ecdb946"
+  },
+  "tools/MemberRefs.java": {
+    "mtime": 1793418601.943343,
+    "seen": 1793715795.5130644,
+    "ast_hash": "53988625c4c2b41495520a7cd71a7b18",
+    "semantic_hash": "53988625c4c2b41495520a7cd71a7b18"
+  },
+  "tools/Sites.java": {
+    "mtime": 1793418478.855035,
+    "seen": 1793715795.5132055,
+    "ast_hash": "a0e43cd1542ba3920e07e54f2f943233",
+    "semantic_hash": "a0e43cd1542ba3920e07e54f2f943233"
+  },
+  "tools/TpPatch.java": {
+    "mtime": 1793715519.1568224,
+    "seen": 1793715795.5133643,
+    "ast_hash": "daa552347818cd5b5db87081dc4c0f37",
+    "semantic_hash": "daa552347818cd5b5db87081dc4c0f37"
+  },
+  "tools/TpReport.java": {
+    "mtime": 1793418930.955251,
+    "seen": 1793715795.5135186,
+    "ast_hash": "52e7430b8f92d262bdbc4313ac7078bf",
+    "semantic_hash": "52e7430b8f92d262bdbc4313ac7078bf"
+  },
+  "tools/TpShapes.java": {
+    "mtime": 1793417980.9159715,
+    "seen": 1793715795.5136986,
+    "ast_hash": "614e44866d29bedd2f1951d8c612602f",
+    "semantic_hash": "614e44866d29bedd2f1951d8c612602f"
+  },
+  "tools/VerifyJar.java": {
+    "mtime": 1793417858.585243,
+    "seen": 1793715795.513921,
+    "ast_hash": "676bb135d2c6249b4cab7d1aa1a30267",
+    "semantic_hash": "676bb135d2c6249b4cab7d1aa1a30267"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Death_35,60,31",
+  "name": "Death",
+  "icon": "waypoint-death.png",
+  "x": 35,
+  "y": 60,
+  "z": 31,
+  "r": 198,
+  "g": 136,
+  "b": 63,
+  "enable": true,
+  "type": "Death",
+  "origin": "JourneyMap",
+  "dimensions": [
+    0
+  ]
+}

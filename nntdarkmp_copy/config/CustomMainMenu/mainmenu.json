@@ -1,0 +1,306 @@
+{
+    "images":
+    {
+        "title":
+        {
+            "image" : "modpack:textures/Tdn2.png",
+            "posX" : -101,
+            "posY" : 12,
+            "width" : 185,
+            "height" : 110,
+            "alignment" : "top_center"
+        }
+    },
+    
+    "buttons":
+    {
+                
+        "play":
+        {
+            "text" : "",
+			"tooltip" : "Go !",
+            "texture" : "modpack:textures/jogar.png",
+            "posX" : -16,
+            "posY" : -57,
+            "width" : 29,
+            "height" : 16.5,
+            "alignment" : "bottom_center",
+			"imageWidth" : 58,
+			"imageHeight" : 33,
+            "action" : 
+            {
+                "type" : "connectToServer",
+                "ip" : "nanatsu.rededarkmc.com"
+            }
+        },
+
+        "website":
+        {
+            "text" : "",
+			"tooltip" : "Acessar o Site",
+            "texture" : "modpack:textures/web.png",
+            "posX" : -160,
+            "posY" : -46,
+            "width" : 34.5,
+            "height" : 4,
+            "alignment" : "bottom_center",
+			"imageWidth" : 69,
+			"imageHeight" : 8,
+            "action" : 
+            {
+                "type" : "openLink",
+                "link" : "https://rededarkmc.com"
+            }
+        },
+
+        "loja":
+        {
+            "text" : "",
+			"tooltip" : "Confira nossa Loja !",
+            "texture" : "modpack:textures/loja.png",
+            "posX" : -226,
+            "posY" : -50,
+            "width" : 42,
+            "height" : 14,
+            "alignment" : "bottom_center",
+			"imageWidth" : 84,
+			"imageHeight" : 28,
+            "action" : 
+            {
+                "type" : "openLink",
+                "link" : "https://rededarkmc.com"
+            }
+        },
+
+        "disc2":
+        {
+            "text" : "",
+			"tooltip" : "Participe da Comunidade !",
+            "texture" : "modpack:textures/discord.png",
+            "posX" : 110,
+            "posY" : -52,
+            "width" : 63.5,
+            "height" : 14,
+            "alignment" : "bottom_center",
+			"imageWidth" : 127,
+			"imageHeight" : 28,
+            "action" : 
+            {
+                "type" : "openLink",
+                "link" : "https://discord.gg/JSxksDq"
+            }
+        },
+
+        "rede":
+        {
+            "text" : "",
+			"tooltip" : "Desde 2017",
+            "texture" : "modpack:textures/craft.png",
+            "posX" : 180,
+            "posY" : -54,
+            "width" : 47,
+            "height" : 15,
+            "alignment" : "bottom_center",
+			"imageWidth" : 92,
+			"imageHeight" : 30,
+            "action" : 
+            {
+                "type" : "openLink",
+                "link" : "https://discord.gg/JSxksDq"
+            }
+        },
+
+        "sair":
+        {
+            "text" : "",
+			"tooltip" : "Fechar",
+            "texture" : "modpack:textures/sair.png",
+            "posX" : -20,
+            "posY" : 2,
+            "width" : 10,
+            "height" : 10,
+            "alignment" : "top_right",
+			"imageWidth" : 20,
+			"imageHeight" : 20,
+            "action" : 
+            {
+                "type" : "quit"
+            }
+        },
+
+        "config":
+        {
+            "text" : "",
+			"tooltip" : "Opções",
+            "texture" : "modpack:textures/config.png",
+            "posX" : -45,
+            "posY" : 30,
+            "width" : 14,
+            "height" : 14,
+            "alignment" : "top_right",
+			"imageWidth" : 28,
+			"imageHeight" : 28,
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "options"
+            }
+        },
+
+        "folder":
+        {
+            "text" : "",
+			"tooltip" : "Pasta do Modpack",
+            "texture" : "modpack:textures/folder.png",
+            "posX" : -45,
+            "posY" : 55,
+            "width" : 14,
+            "height" : 13,
+            "alignment" : "top_right",
+			"imageWidth" : 28,
+			"imageHeight" : 26,
+            "action" : 
+            {
+                "type" : "openFolder",
+                "folderName" : "/"
+            }
+        },
+
+        "1p":
+        {
+            "text" : "",
+			"tooltip" : "Single Player",
+            "texture" : "modpack:textures/1p.png",
+            "posX" : -45,
+            "posY" : 80,
+            "width" : 14.5,
+            "height" : 11.5,
+            "alignment" : "top_right",
+			"imageWidth" : 29,
+			"imageHeight" : 23,
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "singleplayer"
+            }
+        },
+
+        "plus":
+        {
+            "text" : "",
+			"tooltip" : "Mais",
+            "texture" : "modpack:textures/plus.png",
+            "posX" : -45,
+            "posY" : 100,
+            "width" : 13,
+            "height" : 13,
+            "alignment" : "top_right",
+			"imageWidth" : 26,
+			"imageHeight" : 26,
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "custom.teste"
+            }
+        },
+        
+
+        "mais":
+        {
+            "text" : "",
+			"tooltip" : "Outros Servidores",
+            "texture" : "modpack:textures/mais.png",
+            "posX" : -100,
+            "posY" : 3,
+            "width" : 33,
+            "height" : 7,
+            "alignment" : "top_right",
+			"imageWidth" : 66,
+			"imageHeight" : 14,
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "custom.teste"
+            }
+        }
+
+    },
+    
+    "texts":
+    {
+		"hi":
+		{
+			"text":"Logado como §e#username#",
+			"posX" : -70,
+			"posY" : 2,
+			"fontSize" : 1,
+			"color" : -1,
+			"alignment" : "top_center",
+            "action" : 
+            {
+                "type" : "refresh"
+            }
+		},
+
+		"ip":
+		{
+			"text":"IP: §enanatsu.rededarkmc.com",
+			"posX" : -66,
+			"posY" : -22,
+			"fontSize" : 1,
+			"color" : -1,
+			"alignment" : "bottom_center",
+            "action" : 
+            {
+                "type" : "connectToServer",
+                "ip" : "nanatsu.rededarkmc.com"
+            }
+		},
+
+		"ip2":
+		{
+			"text":"SV2: §e7ds.nationmc.com.br",
+			"posX" : -52,
+			"posY" : -10,
+			"fontSize" : 1,
+			"color" : -1,
+			"alignment" : "bottom_center",
+            "action" : 
+            {
+                "type" : "connectToServer",
+                "ip" : "7ds.nationmc.com.br"
+            }
+		}
+            
+    },
+
+    
+    "other":
+    {
+
+        "background":
+        {
+            "image" : "",
+            "slideshow":
+            {
+                "images" : ["modpack:textures/bg1.png","modpack:textures/bg2.png","modpack:textures/bg3.png"],
+                "displayDuration" : 200,
+                "fadeDuration" : 20
+            }
+        },
+		
+		"splash-text":
+        {
+            "posX" : 9990,
+            "posY" : 70,
+            "color" : -256,
+            "alignment" : "top_center",
+            "texts" : [	"LowKeyHigh foi banida!",
+						"Varnek está a espreita!",
+						"Kamehamehaaaaa...",
+						"Satan! Satan! Satan!",
+						"Visite a Fazenda Murasaki!"]	
+        }
+	  
+    }
+}

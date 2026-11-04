@@ -1,0 +1,158 @@
+{
+    "TradeData": {
+        "CurrencyLifetimeSpent": 0L,
+        "CurrencyLifetimeEarned": 0L,
+        "CurrencyBalance": 0L,
+        "AuctionClaims": [
+        ]
+    },
+    "ItemGiversList": [
+    ],
+    "AbilityHotbar10": {
+        "slot": 10,
+        "abilityKey": ""
+    },
+    "DBCInfo": {
+        "OverlayManager": {
+        },
+        "CurrentForm": -1,
+        "SelectedDBCForm": -1,
+        "LastFormBeforeStack": -1,
+        "UnlockedForms": [
+        ],
+        "CurrentAura": -1,
+        "SelectedForm": -1,
+        "UnlockedAuras": [
+        ],
+        "ConfigurableFormColors": [
+        ],
+        "FormWheel3": {
+            "formID": -1,
+            "isDBC": 0b,
+            "slot": 3
+        },
+        "FormWheel4": {
+            "formID": -1,
+            "isDBC": 0b,
+            "slot": 4
+        },
+        "SelectedAura": -1,
+        "FormTimers": [
+        ],
+        "FormWheel5": {
+            "formID": -1,
+            "isDBC": 0b,
+            "slot": 5
+        },
+        "FormWheel0": {
+            "formID": -1,
+            "isDBC": 0b,
+            "slot": 0
+        },
+        "FormWheel1": {
+            "formID": -1,
+            "isDBC": 0b,
+            "slot": 1
+        },
+        "FormWheel2": {
+            "formID": -1,
+            "isDBC": 0b,
+            "slot": 2
+        },
+        "FormMastery": [
+        ]
+    },
+    "Effects": [
+    ],
+    "PlayerAbilitySelected": 0,
+    "DialogData": [
+    ],
+    "isGUIOpen": 0b,
+    "AbilityHotbar11": {
+        "slot": 11,
+        "abilityKey": ""
+    },
+    "MailData": [
+    ],
+    "PlayerName": "VulgoFerd",
+    "UUID": "821b7707-c8a4-4413-be12-6a075f9f3b96",
+    "MagicData": {
+    },
+    "TrackedQuestID": -1,
+    "TransportData": [
+    ],
+    "NpcsTimers": [
+    ],
+    "AbilityAnimating": 0b,
+    "FactionData": [
+    ],
+    "BankData": [
+    ],
+    "ProfileSlot": 0,
+    "AllowAnimation": 0b,
+    "QuestData": {
+        "CompletedQuests": [
+        ],
+        "ActiveQuests": [
+        ]
+    },
+    "PlayerCompanionId": 0,
+    "ItemGiverChained": [
+    ],
+    "SkinOverlayData": [
+    ],
+    "ActiveToggles": [
+    ],
+    "AbilityHotbar8": {
+        "slot": 8,
+        "abilityKey": ""
+    },
+    "AbilityHotbar9": {
+        "slot": 9,
+        "abilityKey": ""
+    },
+    "AbilityHotbar4": {
+        "slot": 4,
+        "abilityKey": ""
+    },
+    "AbilityHotbar5": {
+        "slot": 5,
+        "abilityKey": ""
+    },
+    "AbilityHotbar6": {
+        "slot": 6,
+        "abilityKey": ""
+    },
+    "AbilityHotbar7": {
+        "slot": 7,
+        "abilityKey": ""
+    },
+    "AbilityHotbar0": {
+        "slot": 0,
+        "abilityKey": ""
+    },
+    "AbilityHotbar1": {
+        "slot": 1,
+        "abilityKey": ""
+    },
+    "AbilityHotbar2": {
+        "slot": 2,
+        "abilityKey": ""
+    },
+    "PlayerAbilities": [
+        "npcdbc:friendly_fist",
+        "npcdbc:swoop",
+        "npcdbc:kaioken",
+        "npcdbc:fusion",
+        "npcdbc:ki_fist",
+        "npcdbc:ki_protection",
+        "npcdbc:ki_weapon",
+        "npcdbc:potential_unleashed",
+        "npcdbc:ultra_instinct",
+        "npcdbc:god_of_destruction"
+    ],
+    "AbilityHotbar3": {
+        "slot": 3,
+        "abilityKey": ""
+    }
+}

@@ -1,0 +1,230 @@
+[00:40:43][INFO][noppes.npcs.enchants.EnchantInterface:47] Sat Oct 31 00:40:43 BRST 2026
+[00:40:43][SEVERE][noppes.npcs.CustomNpcs:246] java.lang.IllegalArgumentException: Duplicate enchantment id! class noppes.npcs.enchants.EnchantDamage and class am2.enchantments.EnchantMagicResist Enchantment ID:100
+	at net.minecraft.enchantment.Enchantment.<init>(Enchantment.java:53)
+	at noppes.npcs.enchants.EnchantInterface.<init>(EnchantInterface.java:23)
+	at noppes.npcs.enchants.EnchantDamage.<init>(EnchantDamage.java:9)
+	at noppes.npcs.enchants.EnchantInterface.load(EnchantInterface.java:42)
+	at noppes.npcs.CustomNpcs.load(CustomNpcs.java:246)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:532)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:556)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:243)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:480)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:878)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+[00:40:45][INFO][net.minecraft.client.resources.SimpleReloadableResourceManager:130] [ResourceListener] Adding FolderResourcePack (as fallback): C:\Users\Fernando\Desktop\NanatsuCore\nntdarkmp_copy\customnpcs
+[00:40:45][INFO][noppes.npcs.client.CustomNpcResourceListener:36] [ColorScheme] Loaded script_editor_scheme.json successfully
+[00:40:45][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   COMMENT -> color=#FF777777, bold=false, italic=false
+[00:40:45][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   KEYWORD -> color=#FFFF5555, bold=false, italic=false
+[00:40:45][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   STRING -> color=#FF16C57D, bold=false, italic=false
+[00:40:45][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   METHOD_CALL -> color=#FF55FF55, bold=false, italic=false
+[00:40:45][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   DEFAULT -> color=#FFFFFFFF, bold=false, italic=false
+[00:40:45][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   background -> bg=#FF000000, gutter=#FF000000
+[00:40:48][INFO][noppes.npcs.CustomNpcs:253] Script Engines Available:
+[00:41:07][INFO][kamkeel.npcs.util.Register$Abilities:98] Registered ability: friendly_fist
+[00:41:07][INFO][kamkeel.npcs.util.Register$Abilities:98] Registered ability: swoop
+[00:41:07][INFO][kamkeel.npcs.util.Register$Abilities:98] Registered ability: kaioken
+[00:41:07][INFO][kamkeel.npcs.util.Register$Abilities:98] Registered ability: fusion
+[00:41:07][INFO][kamkeel.npcs.util.Register$Abilities:98] Registered ability: ki_fist
+[00:41:07][INFO][kamkeel.npcs.util.Register$Abilities:98] Registered ability: ki_protection
+[00:41:07][INFO][kamkeel.npcs.util.Register$Abilities:98] Registered ability: ki_weapon
+[00:41:07][INFO][kamkeel.npcs.util.Register$Abilities:98] Registered ability: potential_unleashed
+[00:41:07][INFO][kamkeel.npcs.util.Register$Abilities:98] Registered ability: ultra_instinct
+[00:41:07][INFO][kamkeel.npcs.util.Register$Abilities:98] Registered ability: god_of_destruction
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_zone_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_zone_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_slam_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_slam_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_shockwave_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_shockwave_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orb_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orb_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orbdual_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orbdual_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orbbarrage_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orbbarrage_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_laser_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_laser_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_heavyhit_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_heavyhit_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_guard_counter
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_guard_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_generic_dazed
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_disc_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_disc_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_discdual_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_discdual_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_cutter_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_cutter_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_charge_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_charge_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_beam_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_beam_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_beamdual_windup
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_beamdual_active
+[00:41:36][INFO][noppes.npcs.controllers.AnimationController:242] Loaded 31 built-in animations.
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: namekregen
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: fusion_left
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: fusion_right
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: bigbangattack_windup
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: bigbangattack_active
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: burningattack_windup
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: burningattack_windup_slower
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: burningattack_active
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: deathball_windup
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: deathball_active
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: energygeneric_windup
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: energygeneric_charge
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: energygeneric_active
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: finishbreaker_windup
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: finishbreaker_active
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: spiritbomb_windup
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: spiritbomb_active
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: largespiritbomb_windup
+[00:41:36][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: largespiritbomb_active
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: supernova_windup
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: supernova_active
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: kamehameha_windup
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: kamehameha_active
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: masenko_windup
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: masenko_active
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: galickgun_windup
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: galickgun_active
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: doublesunday_windup
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: doublesunday_active
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: finalflash_windup
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: finalflash_active
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: specialbeamcannon_windup
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: specialbeamcannon_active
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: tribeam_windup
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: tribeam_active
+[00:41:37][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: androidbarrier
+[00:41:37][INFO][net.minecraft.client.resources.SimpleReloadableResourceManager:143] [ResourceListener] Adding FolderResourcePack (as fallback): C:\Users\Fernando\Desktop\NanatsuCore\nntdarkmp_copy\customnpcs
+[00:41:37][INFO][noppes.npcs.client.CustomNpcResourceListener:36] [ColorScheme] Loaded script_editor_scheme.json successfully
+[00:41:37][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   COMMENT -> color=#FF777777, bold=false, italic=false
+[00:41:37][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   KEYWORD -> color=#FFFF5555, bold=false, italic=false
+[00:41:37][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   STRING -> color=#FF16C57D, bold=false, italic=false
+[00:41:37][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   METHOD_CALL -> color=#FF55FF55, bold=false, italic=false
+[00:41:37][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   DEFAULT -> color=#FFFFFFFF, bold=false, italic=false
+[00:41:37][INFO][noppes.npcs.client.gui.util.script.interpreter.token.ScriptColorScheme:56] [ColorScheme]   background -> bg=#FF000000, gutter=#FF000000
+[00:42:03][INFO][noppes.npcs.CustomNpcs:361] Loading animations...
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_zone_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_zone_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_slam_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_slam_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_shockwave_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_shockwave_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orb_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orb_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orbdual_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orbdual_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orbbarrage_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_orbbarrage_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_laser_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_laser_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_heavyhit_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_heavyhit_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_guard_counter
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_guard_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_generic_dazed
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_disc_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_disc_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_discdual_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_discdual_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_cutter_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_cutter_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_charge_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_charge_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_beam_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_beam_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_beamdual_windup
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:160] Registered animation: ability_beamdual_active
+[00:42:03][INFO][noppes.npcs.controllers.AnimationController:70] Loaded 31 built-in animations.
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: namekregen
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: fusion_left
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: fusion_right
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: bigbangattack_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: bigbangattack_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: burningattack_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: burningattack_windup_slower
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: burningattack_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: deathball_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: deathball_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: energygeneric_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: energygeneric_charge
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: energygeneric_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: finishbreaker_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: finishbreaker_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: spiritbomb_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: spiritbomb_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: largespiritbomb_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: largespiritbomb_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: supernova_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: supernova_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: kamehameha_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: kamehameha_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: masenko_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: masenko_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: galickgun_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: galickgun_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: doublesunday_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: doublesunday_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: finalflash_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: finalflash_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: specialbeamcannon_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: specialbeamcannon_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: tribeam_windup
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: tribeam_active
+[00:42:03][INFO][kamkeel.npcs.util.Register$Animations:158] Registered animation: androidbarrier
+[00:42:03][INFO][noppes.npcs.CustomNpcs:361] Done loading animations.
+[00:42:03][INFO][noppes.npcs.CustomNpcs:365] Loading PlayerData...
+[00:42:03][INFO][noppes.npcs.CustomNpcs:365] Generating PlayerData map file...
+[00:42:03][INFO][noppes.npcs.CustomNpcs:365] Done loading PlayerData
+[00:42:03][INFO][noppes.npcs.controllers.LinkedNpcController:29] Loading Linked Npcs
+[00:42:03][INFO][noppes.npcs.controllers.LinkedNpcController:29] Done loading Linked Npcs
+[00:42:03][INFO][noppes.npcs.CustomNpcs:371] Loaded 0 custom abilities
+[00:42:03][INFO][kamkeel.npcs.controllers.AbilityController:250] Loaded 0 chained abilities
+[00:42:03][INFO][kamkeel.npcs.controllers.TelegraphController:46] Loading telegraph presets...
+[00:42:03][INFO][noppes.npcs.CustomNpcs:374] Loading linked items...
+[00:42:03][INFO][noppes.npcs.CustomNpcs:374] Done loading linked items.
+[00:42:03][INFO][noppes.npcs.CustomNpcs:377] Loading custom effects...
+[00:42:03][INFO][noppes.npcs.CustomNpcs:377] Done loading custom effects.
+[00:42:03][INFO][kamkeel.npcdbc.CustomNpcPlusDBC:118] Loading custom forms...
+[00:42:03][INFO][kamkeel.npcdbc.CustomNpcPlusDBC:118] Done loading custom forms.
+[00:42:03][INFO][kamkeel.npcdbc.CustomNpcPlusDBC:119] Loading custom auras...
+[00:42:03][INFO][kamkeel.npcdbc.CustomNpcPlusDBC:119] Done loading custom auras.
+[00:42:03][INFO][kamkeel.npcdbc.CustomNpcPlusDBC:122] Loading custom outlines...
+[00:42:03][INFO][kamkeel.npcdbc.CustomNpcPlusDBC:122] Done loading custom outlines.
+[00:42:03][INFO][kamkeel.npcdbc.CustomNpcPlusDBC:123] Loading custom skills...
+[00:42:03][INFO][kamkeel.npcdbc.CustomNpcPlusDBC:123] Done loading custom skills.
+[00:42:35][INFO][noppes.npcs.CustomNpcs:412] Loading Dialogs
+[00:42:36][INFO][noppes.npcs.CustomNpcs:412] Done loading Dialogs

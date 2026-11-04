@@ -1,0 +1,43 @@
+Tijolos de Pedra                4698
+Bloco de Grama                  2521
+Parede de Pedregulho            1475
+Escadas de Tijolos de Pedra      826
+Terra                            796
+Madeira de Pinheiro              480
+Tijolos de Pedra Rachados        385
+Laje de Tijolos de Pedra         348
+Tábuas de Carvalho               265
+Lã                               261
+Tábuas de Pinheiro               244
+Pedra Luminosa                   183
+Pedregulho                       125
+Alçapão                           99
+Mesa de Corantes                  96
+Laje de Pinheiro                  96
+Escadas de Pinheiro               80
+Carpete Vermelho                  70
+Tocha                             64
+Escada                            60
+Tijolos de Pedra com Musgo        56
+Pedra                             55
+Arbusto                           47
+Painel de Vidro Tingido de Azul   40
+Barras de Ferro                   38
+Grama                             32
+Escadas de Carvalho               13
+Estante                           10
+Madeira de Carvalho                8
+Podzol                             7
+Teia                               5
+Wall Banner                        4
+Laje de Pedra                      4
+Dente-de-Leão                      3
+Wall Banner                        3
+Lã Vermelha                        3
+Wall Banner                        3
+Wall Banner                        2
+Laje de Pedregulho                 2
+Escadas de Pedra                   2
+Arbusto Morto                      1
+Wall Banner                        1
+Wall Banner                        1
