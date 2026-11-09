@@ -37,7 +37,8 @@ public class DebugMethod {
                 System.out.println("  instructions: " + m.instructions.size());
                 System.out.println("  localVariables: " + (m.localVariables != null ? m.localVariables.size() : 0));
                 if (m.localVariables != null) {
-                    for (var lv : m.localVariables) {
+                    for (Object lvObj : m.localVariables) {
+                        org.objectweb.asm.tree.LocalVariableNode lv = (org.objectweb.asm.tree.LocalVariableNode) lvObj;
                         System.out.println("    LV: " + lv.name + " " + lv.desc + " slot=" + lv.index + " start=" + lv.start + " end=" + lv.end);
                     }
                 }

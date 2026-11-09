@@ -14,13 +14,14 @@ public class JarHierarchy {
     static Map<String, ClassNode> classes = new HashMap<>();
 
     public static void main(String[] args) throws Exception {
-        if (args.length < 2) {
-            System.err.println("Usage: java JarHierarchy <forge-jar> <jrmc-jar> [npcdbc-jar]");
+        if (args.length < 1) {
+            System.err.println("Usage: java JarHierarchy <jrmc-jar> [npcdbc-jar]");
             System.exit(1);
         }
-        loadJar(args[0]); // forge userdev jar (MCP-named)
-        loadJar(args[1]); // JRMCore original
-        if (args.length > 2) loadJar(args[2]); // NPCDBC
+        // Try to load forge jar if available, but don't require it
+        // We'll load JRMCore and NPCDBC
+        if (args.length >= 1) loadJar(args[0]); // JRMCore
+        if (args.length >= 2) loadJar(args[1]); // NPCDBC
 
         // Build hierarchy: for each class, find its superclass and interfaces
         Map<String, Set<String>> hierarchy = new HashMap<>();

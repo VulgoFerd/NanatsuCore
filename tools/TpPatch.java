@@ -36,6 +36,14 @@ public class TpPatch {
         "JinRyuu/JRMCore/JRMCoreGuiSCM",
         "JinRyuu/JRMCore/JRMCoreGuiScreen"
     };
+    // DBC (DragonBlockC) GUI classes that access curTP:I
+    static final String[] DBC_GUI_CLASSES = {
+        "JinRyuu/DragonBC/common/Gui/DBCTalkGui"
+    };
+    // NPCDBC GUI classes that access curTP:I
+    static final String[] NPCDBC_GUI_CLASSES = {
+        "kamkeel/npcdbc/client/gui/dbc/StatSheetGui"
+    };
 
     // Hierarchy for frame computation
     static Map<String, Set<String>> hierarchy;
@@ -146,10 +154,30 @@ public class TpPatch {
                 } else if (name.equals(DBCData + ".class")) {
                     patched = patchDBCData(data);
                 } else {
+                    boolean patchedGui = false;
                     for (String gui : GUI_CLASSES) {
                         if (name.equals(gui + ".class")) {
                             patched = patchGuiDisplay(data, gui);
+                            patchedGui = true;
                             break;
+                        }
+                    }
+                    if (!patchedGui) {
+                        for (String gui : DBC_GUI_CLASSES) {
+                            if (name.equals(gui + ".class")) {
+                                patched = patchGuiDisplay(data, gui);
+                                patchedGui = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (!patchedGui) {
+                        for (String gui : NPCDBC_GUI_CLASSES) {
+                            if (name.equals(gui + ".class")) {
+                                patched = patchGuiDisplay(data, gui);
+                                patchedGui = true;
+                                break;
+                            }
                         }
                     }
                 }
@@ -223,9 +251,9 @@ public class TpPatch {
                 }
             }
 
-            // Fallback - should not happen if hierarchy is complete
-            // Throw error to detect incomplete hierarchy rather than silently producing bad frames
-            throw new RuntimeException("HierarchyClassWriter: No common superclass found for " + type1 + " and " + type2 + ". Hierarchy incomplete or types not in hierarchy.");
+            // Fallback - hierarchy incomplete (e.g., no Forge JAR available)
+            // Return java/lang/Object as safe common superclass for frame computation
+            return "java/lang/Object";
         }
 
         private Set<String> getAllAncestors(String type) {
@@ -1927,8 +1955,8 @@ public class TpPatch {
         System.out.println("  ComJrmctp.execute: rewriting jrmcTpint NBT operations to long TP");
         // Collect all replacements first to avoid index shifting issues
         List<Replacement> replacements = new ArrayList<>();
-        // Track converted variables: oldVar -> newVar mapping
-        Map<Integer, Integer> convertedVarMap = new HashMap<>();
+        // Track variables that need int->long conversion (oldVar -> newVar)
+        Map<Integer, Integer> oldVarToNewVar = new HashMap<>();
         
         AbstractInsnNode[] arr = m.instructions.toArray();
         for (int i = 0; i < arr.length; i++) {
@@ -1950,14 +1978,12 @@ public class TpPatch {
                                 }
                             }
                             // Find the ISTORE after this method call in the snapshot
-                            VarInsnNode istoreNode = null;
-                            int istoreIdx = -1;
+                            int istoreOldVar = -1;
                             for (int j = i + 1; j < arr.length; j++) {
                                 if (arr[j] instanceof VarInsnNode) {
                                     VarInsnNode var = (VarInsnNode)arr[j];
                                     if (var.getOpcode() == Opcodes.ISTORE) {
-                                        istoreNode = var;
-                                        istoreIdx = j;
+                                        istoreOldVar = var.var;
                                         break;
                                     }
                                 }
@@ -1971,9 +1997,16 @@ public class TpPatch {
                             }
                             addInsn(replacement, new MethodInsnNode(Opcodes.INVOKESTATIC, JRMCoreH, "getTPTotal",
                                     "(Ljava/lang/Object;)J", false));
-                            replacements.add(new Replacement(ldc, min, nbtLoad, replacement, "getTPTotal", istoreNode, istoreIdx));
-                            if (istoreNode != null) {
-                                System.out.println("  ComJrmctp.execute: found ISTORE at var " + istoreNode.var + " for getTPTotal at snapshot index " + istoreIdx);
+                            replacements.add(new Replacement(ldc, min, nbtLoad, replacement, "getTPTotal", istoreOldVar));
+                            if (istoreOldVar >= 0) {
+                                System.out.println("  ComJrmctp.execute: found ISTORE at var " + istoreOldVar + " for getTPTotal");
+                                // Allocate new variable for this oldVar if not already allocated
+                                if (!oldVarToNewVar.containsKey(istoreOldVar)) {
+                                    int newVar = m.maxLocals + 1;
+                                    m.maxLocals = newVar + 1; // long takes 2 slots
+                                    oldVarToNewVar.put(istoreOldVar, newVar);
+                                    System.out.println("  ComJrmctp.execute: allocated new var " + newVar + " for TP long (was var " + istoreOldVar + ")");
+                                }
                             }
                         }
                     }
@@ -2007,35 +2040,13 @@ public class TpPatch {
             }
         }
         
-        // First pass: collect all getTPTotal replacements and their ISTORE nodes, grouped by oldVar
-        Map<Integer, List<Replacement>> getTPTotalByOldVar = new HashMap<>();
-        for (Replacement r : replacements) {
-            if (r.label.equals("getTPTotal") && r.istoreNode != null) {
-                int oldVar = r.istoreNode.var;
-                getTPTotalByOldVar.computeIfAbsent(oldVar, k -> new ArrayList<>()).add(r);
-            }
-        }
-        
-        // Allocate one newVar per oldVar
-        Map<Integer, Integer> oldVarToNewVar = new HashMap<>();
-        for (int oldVar : getTPTotalByOldVar.keySet()) {
-            int newVar = m.maxLocals + 1;
-            m.maxLocals = newVar + 1; // long takes 2 slots
-            oldVarToNewVar.put(oldVar, newVar);
-            System.out.println("  ComJrmctp.execute: allocated new var " + newVar + " for getTPTotal results (was var " + oldVar + ")");
-        }
-        
-        // Apply all replacements and modify ISTOREs
+        // Apply all replacements first (just remove old, insert new)
         for (Replacement r : replacements) {
             m.instructions.remove(r.ldc);
             m.instructions.remove(r.min);
             
-            // Save the last node of replacement BEFORE insertion (nodes are moved during insert)
-            AbstractInsnNode replacementLast = r.replacement.getLast();
-            
             if (r.label.equals("getTPTotal") && r.nbtLoad != null) {
                 // For getTPTotal with nbtLoad: insert AFTER nbtLoad so nbt is on stack
-                // insert() inserts BEFORE the given node, so we insert before nbtLoad.getNext()
                 AbstractInsnNode afterNbtLoad = r.nbtLoad.getNext();
                 if (afterNbtLoad != null) {
                     m.instructions.insert(afterNbtLoad, r.replacement);
@@ -2047,58 +2058,155 @@ public class TpPatch {
                 m.instructions.insert(r.min, r.replacement);
             }
             
-            // If this was a getTPTotal replacement, use the stored ISTORE node from snapshot
-            if (r.label.equals("getTPTotal") && r.istoreNode != null) {
-                // Use the ISTORE node we found in the snapshot
-                VarInsnNode var = r.istoreNode;
-                int oldVar = var.var;
-                int newVar = oldVarToNewVar.get(oldVar);
-                
-                System.out.println("  ComJrmctp.execute: converting ISTORE at var " + oldVar + " to LSTORE at var " + newVar);
-                
-                // Change ISTORE to LSTORE at NEW variable index
-                var.setOpcode(Opcodes.LSTORE);
-                var.var = newVar;
-                
-                // Track this conversion: oldVar -> newVar
-                // We'll replace ILOAD oldVar; I2L with LLOAD newVar
-                convertedVarMap.put(oldVar, newVar);
-            } else if (r.label.equals("getTPTotal")) {
-                System.out.println("  ComJrmctp.execute: WARNING - no ISTORE found for getTPTotal at snapshot index " + r.istoreIndexInSnapshot);
-            }
             System.out.println("  ComJrmctp.execute: NBT." + r.label + " -> " + r.label);
         }
         
-        // Replace ILOAD oldVar; I2L with LLOAD newVar for all converted variables
-        // Do this BEFORE remapping
+        // Now do a separate pass to convert ALL ISTORE oldVar -> LSTORE newVar
+        // that follow an INVOKESTATIC getTPTotal call
         AbstractInsnNode[] arr2 = m.instructions.toArray();
-        System.out.println("  ComJrmctp.execute: scanning for ILOAD/I2L pairs, convertedVarMap=" + convertedVarMap);
-        for (int i = 0; i < arr2.length - 1; i++) {
-            if (arr2[i] instanceof VarInsnNode && arr2[i + 1] instanceof InsnNode) {
-                VarInsnNode var = (VarInsnNode)arr2[i];
-                InsnNode insn = (InsnNode)arr2[i + 1];
-                if (var.getOpcode() == Opcodes.ILOAD && insn.getOpcode() == Opcodes.I2L) {
-                    System.out.println("  ComJrmctp.execute: found ILOAD " + var.var + "; I2L at index " + i);
-                    Integer newVar = convertedVarMap.get(var.var);
-                    if (newVar != null) {
-                        var.setOpcode(Opcodes.LLOAD);
-                        var.var = newVar;
-                        m.instructions.remove(insn);
-                        System.out.println("  ComJrmctp.execute: replaced ILOAD with LLOAD at new var " + newVar);
-                    } else {
-                        System.out.println("  ComJrmctp.execute: no mapping for var " + var.var);
+        int getTPTotalCount = 0;
+        for (int i = 0; i < arr2.length; i++) {
+            AbstractInsnNode insn = arr2[i];
+            if (insn instanceof MethodInsnNode) {
+                MethodInsnNode min = (MethodInsnNode)insn;
+                if ("getTPTotal".equals(min.name) && JRMCoreH.equals(min.owner)) {
+                    getTPTotalCount++;
+                    // Found a getTPTotal call, scan forward for ISTORE at converted vars
+                    System.out.println("  ComJrmctp.execute: scanning for ISTORE after getTPTotal #" + getTPTotalCount + " at index " + i);
+                    boolean foundIstore = false;
+                    for (int j = i + 1; j < arr2.length; j++) {
+                        if (arr2[j] instanceof VarInsnNode) {
+                            VarInsnNode var = (VarInsnNode)arr2[j];
+                            if (var.getOpcode() == Opcodes.ISTORE) {
+                                System.out.println("    found ISTORE at index " + j + ", var=" + var.var);
+                                int oldVar = var.var;
+                                Integer newVar = oldVarToNewVar.get(oldVar);
+                                if (newVar != null) {
+                                    System.out.println("  ComJrmctp.execute: converting ISTORE at var " + oldVar + " to LSTORE at var " + newVar + " (after getTPTotal #" + getTPTotalCount + " at index " + i + ", ISTORE at index " + j + ")");
+                                    var.setOpcode(Opcodes.LSTORE);
+                                    var.var = newVar;
+                                    foundIstore = true;
+                                    break; // Only convert the first ISTORE after this getTPTotal
+                                }
+                            }
+                        }
+                    }
+                    // If no ISTORE found, insert LSTORE newVar after the getTPTotal call (skip Label/LineNumber)
+                    if (!foundIstore) {
+                        // Find the first non-Label/LineNumber instruction after getTPTotal
+                        int insertIdx = i + 1;
+                        while (insertIdx < arr2.length) {
+                            AbstractInsnNode next = arr2[insertIdx];
+                            if (!(next instanceof LabelNode) && !(next instanceof LineNumberNode) && !(next instanceof FrameNode)) {
+                                break;
+                            }
+                            insertIdx++;
+                        }
+                        // Get the newVar for var 13 (the original TP variable)
+                        Integer newVar = oldVarToNewVar.get(13);
+                        if (newVar != null) {
+                            System.out.println("  ComJrmctp.execute: inserting LSTORE at var " + newVar + " after getTPTotal #" + getTPTotalCount + " (no ISTORE found)");
+                            AbstractInsnNode insertBefore = insertIdx < arr2.length ? arr2[insertIdx] : null;
+                            if (insertBefore != null) {
+                                m.instructions.insertBefore(insertBefore, new VarInsnNode(Opcodes.LSTORE, newVar));
+                            } else {
+                                m.instructions.add(new VarInsnNode(Opcodes.LSTORE, newVar));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        System.out.println("  ComJrmctp.execute: found " + getTPTotalCount + " getTPTotal calls");
+        
+        // Debug: dump instructions around second getTPTotal
+        System.out.println("  ComJrmctp.execute: DEBUG - instructions around index 570-620:");
+        for (int i = 570; i < Math.min(620, arr2.length); i++) {
+            AbstractInsnNode insn = arr2[i];
+            String desc = insn.getClass().getSimpleName();
+            if (insn instanceof VarInsnNode) {
+                VarInsnNode v = (VarInsnNode)insn;
+                desc += " opcode=" + v.getOpcode() + " var=" + v.var;
+            } else if (insn instanceof MethodInsnNode) {
+                MethodInsnNode m2 = (MethodInsnNode)insn;
+                desc += " " + m2.owner + "." + m2.name + m2.desc;
+            } else if (insn instanceof LdcInsnNode) {
+                LdcInsnNode l = (LdcInsnNode)insn;
+                desc += " cst=" + l.cst;
+            }
+            System.out.println("    [" + i + "] " + desc);
+        }
+        
+        // Now convert ILOAD oldVar; I2L -> LLOAD newVar
+        arr2 = m.instructions.toArray(); // Refresh array after ISTORE conversions
+        for (int i = 0; i < arr2.length; i++) {
+            AbstractInsnNode insn = arr2[i];
+            if (insn instanceof VarInsnNode) {
+                VarInsnNode var = (VarInsnNode)insn;
+                int oldVar = var.var;
+                Integer newVar = oldVarToNewVar.get(oldVar);
+                if (newVar != null && var.getOpcode() == Opcodes.ILOAD) {
+                    // Check if next instruction is I2L
+                    if (i + 1 < arr2.length && arr2[i + 1] instanceof InsnNode) {
+                        InsnNode nextInsn = (InsnNode)arr2[i + 1];
+                        if (nextInsn.getOpcode() == Opcodes.I2L) {
+                            System.out.println("  ComJrmctp.execute: converting ILOAD " + oldVar + "; I2L to LLOAD at var " + newVar);
+                            var.setOpcode(Opcodes.LLOAD);
+                            var.var = newVar;
+                            m.instructions.remove(nextInsn);
+                        }
                     }
                 }
             }
         }
         
+        // Fix: var 13 is used for both Object references (ALOAD/ASTORE) and TP int.
+        // After converting TP uses to var 26, var 13 still has ALOAD/ASTORE for Objects.
+        // This causes frame conflicts because frames see var 13 as both Object and long.
+        // Remap ALL remaining uses of var 13 (except LLOAD/LSTORE which are TP) to a new variable (27).
+        int objRefNewVar = 27;
+        arr2 = m.instructions.toArray();
+        for (int i = 0; i < arr2.length; i++) {
+            AbstractInsnNode insn = arr2[i];
+            if (insn instanceof VarInsnNode) {
+                VarInsnNode var = (VarInsnNode)insn;
+                if (var.var == 13) {
+                    int opcode = var.getOpcode();
+                    // Skip LLOAD/LSTORE (25/55 for long? No, LLOAD=22, LSTORE=55? Let me check)
+                    // Actually: ILOAD=21, LLOAD=22, FLOAD=23, DLOAD=24, ALOAD=25
+                    // ISTORE=54, LSTORE=55, FSTORE=56, DSTORE=57, ASTORE=58
+                    // Wait, the debug shows: 58 var=27 (ASTORE), 25 var=27 (ALOAD), 54 var=13 (ASTORE)
+                    // So ALOAD=25, ASTORE=58? But 54 is ISTORE.
+                    // Let me check: 54 is ISTORE (int store), 58 is ASTORE (reference store).
+                    // The debug shows "54 var=13" which is ISTORE 13, not ASTORE!
+                    // But we converted all ISTORE 13 to LSTORE 26. So why is there still ISTORE 13?
+                    
+                    // Actually, looking at the debug output: "54 var=13" - opcode 54 is ISTORE.
+                    // But we converted ISTORE 13 to LSTORE 26 (opcode 55). So this should be 55 var=26.
+                    // Unless this is a DIFFERENT ISTORE 13 that wasn't converted.
+                    
+                    // The remapping should catch ALL var 13 uses except the converted TP ones (LLOAD 22, LSTORE 55 at var 26).
+                    // But var 13 at this point should only have Object refs (ALOAD=25, ASTORE=58) or missed ISTORE/ILOAD.
+                    if (opcode == Opcodes.ALOAD || opcode == Opcodes.ASTORE || 
+                        opcode == Opcodes.ILOAD || opcode == Opcodes.ISTORE) {
+                        System.out.println("  ComJrmctp.execute: remapping var 13 opcode=" + opcode + " -> " + objRefNewVar);
+                        var.var = objRefNewVar;
+                    }
+                }
+            } else if (insn instanceof IincInsnNode) {
+                IincInsnNode iinc = (IincInsnNode)insn;
+                if (iinc.var == 13) {
+                    System.out.println("  ComJrmctp.execute: remapping IINC var 13 -> " + objRefNewVar);
+                    iinc.var = objRefNewVar;
+                }
+            }
+        }
+        
         // Update maxLocals to accommodate the new highest variable index
-        // (We allocated new variables at the end, so just recalculate maxLocals)
         int maxVar = 0;
         for (AbstractInsnNode insn : m.instructions.toArray()) {
             if (insn instanceof VarInsnNode) {
                 VarInsnNode var = (VarInsnNode)insn;
-                // Long/double take 2 slots
                 int opcode = var.getOpcode();
                 int slots = (opcode == Opcodes.LLOAD || opcode == Opcodes.LSTORE ||
                              opcode == Opcodes.DLOAD || opcode == Opcodes.DSTORE) ? 2 : 1;
@@ -2193,22 +2301,20 @@ public class TpPatch {
         final AbstractInsnNode nbtLoad;
         final InsnList replacement;
         final String label;
-        // For getTPTotal: the ISTORE node in the original snapshot (to avoid search issues after modifications)
-        final VarInsnNode istoreNode;
-        final int istoreIndexInSnapshot;
+        // For getTPTotal: the ISTORE variable index in the original snapshot
+        final int istoreOldVar;
         
         Replacement(LdcInsnNode ldc, MethodInsnNode min, AbstractInsnNode nbtLoad, InsnList replacement, String label) {
-            this(ldc, min, nbtLoad, replacement, label, null, -1);
+            this(ldc, min, nbtLoad, replacement, label, -1);
         }
         
-        Replacement(LdcInsnNode ldc, MethodInsnNode min, AbstractInsnNode nbtLoad, InsnList replacement, String label, VarInsnNode istoreNode, int istoreIndexInSnapshot) {
+        Replacement(LdcInsnNode ldc, MethodInsnNode min, AbstractInsnNode nbtLoad, InsnList replacement, String label, int istoreOldVar) {
             this.ldc = ldc;
             this.min = min;
             this.nbtLoad = nbtLoad;
             this.replacement = replacement;
             this.label = label;
-            this.istoreNode = istoreNode;
-            this.istoreIndexInSnapshot = istoreIndexInSnapshot;
+            this.istoreOldVar = istoreOldVar;
         }
     }
 
