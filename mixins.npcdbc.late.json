@@ -2,10 +2,11 @@
   "required": true,
   "minVersion": "0.7.11",
   "package": "kamkeel.npcdbc.mixins.late.impl",
+  "plugin": "kamkeel.npcdbc.mixins.late.NPCDBCLateMixins",
   "refmap": "mixins.npcdbc.refmap.json",
   "target": "@env(DEFAULT)",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [],
+  "mixins": ["npc.MixinPlayerData"],
   "client": [],
   "server": []
 }

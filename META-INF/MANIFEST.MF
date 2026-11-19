@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Created-By: BigTP 1.1.1 Patcher
+Build-Date: 2026-11-12 08:24:15 -0300
+Specification-Title: JinRyuu JRMCore BigTP
+Specification-Version: 1.1.1
+Implementation-Version: 1.1.1
+Main-Class: 
+MixinConfigs: mixins.npcdbc.json
+TweakClass: org.spongepowered.asm.launch.MixinTweaker
+FMLCorePluginContainsFMLMod: true
+FMLAT: npcdbc_at.cfg ../../../../CustomNPC-Plus/src/main/resources/META-INF/customnpcs_at.cfg
+ForceLoadAsMod: true

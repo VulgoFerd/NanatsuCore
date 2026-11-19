@@ -86,6 +86,11 @@ key_key.hotbar.7:8
 key_key.hotbar.8:9
 key_key.hotbar.9:10
 key_key.showHPBar:0
+key_NPC Inventory:49
+key_key.customnpcs.special:-98
+key_key.customnpcs.abilityHudKey:40
+key_key.customnpcs.abilityNext:-97
+key_key.customnpcs.abilityPrev:-96
 key_Data Sheet:47
 key_2nd Fn:41
 key_Action menu:45
@@ -99,11 +104,6 @@ key_Story System:207
 key_Info Panel:37
 key_Scouter Functions:62
 key_3rd Fn:50
-key_NPC Inventory:49
-key_key.customnpcs.special:-98
-key_key.customnpcs.abilityHudKey:40
-key_key.customnpcs.abilityNext:-97
-key_key.customnpcs.abilityPrev:-96
 key_schematica.key.load:76
 key_schematica.key.save:73
 key_schematica.key.control:77

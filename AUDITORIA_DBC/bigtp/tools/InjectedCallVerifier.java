@@ -194,6 +194,11 @@ public final class InjectedCallVerifier {
                 Opcodes.INVOKESTATIC, "StateLocalAdapter:tpShort", "STATE:tpShort");
         addInjected("JinRyuu/JRMCore/JRMCoreH", "clampTP", "(J)I",
                 Opcodes.INVOKESTATIC, "StateLocalAdapter:clampTP", "STATE:clampTP");
+        // New LONG APIs on JRMCoreH
+        addInjected("JinRyuu/JRMCore/JRMCoreH", "getMaxTPLong", "()J",
+                Opcodes.INVOKESTATIC, "StateLocalAdapter:getMaxTPLong", "STATE:getMaxTPLong");
+        addInjected("JinRyuu/JRMCore/JRMCoreH", "canAffordSkill", "(JJ)Z",
+                Opcodes.INVOKESTATIC, "StateLocalAdapter:canAffordSkill", "STATE:canAffordSkill");
 
         // ---- Explicit adapters from SiteRewriter.EXPLICIT_ADAPTERS ----
         // These are encoded as strings like "TpUtil.readUsable(player)"
@@ -211,7 +216,7 @@ public final class InjectedCallVerifier {
             String clazz = cols[0];
             String method = cols[1];
             String desc = cols[2];
-            int offset = Integer.parseInt(cols[3]);
+            int offset = Integer.parseInt(cols[3]); // offset is in column 3 (index 3)
             String adapter = cols[9];
             if (adapter == null || adapter.isEmpty()) continue;
 
@@ -324,6 +329,8 @@ public final class InjectedCallVerifier {
                 case "tpShort": return "(J)S";
                 case "clampTP": return "(J)I";
                 case "getMaxTP": return "()I";
+                case "getMaxTPLong": return "()J";
+                case "canAffordSkill": return "(JJ)Z";
                 case "nbt": return "(Lnet/minecraft/entity/Entity;Ljava/lang/String;)Lnet/minecraft/nbt/NBTTagCompound;";
                 case "getByte": return "(Lnet/minecraft/entity/Entity;Ljava/lang/String;)B";
                 case "setByte": return "(Lnet/minecraft/entity/Entity;Ljava/lang/String;B)V";

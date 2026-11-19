@@ -1,0 +1,6 @@
+chore: update AUDITORIA_DBC submodule to fixed BigTP 1.1.1 commit
+
+Submodule commit b10044a resolves structural blockers:
+- injectJRMCoreHMethods implements tpShort/clampTP
+- writeClassWithFallback catches Throwable for v50 classes
+- 3 verified JARs produced with SHA-256 hashes

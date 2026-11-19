@@ -154,6 +154,9 @@
     },
     "kamkeel/npcdbc/mixins/late/impl/npc/client/MixinSubGuiNPCResistanceProperties": {
       "initGui": "Lnoppes/npcs/client/gui/SubGuiNpcResistanceProperties;func_73866_w_()V"
+    },
+    "kamkeel/npcdbc/mixins/late/impl/npc/MixinPlayerData": {
+      "getPlayerDBCInfo": "Lnoppes/npcs/controllers/data/PlayerData;getPlayerDBCInfo:()Lkamkeel/npcdbc/data/PlayerDBCInfo;"
     }
   },
   "data": {
@@ -312,6 +315,9 @@
       },
       "kamkeel/npcdbc/mixins/late/impl/npc/client/MixinSubGuiNPCResistanceProperties": {
         "initGui": "Lnoppes/npcs/client/gui/SubGuiNpcResistanceProperties;func_73866_w_()V"
+      },
+      "kamkeel/npcdbc/mixins/late/impl/npc/MixinPlayerData": {
+        "getPlayerDBCInfo": "Lnoppes/npcs/controllers/data/PlayerData;getPlayerDBCInfo:()Lkamkeel/npcdbc/data/PlayerDBCInfo;"
       }
     }
   }

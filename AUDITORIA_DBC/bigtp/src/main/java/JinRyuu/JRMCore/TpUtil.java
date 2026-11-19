@@ -371,7 +371,13 @@ public final class TpUtil {
     private static void writeLegacyInt(NBTTagCompound tag, int requested) {
         long current = readUsable(tag);
         int mirrored = TpLogic.mirror(current);
-        long delta = (long) requested - (long) mirrored;
+        // A subtracao e feita em 32 bits de proposito. O codigo legado le o
+        // espelho int, soma/subtrai em int e grava o resultado; quando o saldo
+        // passa de Integer.MAX_VALUE o espelho satura e a soma sofre overflow
+        // (MAX + 42 -> -2147483607). A diferenca em int cancela exatamente o
+        // overflow e devolve o delta real (42), que e somado ao saldo long.
+        // Em 64 bits o resultado seria -4294967254 e destruiria o saldo.
+        long delta = (long) (requested - mirrored);
         long next;
         if (delta > 0L && current > Long.MAX_VALUE - delta) {
             next = Long.MAX_VALUE;

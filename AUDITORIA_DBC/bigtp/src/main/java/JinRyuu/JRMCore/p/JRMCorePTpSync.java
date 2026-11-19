@@ -22,15 +22,4 @@ public class JRMCorePTpSync implements IMessage {
     public void fromBytes(ByteBuf buf) {
         this.tpLong = buf.readLong();
     }
-
-    public static class Handler extends CAmh<JRMCorePTpSync> {
-        public Handler() {
-        }
-
-        @Override
-        public IMessage handleClientMessage(net.minecraft.entity.player.EntityPlayer player, JRMCorePTpSync message, cpw.mods.fml.common.network.simpleimpl.MessageContext ctx) {
-            JinRyuu.JRMCore.TpNetwork.accept(message.tpLong);
-            return null;
-        }
-    }
 }

@@ -1,0 +1,196 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 12/11/26 02:58
+Description: Rendering entity in world
+
+java.lang.ClassCastException: net.minecraft.client.entity.EntityClientPlayerMP cannot be cast to kamkeel.npcdbc.mixins.early.IEntityMC
+	at kamkeel.npcdbc.client.render.RenderEventHandler.enableEntityStencil(RenderEventHandler.java:162)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_276_RenderEventHandler_enableEntityStencil_Pre.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraft.client.renderer.entity.RendererLivingEntity.func_76986_a(RendererLivingEntity.java:71)
+	at net.minecraft.client.renderer.entity.RenderPlayer.func_76986_a(RenderPlayer.java:158)
+	at JinRyuu.JBRA.RenderPlayerJBRA.func_130009_a(RenderPlayerJBRA.java:199)
+	at JinRyuu.JBRA.RenderPlayerJBRA.func_76986_a(RenderPlayerJBRA.java:227)
+	at JinRyuu.JBRA.RenderPlayerJBRA.func_76986_a(RenderPlayerJBRA.java:3388)
+	at net.minecraft.client.renderer.entity.RenderManager.func_147939_a(RenderManager.java:293)
+	at net.minecraft.client.renderer.entity.RenderManager.func_147940_a(RenderManager.java:276)
+	at JinRyuu.JRMCore.JRMCoreGuiScreen.func_110423_a(JRMCoreGuiScreen.java:7092)
+	at JinRyuu.JRMCore.JRMCoreGuiScreen.func_110423_a_I(JRMCoreGuiScreen.java:7057)
+	at JinRyuu.JRMCore.JRMCoreGuiScreen.func_73863_a(JRMCoreGuiScreen.java:3045)
+	at net.minecraft.client.renderer.EntityRenderer.func_78480_b(EntityRenderer.java:1061)
+	at JinRyuu.JBRA.JBRAEnRen.func_78480_b(JBRAEnRen.java:61)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1001)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:898)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at kamkeel.npcdbc.client.render.RenderEventHandler.enableEntityStencil(RenderEventHandler.java:162)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_276_RenderEventHandler_enableEntityStencil_Pre.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:140)
+	at net.minecraft.client.renderer.entity.RendererLivingEntity.func_76986_a(RendererLivingEntity.java:71)
+	at net.minecraft.client.renderer.entity.RenderPlayer.func_76986_a(RenderPlayer.java:158)
+	at JinRyuu.JBRA.RenderPlayerJBRA.func_130009_a(RenderPlayerJBRA.java:199)
+	at JinRyuu.JBRA.RenderPlayerJBRA.func_76986_a(RenderPlayerJBRA.java:227)
+	at JinRyuu.JBRA.RenderPlayerJBRA.func_76986_a(RenderPlayerJBRA.java:3388)
+
+-- Entity being rendered --
+Details:
+	Entity Type: null (net.minecraft.client.entity.EntityClientPlayerMP)
+	Entity ID: 771
+	Entity Name: VulgoFerd
+	Entity's Exact location: -37,14, 5,62, -1195,14
+	Entity's Block location: World: (-38,5,-1196), Chunk: (at 10,0,4 in -3,-75; contains blocks -48,0,-1200 to -33,255,-1185), Region: (-1,-3; contains chunks -32,-96 to -1,-65, blocks -512,0,-1536 to -1,255,-1025)
+	Entity's Momentum: 0,00, -0,08, 0,00
+
+-- Renderer details --
+Details:
+	Assigned renderer: JinRyuu.JBRA.RenderPlayerJBRA@467bc220
+	Location: 0,00,0,00,0,00 - World: (0,0,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Rotation: 0.0
+	Delta: 1.0
+Stacktrace:
+	at net.minecraft.client.renderer.entity.RenderManager.func_147939_a(RenderManager.java:293)
+	at net.minecraft.client.renderer.entity.RenderManager.func_147940_a(RenderManager.java:276)
+	at JinRyuu.JRMCore.JRMCoreGuiScreen.func_110423_a(JRMCoreGuiScreen.java:7092)
+	at JinRyuu.JRMCore.JRMCoreGuiScreen.func_110423_a_I(JRMCoreGuiScreen.java:7057)
+	at JinRyuu.JRMCore.JRMCoreGuiScreen.func_73863_a(JRMCoreGuiScreen.java:3045)
+
+-- Screen render details --
+Details:
+	Screen name: JinRyuu.JRMCore.JRMCoreGuiScreen
+	Mouse location: Scaled: (213, 119). Absolute: (427, 240)
+	Screen size: Scaled: (427, 240). Absolute: (854, 480). Scale factor of 2
+Stacktrace:
+	at net.minecraft.client.renderer.EntityRenderer.func_78480_b(EntityRenderer.java:1061)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['VulgoFerd'/771, l='MpServer', x=-37,14, y=5,62, z=-1195,14]]
+	Chunk stats: MultiplayerChunkCache: 441, 441
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (3,4,-1154), Chunk: (at 3,0,14 in 0,-73; contains blocks 0,0,-1168 to 15,255,-1153), Region: (0,-3; contains chunks 0,-96 to 31,-65, blocks 0,0,-1536 to 511,255,-1025)
+	Level time: 24099 game time, 24099 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 92 total; [EntityTigerBandit['Tiger Bandit'/644616, l='MpServer', x=26,31, y=4,00, z=-1197,59], EntityClientPlayerMP['VulgoFerd'/771, l='MpServer', x=-37,14, y=5,62, z=-1195,14], EntityTigerBandit['Tiger Bandit'/599041, l='MpServer', x=-107,75, y=4,00, z=-1199,63], EntityTigerBandit['Tiger Bandit'/599040, l='MpServer', x=-100,31, y=4,00, z=-1201,41], EntityTigerBandit['Tiger Bandit'/599042, l='MpServer', x=-100,22, y=4,00, z=-1199,22], EntityTigerBandit['Tiger Bandit'/644615, l='MpServer', x=20,44, y=4,00, z=-1192,34], EntityTigerBandit['Tiger Bandit'/644614, l='MpServer', x=18,72, y=4,00, z=-1197,22], EntitySabertooth['Sabertooth'/766504, l='MpServer', x=-26,00, y=4,00, z=-1250,75], EntitySpider['Aranha'/444962, l='MpServer', x=-103,75, y=4,00, z=-1238,50], EntitySabertooth['Sabertooth'/766503, l='MpServer', x=-26,50, y=4,00, z=-1247,50], EntityCow['Vaca'/558, l='MpServer', x=-69,88, y=4,00, z=-1181,91], EntitySabertooth['Sabertooth'/766501, l='MpServer', x=-31,50, y=4,00, z=-1245,50], EntitySheep['Ovelha'/568, l='MpServer', x=-66,81, y=4,00, z=-1179,81], EntitySabertooth['Sabertooth'/576, l='MpServer', x=-38,53, y=4,00, z=-1206,03], EntityCreeper['Creeper'/295494, l='MpServer', x=-109,50, y=4,00, z=-1256,50], EntityXPOrb['Orbe de Experiência'/31046, l='MpServer', x=-20,06, y=4,25, z=-1176,06], EntityXPOrb['Orbe de Experiência'/31047, l='MpServer', x=-24,59, y=4,25, z=-1180,97], EntityXPOrb['Orbe de Experiência'/43335, l='MpServer', x=-34,72, y=4,25, z=-1205,44], EntityXPOrb['Orbe de Experiência'/43337, l='MpServer', x=-38,22, y=4,25, z=-1203,47], EntitySheep['Ovelha'/591, l='MpServer', x=-29,16, y=4,00, z=-1237,91], EntitySpider['Aranha'/205395, l='MpServer', x=-73,63, y=4,00, z=-1201,56], EntityPig['Porco'/593, l='MpServer', x=4,94, y=4,00, z=-1219,13], EntityCreeper['Creeper'/205398, l='MpServer', x=-41,09, y=4,00, z=-1222,66], EntityCow['Vaca'/600, l='MpServer', x=-34,81, y=4,00, z=-1150,19], EntityHorse['Cavalo'/601, l='MpServer', x=-42,34, y=4,00, z=-1137,84], EntityHorse['Cavalo'/602, l='MpServer', x=-23,50, y=4,00, z=-1151,78], EntityHorse['Cavalo'/623, l='MpServer', x=13,50, y=4,00, z=-1250,50], EntitySlime['Slime'/753019, l='MpServer', x=25,28, y=4,00, z=-1268,55], EntityHorse['Cavalo'/625, l='MpServer', x=11,34, y=4,00, z=-1204,25], EntityGoblin['Hobgoblin'/626, l='MpServer', x=12,25, y=4,00, z=-1213,88], EntitySheep['Ovelha'/627, l='MpServer', x=2,81, y=4,00, z=-1201,03], EntityHorse['Cavalo'/628, l='MpServer', x=10,03, y=4,00, z=-1210,16], EntitySheep['Ovelha'/630, l='MpServer', x=8,41, y=4,00, z=-1197,31], EntityPig['Porco'/631, l='MpServer', x=6,25, y=4,00, z=-1199,22], EntitySheep['Ovelha'/632, l='MpServer', x=5,69, y=4,00, z=-1198,09], EntitySheep['Ovelha'/633, l='MpServer', x=5,94, y=4,00, z=-1193,03], EntitySheep['Ovelha'/634, l='MpServer', x=3,88, y=4,00, z=-1184,59], EntityEvilWizard['Wizard'/444807, l='MpServer', x=62,50, y=4,00, z=-1138,50], EntityHorse['Cavalo'/654, l='MpServer', x=19,72, y=4,00, z=-1248,28], EntityHorse['Cavalo'/655, l='MpServer', x=18,09, y=4,00, z=-1250,00], EntityHorse['Cavalo'/656, l='MpServer', x=17,84, y=4,00, z=-1251,97], EntityHorse['Cavalo'/657, l='MpServer', x=15,91, y=4,00, z=-1258,00], EntityChicken['Galinha'/658, l='MpServer', x=19,50, y=4,00, z=-1250,50], EntityXPOrb['Orbe de Experiência'/34707, l='MpServer', x=-22,91, y=4,25, z=-1186,63], EntityChicken['Galinha'/662, l='MpServer', x=21,50, y=4,00, z=-1246,50], EntityChicken['Galinha'/663, l='MpServer', x=19,50, y=4,00, z=-1244,50], EntityChicken['Galinha'/664, l='MpServer', x=17,59, y=4,00, z=-1247,03], EntityGoblin['Hobgoblin'/668, l='MpServer', x=24,06, y=4,00, z=-1218,13], EntityGoblin['Hobgoblin'/673, l='MpServer', x=25,50, y=4,00, z=-1208,50], EntityGoblin['Hobgoblin'/674, l='MpServer', x=21,34, y=4,00, z=-1206,06], EntityGoblin['Hobgoblin'/675, l='MpServer', x=19,50, y=4,00, z=-1203,50], EntityHorse['Cavalo'/676, l='MpServer', x=21,66, y=4,00, z=-1207,50], EntityHorse['Cavalo'/677, l='MpServer', x=21,22, y=4,00, z=-1212,00], EntityGoblin['Hobgoblin'/678, l='MpServer', x=17,56, y=4,00, z=-1211,94], EntityGoblin['Hobgoblin'/681, l='MpServer', x=17,84, y=4,00, z=-1199,78], EntityGoblin['Hobgoblin'/682, l='MpServer', x=29,22, y=4,00, z=-1198,78], EntitySabertooth['Sabertooth'/756671, l='MpServer', x=-17,72, y=4,00, z=-1230,22], EntityTigerBandit['Tiger Bandit'/759987, l='MpServer', x=-69,30, y=4,00, z=-1233,41], EntityItem['item.item.arrow'/748466, l='MpServer', x=-72,25, y=4,13, z=-1169,78], EntityTigerBandit['Tiger Bandit'/759986, l='MpServer', x=-72,50, y=4,00, z=-1235,50], EntityTigerBandit['Tiger Bandit'/759985, l='MpServer', x=-76,66, y=4,00, z=-1245,22], EntityTigerBandit['Tiger Bandit'/759984, l='MpServer', x=-78,50, y=4,00, z=-1242,50], EntityCow['Vaca'/701, l='MpServer', x=38,19, y=4,00, z=-1187,13], EntityCow['Vaca'/702, l='MpServer', x=45,41, y=4,00, z=-1176,41], EntityCow['Vaca'/703, l='MpServer', x=45,50, y=4,00, z=-1174,31], EntityCow['Vaca'/704, l='MpServer', x=40,44, y=4,00, z=-1172,06], EntityCow['Vaca'/705, l='MpServer', x=45,81, y=4,00, z=-1181,84], EntitySabertooth['Sabertooth'/672971, l='MpServer', x=-49,34, y=4,00, z=-1217,22], EntityCow['Vaca'/706, l='MpServer', x=44,66, y=4,00, z=-1179,53], EntityCow['Vaca'/707, l='MpServer', x=42,69, y=4,00, z=-1176,63], EntityCow['Vaca'/708, l='MpServer', x=36,13, y=4,00, z=-1170,97], EntitySabertooth['Sabertooth'/672974, l='MpServer', x=-55,31, y=4,00, z=-1210,91], EntitySabertooth['Sabertooth'/602319, l='MpServer', x=-95,50, y=4,00, z=-1249,50], EntityTigerBandit['Tiger Bandit'/633807, l='MpServer', x=32,72, y=4,00, z=-1150,69], EntitySabertooth['Sabertooth'/672972, l='MpServer', x=-56,50, y=4,00, z=-1221,50], EntityTigerBandit['Tiger Bandit'/633806, l='MpServer', x=37,63, y=4,00, z=-1151,34], EntitySabertooth['Sabertooth'/672973, l='MpServer', x=-56,78, y=4,00, z=-1217,91], EntitySlime['Slime'/751820, l='MpServer', x=-14,72, y=4,00, z=-1135,75], EntityBearThief['Bear Thief'/612801, l='MpServer', x=-105,50, y=4,00, z=-1267,50], EntityCreeper['Creeper'/444879, l='MpServer', x=41,41, y=4,00, z=-1119,06], EntitySabertooth['Sabertooth'/756674, l='MpServer', x=-15,97, y=4,00, z=-1226,09], EntityBearThief['Bear Thief'/612802, l='MpServer', x=-102,97, y=4,00, z=-1268,13], EntityItem['item.item.arrow'/750556, l='MpServer', x=-66,16, y=4,13, z=-1162,34], EntityTigerBandit['Tiger Bandit'/633809, l='MpServer', x=34,75, y=4,00, z=-1145,81], EntityTigerBandit['Tiger Bandit'/633808, l='MpServer', x=35,09, y=4,00, z=-1144,59], EntitySabertooth['Sabertooth'/703215, l='MpServer', x=17,50, y=4,00, z=-1179,50], EntitySabertooth['Sabertooth'/703213, l='MpServer', x=12,50, y=4,00, z=-1176,50], EntityItem['item.item.sulphur'/53230, l='MpServer', x=-34,75, y=4,13, z=-1198,59], EntitySabertooth['Sabertooth'/755195, l='MpServer', x=-97,50, y=4,00, z=-1274,50], EntitySabertooth['Sabertooth'/755193, l='MpServer', x=-94,00, y=4,00, z=-1271,50], EntityTigerBandit['Tiger Bandit'/599039, l='MpServer', x=-98,50, y=4,00, z=-1203,50], EntitySlime['Slime'/612080, l='MpServer', x=22,76, y=4,00, z=-1211,11]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.func_72914_a(WorldClient.java:373)
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2444)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:919)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 538501856 bytes (513 MB) / 1879048192 bytes (1792 MB) up to 2147483648 bytes (2048 MB)
+	JVM Flags: 8 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx2G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 42 mods loaded, 42 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAAAA	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAAAA	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10.jar) 
+	UCHIJAAAAAA	AM2-Preloader{0.0.3} [AMCore] (minecraft.jar) 
+	UCHIJAAAAAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAAAA	LumySkinPatch{1.0.13} [Lumy Skin Patch] (minecraft.jar) 
+	UCHIJAAAAAA	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-universal.jar) 
+	UCHIJAAAAAA	unimixins{0.1.17} [UniMixins] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UCHIJAAAAAA	unimixins-mixin{0.1.17} [UniMixins: Mixin (UniMix)] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UCHIJAAAAAA	unimixins-compat{0.1.17} [UniMixins: Compatibility] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UCHIJAAAAAA	mixingasm{0.3} [UniMixins: Mixingasm] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UCHIJAAAAAA	spongemixins{2.0.1} [UniMixins: SpongeMixins] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UCHIJAAAAAA	mixinbooterlegacy{1.2.1} [UniMixins: MixinBooterLegacy] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UCHIJAAAAAA	gasstation{0.5.1} [UniMixins: GasStation] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UCHIJAAAAAA	gtnhmixins{2.2.0} [UniMixins: GTNHMixins] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UCHIJAAAAAA	mixinextras{0.1.17} [UniMixins: MixinExtras] (+unimixins-all-1.7.10-0.1.17.jar) 
+	UCHIJAAAAAA	fullbright{1.2} [Fullbright] (1.7.10-Fullbright-v1.2.jar) 
+	UCHIJAAAAAA	DamageIndicatorsMod{3.2.3} [Damage Indicators] (1.7.10DamageIndicatorsMod-3.2.3.jar) 
+	UCHIJAAAAAA	nanatsu{0.1} [nanatsu] (7dsMod_0.1_2.jar) 
+	UCHIJAAAAAA	crow{1.1} [Crow's weapons Mod] (7DSModels.jar) 
+	UCHIJAAAAAA	nanatsunotaizai{4.0.0} [nanatsunotaizai] (7DSNationv1.3.jar) 
+	UCHIJAAAAAA	advancedtitles{1.0.0} [AdvancedTitles] (advancedtitles-1.0.0.jar) 
+	UCHIJAAAAAA	AnimationAPI{1.2.4} [AnimationAPI] (AnimationAPI-1.7.10.jar) 
+	UCHIJAAAAAA	armourersWorkshop{1.7.10-0.48.5} [Armourer's Workshop] (Armourers-Workshop-1.7.10-0.48.5.jar) 
+	UCHIJAAAAAA	arsmagica2{1.4.0.009} [Ars Magica 2] (Ars-Magica-2-Mod-1.7.10.jar) 
+	UCHIJAAAAAA	clientslots{1.0.0} [ClientSlots] (ClientSlots-1.7.10.jar) 
+	UCHIJAAAAAA	crowhpbar{1.0} [Crow's HP Bar] (crowHPBar-1.0.jar) 
+	UCHIJAAAAAA	customnpcs{1.11.1} [CustomNPC+] (CustomNPCs-1.11.1.jar) 
+	UCHIJAAAAAA	jinryuujrmcore{1.3.51} [JinRyuu's JRMCore] (JRMCore-v1.3.51-bigtp-1.1.1.jar) 
+	UCHIJAAAAAA	jinryuudragonblockc{1.4.85} [Dragon Block C] (DragonBlockC-v1.4.85-bigtp-1.1.1.jar) 
+	UCHIJAAAAAA	wizardry{1.1.5} [Electroblob's Wizardry] (ElectroblobsWizardry-1.1.5-MC1.7.10.jar) 
+	UCHIJAAAAAA	ias{D7.29 :P} [In-Game Account Switcher] (InGameAccountSwitcher-Forge-1.7-8.0.1.jar) 
+	UCHIJAAAAAA	jinryuubetterrenderaddon{1.6.52} [JinRyuu's Better Render Addon] (JBRA-Client-v1.6.52.jar) 
+	UCHIJAAAAAA	journeymap{4.0.1} [JourneyMap] (JourneyMap-Mod-1.7.10-FairPlay.jar) 
+	UCHIJAAAAAA	LunatriusCore{1.1.2.21} [LunatriusCore] (LunatriusCore-1.7.10-1.1.2.21-universal.jar) 
+	UCHIJAAAAAA	necrotempus{1.3.6} [NecroTempus] (necrotempus-1.3.6.jar) 
+	UCHIJAAAAAA	npcdbc{1.2.1} [CustomNPC+ DBC Addon] (NPCDBC-v1.2.1-hotfix1-bigtp-1.1.1.jar) 
+	UCHIJAAAAAA	omniconfig{1.0.1} [Omniconfig] (omniconfig-1.0.1-mc1.7.10.jar) 
+	UCHIJAAAAAA	rpresence{1.0} [rpresence] (RPresenceCore-NNTDark.jar) 
+	UCHIJAAAAAA	Schematica{1.7.6.131} [Schematica] (Schematica-1.7.10-1.7.6.131-universal.jar) 
+	UCHIJAAAAAA	Waila{1.5.10} [Waila] (Waila-1.5.10_1.7.10.jar) 
+	UCHIJAAAAAA	witchery{0.24.1} [Witchery] (Witchery-Mod-1.7.10.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.3.0 - Build 20.19.15.5171' Renderer: 'Intel(R) HD Graphics 4600'
+	Armourer's Workshop: 
+		Render Type: RENDER_EVENT
+		Texture Render: false
+		Baking Queue: 0
+		Request Queue: 0
+		Texture Painting: false
+		Multipass Skin Rendering: true
+	Mixins in Stacktrace: 
+		net.minecraft.client.renderer.EntityRenderer:
+			mixins.customnpcs.json:MixinEntityRenderer from mod customnpcs
+		JinRyuu.JRMCore.JRMCoreGuiScreen:
+			mixins.npcdbc.late.json:dbc.recolor.MixinJRMCoreGuiScreenColor from mod (unknown)
+			mixins.npcdbc.late.json:dbc.MixinJRMCoreGuiScreen from mod (unknown)
+		JinRyuu.JBRA.RenderPlayerJBRA:
+			mixins.npcdbc.late.json:dbc.MixinRenderPlayerJBRA from mod (unknown)
+		net.minecraft.client.renderer.entity.RendererLivingEntity:
+			mixins.customnpcs.json:MixinRendererLivingEntity from mod customnpcs
+	Launched Version: 1.7.10-Forge10.13.4.1614-1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) HD Graphics 4600 GL version 4.3.0 - Build 20.19.15.5171, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: [nntdarkv3.zip]
+	Current Language: Português (Brasil)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)
